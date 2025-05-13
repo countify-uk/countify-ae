@@ -20,9 +20,9 @@ export default function ClientLayoutWrapper({
         <meta name="description" content="Explore expert accounting, VAT, tax, and company formation services in UAE. Chartered Accountant with 15+ years of experience. Serving startups, SMEs, and corporates." />
         <meta property="og:title" content="Accounting & Tax Services UAE | Company Setup, VAT, Payroll, Tax Filing" />
         <meta property="og:description" content="Explore expert accounting, VAT, tax, and company formation services in UAE. Chartered Accountant with 15+ years of experience. Serving startups, SMEs, and corporates." />
-        <meta property="og:image" content="/images/countify-og.webp" />
+        <meta property="og:image" content="https://countify-dubai.vercel.app/images/countify-og.webp" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://countify.ae/" />
+        <meta property="og:url" content="https://countify-dubai.vercel.app/" />
       </head>
       <body className={`${fontVariables} antialiased`}>
         <Navbar />
