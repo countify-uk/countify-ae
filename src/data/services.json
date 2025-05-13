@@ -1,0 +1,544 @@
+[
+  {
+    "title": {
+      "en": "Company Formation – Freezone & Mainland",
+      "ar": "تأسيس الشركات - المناطق الحرة والبر الرئيسي"
+    },
+    "description": {
+      "en": "Launch your business in Dubai or any Free Zone with full support — license applications, MOA drafting, PRO services, and bank account setup.",
+      "ar": "ابدأ عملك في دبي أو أي منطقة حرة بدعم كامل - طلبات الترخيص، صياغة عقد التأسيس، خدمات العلاقات العامة، وفتح حساب بنكي."
+    },
+    "image": "/images/services/company-formation.webp",
+    "link": "/services/company-formation",
+    "id": "company-formation",
+    "slug": "company-formation",
+    "canonical": "https://countify.ae/services/company-formation",
+    "meta": {
+      "title_en": "Freezone & Mainland Company Formation UAE | 100% Ownership Setup",
+      "description_en": "Start your UAE business with ease. Expert company formation services for Freezone & Mainland setups – fast-track licensing, 100% foreign ownership, PRO & bank support.",
+      "title_ar": "تأسيس الشركات في الإمارات – المناطق الحرة والبر الرئيسي | تملك أجنبي 100%",
+      "description_ar": "ابدأ عملك في الإمارات بسهولة. خدمات تأسيس الشركات في المناطق الحرة والبر الرئيسي مع تملك أجنبي 100%، ترخيص سريع، وخدمات العلاقات العامة وفتح الحساب البنكي."
+    },
+    "content": {
+      "h1_en": "Company Formation in UAE – Freezone & Mainland Setup Made Simple",
+      "h1_ar": "تأسيس الشركات في الإمارات – إجراءات مبسطة للمناطق الحرة والبر الرئيسي",
+  
+      "intro_en": "Starting a company in the UAE? Whether you're looking to set up in a Freezone or on the Mainland, we simplify the entire process — from trade license registration to bank account opening. Our company formation experts in Dubai and across the UAE provide end-to-end support to ensure a hassle-free experience, so you can focus on your business goals.",
+      "intro_ar": "هل تفكر في تأسيس شركة في الإمارات؟ سواء كنت تود التأسيس في منطقة حرة أو في البر الرئيسي، نحن نسهل لك العملية بالكامل – من تسجيل الرخصة التجارية إلى فتح الحساب البنكي. يقدم خبراؤنا في تأسيس الشركات في دبي والإمارات دعمًا شاملاً لتجربة خالية من التعقيدات، حتى تتمكن من التركيز على أهداف عملك.",
+  
+      "what_we_offer_en": [
+        {
+          "title": "Freezone Company Setup in UAE",
+          "points": [
+            "100% foreign ownership",
+            "Tax-free operations",
+            "Quick license approvals",
+            "Partnerships with DMCC, IFZA, SHAMS, RAKEZ & more"
+          ]
+        },
+        {
+          "title": "Mainland Company Formation in Dubai & UAE",
+          "points": [
+            "DED licensing",
+            "Local service agent setup (if needed)",
+            "Wider business activity options",
+            "Access to local contracts and markets"
+          ]
+        }
+      ],
+      "what_we_offer_ar": [
+        {
+          "title": "تأسيس شركة في المناطق الحرة",
+          "points": [
+            "تملك أجنبي 100%",
+            "عمليات معفاة من الضرائب",
+            "موافقات ترخيص سريعة",
+            "شراكات مع DMCC، IFZA، SHAMS، RAKEZ وغيرها"
+          ]
+        },
+        {
+          "title": "تأسيس شركة في البر الرئيسي في دبي والإمارات",
+          "points": [
+            "ترخيص من دائرة التنمية الاقتصادية (DED)",
+            "ترتيبات وكيل خدمات محلي (إن لزم)",
+            "خيارات أوسع للأنشطة التجارية",
+            "الوصول إلى العقود والأسواق المحلية"
+          ]
+        }
+      ],
+  
+      "services_en": [
+        "Trade name reservation & initial approval",
+        "MOA (Memorandum of Association) drafting",
+        "Licensing (Freezone & Mainland)",
+        "Visa & immigration processing (PRO services)",
+        "Business bank account setup",
+        "Business activity selection & jurisdiction advisory"
+      ],
+      "services_ar": [
+        "حجز الاسم التجاري والموافقة المبدئية",
+        "صياغة عقد التأسيس (MOA)",
+        "إجراءات الترخيص (المنطقة الحرة والبر الرئيسي)",
+        "إجراءات التأشيرات والهجرة (خدمات PRO)",
+        "فتح الحساب البنكي للشركة",
+        "اختيار النشاط التجاري وتقديم المشورة بشأن الاختصاص القضائي"
+      ],
+  
+      "why_us_en": [
+        "Fast-Track Setup: Get your license within days",
+        "Expert Guidance: We help you choose the right Free Zone or Mainland structure",
+        "100% Foreign Ownership: No local sponsor needed in most Free Zones",
+        "Compliant Documentation: Everything prepared and submitted correctly the first time"
+      ],
+      "why_us_ar": [
+        "إجراءات سريعة: احصل على ترخيصك خلال أيام",
+        "إرشاد احترافي: نساعدك في اختيار الهيكل المناسب لمنطقتك الحرة أو البر الرئيسي",
+        "تملك أجنبي 100%: لا حاجة لكفيل محلي في معظم المناطق الحرة",
+        "توثيق متكامل: إعداد وتقديم جميع المستندات بشكل صحيح من المرة الأولى"
+      ],
+  
+      "cta_en": "Speak to our specialists and get a free consultation. Whether you're a solo entrepreneur, foreign investor, or growing company — we’re here to guide your setup journey.",
+      "cta_ar": "تحدث إلى خبرائنا واحصل على استشارة مجانية. سواء كنت رائد أعمال فردي أو مستثمر أجنبي أو شركة متنامية — نحن هنا لنرشدك خلال رحلة التأسيس."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Company Formation – Freezone & Mainland UAE",
+      "description": "Start your business in the UAE with expert company formation services. We offer Freezone and Mainland setup with fast-track licensing, PRO services, and 100% foreign ownership.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Countify AE",
+        "url": "https://countify.ae"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "serviceType": "Company Formation",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://countify.ae/services/company-formation"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Business Setup Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Freezone Company Setup"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mainland Company Formation"
+            }
+          }
+        ]
+      }
+    }
+   
+  },
+  {
+    "title": {
+      "en": "Bookkeeping Services",
+      "ar": "خدمات مسك الدفاتر"
+    },
+    "description": {
+      "en": "Keep your financial records accurate and audit-ready with monthly or quarterly bookkeeping on Xero, Zoho, and QuickBooks.",
+      "ar": "حافظ على سجلاتك المالية دقيقة وجاهزة للتدقيق مع خدمات مسك الدفاتر الشهرية أو الفصلية باستخدام Xero وZoho وQuickBooks."
+    },
+    "image": "/images/services/bookkeeping-services.webp",
+    "link": "/services/bookkeeping",
+    "id": "bookkeeping",
+    "slug": "bookkeeping",
+    "canonical": "https://countify.ae/services/bookkeeping",
+    "meta": {
+      "title_en": "Bookkeeping Services UAE | Monthly Accounting & Cloud-Based Solutions",
+      "description_en": "Get accurate, FTA-compliant bookkeeping in UAE. We offer outsourced monthly accounting, bank reconciliation, and cloud accounting (Xero, Zoho, QuickBooks).",
+      "title_ar": "خدمات مسك الدفاتر في الإمارات | حلول محاسبة شهرية وسحابية",
+      "description_ar": "احصل على خدمات مسك دفاتر دقيقة ومتوافقة مع الهيئة الاتحادية للضرائب في الإمارات. نقدم محاسبة شهرية خارجية، ومطابقة بنكية، وحلول محاسبة سحابية باستخدام Xero وZoho وQuickBooks."
+    },
+    "content": {
+      "h1_en": "Professional Bookkeeping Services in UAE – Reliable, Cloud-Based, and Audit-Ready",
+      "h1_ar": "خدمات مسك الدفاتر المهنية في الإمارات – موثوقة وسحابية وجاهزة للتدقيق",
+      
+      "intro_en": "Whether you're a startup or a growing SME, our outsourced bookkeeping services in Dubai and across the UAE ensure your accounts are accurate, organized, and fully compliant. We take the pressure off your internal team by managing your financial records with precision and professionalism.",
+      "intro_ar": "سواء كنت شركة ناشئة أو مؤسسة صغيرة ومتوسطة، فإن خدمات مسك الدفاتر الخارجية التي نقدمها في دبي وجميع أنحاء الإمارات تضمن أن حساباتك دقيقة ومنظمة ومتوافقة تمامًا. نحن نُخفف العبء عن فريقك الداخلي من خلال إدارة سجلاتك المالية بدقة واحترافية.",
+      
+      "services_en": [
+        "Monthly & Quarterly Bookkeeping Packages – Flexible solutions tailored to your business size and transaction volume.",
+        "Bank Reconciliation & Ledger Maintenance – Timely tracking of cash flow and financial health.",
+        "Cloud-Based Accounting (Xero, Zoho, QuickBooks) – Real-time access to your accounts from anywhere.",
+        "Invoice & Expense Management – Stay on top of your receivables and payables.",
+        "Chart of Accounts Setup & Financial Reporting – Accurate financial insights to guide better business decisions."
+      ],
+      "services_ar": [
+        "حزم مسك دفاتر شهرية وربع سنوية – حلول مرنة تناسب حجم أعمالك وعدد المعاملات.",
+        "مطابقة البنك وصيانة الدفاتر – تتبع التدفق النقدي والصحة المالية في الوقت المناسب.",
+        "المحاسبة السحابية (Xero وZoho وQuickBooks) – وصول فوري لحساباتك من أي مكان.",
+        "إدارة الفواتير والمصاريف – راقب مستحقاتك ومدفوعاتك بسهولة.",
+        "إعداد دليل الحسابات والتقارير المالية – رؤى مالية دقيقة لاتخاذ قرارات أفضل."
+      ],
+      
+      "why_us_en": [
+        "15+ Years of Chartered Accountancy Experience",
+        "FTA-Compliant, Audit-Ready Books",
+        "Dedicated Account Manager",
+        "Scalable Pricing for Startups and SMEs",
+        "Certified Experts in Xero, Zoho, and QuickBooks"
+      ],
+      "why_us_ar": [
+        "أكثر من 15 عامًا من الخبرة في المحاسبة القانونية",
+        "دفاتر متوافقة مع الهيئة الاتحادية للضرائب وجاهزة للتدقيق",
+        "مدير حسابات مخصص لكل عميل",
+        "أسعار مرنة تناسب الشركات الناشئة والصغيرة والمتوسطة",
+        "خبراء معتمدون في Xero وZoho وQuickBooks"
+      ],
+      
+      "cta_en": "Let our team keep your books clean, compliant, and up-to-date — so you can focus on running your business. Contact us today for a personalised bookkeeping solution.",
+      "cta_ar": "دع فريقنا يضمن لك دفاتر محاسبية نظيفة ومتوافقة ومحدثة – حتى تتمكن من التركيز على تنمية أعمالك. اتصل بنا اليوم للحصول على حل مخصص لمسك الدفاتر."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Bookkeeping Services UAE",
+      "description": "Accurate and reliable bookkeeping services in UAE. Monthly and quarterly packages, cloud accounting with Xero, Zoho, and QuickBooks. Always audit-ready and FTA-compliant.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Countify AE",
+        "url": "https://countify.ae"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "serviceType": "Outsourced Bookkeeping",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://countify.ae/services/bookkeeping"
+      }
+    }
+  },
+  {
+    "title": {
+      "en": "Payroll & HR Compliance",
+      "ar": "الرواتب والامتثال لقوانين العمل"
+    },
+    "description": {
+      "en": "We manage WPS-compliant payroll, leave calculations, payslips, and labour law obligations.",
+      "ar": "نقوم بإدارة الرواتب المتوافقة مع نظام حماية الأجور، وحساب الإجازات، وكشوف الرواتب، والالتزامات القانونية للعمل."
+    },
+    "image": "/images/services/payroll-&-hr-compliance.webp",
+    "link": "/services/payroll-services",
+    "id": "payroll-services",
+    "slug": "payroll-services",
+    "canonical": "https://countify.ae/services/payroll-services",
+    "meta": {
+      "title_en": "Payroll Services UAE | WPS-Compliant Salary Processing & HR Support",
+      "description_en": "Reliable payroll processing in UAE – WPS-compliant salary disbursement, payslip generation, leave & gratuity calculations, and labour law compliance for your business.",
+      "title_ar": "خدمات الرواتب في الإمارات | معالجة الرواتب وفق نظام WPS ودعم الموارد البشرية",
+      "description_ar": "معالجة رواتب موثوقة في الإمارات – تحويل الرواتب وفق نظام حماية الأجور (WPS)، إنشاء كشوف الرواتب، حساب الإجازات والمكافآت، والامتثال لقوانين العمل الإماراتية."
+    },
+    "content": {
+      "h1_en": "Professional Payroll Services in UAE – WPS-Compliant & Fully Automated",
+      "h1_ar": "خدمات الرواتب المهنية في الإمارات – متوافقة مع WPS وآلية بالكامل",
+  
+      "intro_en": "Managing payroll can be complex — from tracking working hours and allowances to calculating end-of-service benefits and complying with UAE labour laws and WPS. That’s where we come in. We provide reliable, compliant, and scalable payroll services in Dubai and across the UAE, tailored for startups, SMEs, and growing enterprises.",
+      "intro_ar": "إدارة الرواتب قد تكون معقدة – من تتبع ساعات العمل والبدلات إلى حساب مكافأة نهاية الخدمة والامتثال لقوانين العمل الإماراتية ونظام حماية الأجور (WPS). وهنا يأتي دورنا. نحن نقدم خدمات رواتب موثوقة ومتوافقة وقابلة للتوسع في دبي وجميع أنحاء الإمارات، مصممة خصيصًا للشركات الناشئة والصغيرة والمتوسطة.",
+  
+      "services_en": [
+        "Monthly Payroll Processing – Accurate salary calculations, deductions, and allowances – processed on time, every time.",
+        "WPS-Compliant Salary Transfers – We ensure seamless integration with the Wage Protection System (WPS) and meet all legal salary disbursement obligations.",
+        "Leave & Gratuity Calculations – Calculation of paid/unpaid leaves, sick leave, annual leave balances, and end-of-service gratuity as per UAE labour law.",
+        "Payslip Generation & Reporting – Secure, digital payslips delivered monthly along with summary payroll reports for your HR and finance teams.",
+        "HR & Labour Law Compliance – Compliance with UAE labour regulations, contract terms, and ongoing advisory on employment matters."
+      ],
+      "services_ar": [
+        "معالجة الرواتب الشهرية – حساب دقيق للرواتب، الاستقطاعات، والبدلات – يتم معالجتها في الوقت المحدد دائمًا.",
+        "تحويل الرواتب وفق نظام WPS – نضمن التكامل السلس مع نظام حماية الأجور (WPS) والامتثال الكامل لقوانين صرف الرواتب.",
+        "حساب الإجازات والمكافآت – حساب الإجازات المدفوعة وغير المدفوعة، والإجازات المرضية، والسنوية، ومكافأة نهاية الخدمة وفقًا لقانون العمل الإماراتي.",
+        "إنشاء كشوف الرواتب والتقارير – كشوف رواتب رقمية وآمنة تُسلم شهريًا مع تقارير ملخصة لقسمي الموارد البشرية والمالية.",
+        "الامتثال لقانون العمل – الامتثال للقوانين الإماراتية، وشروط العقود، وتقديم الاستشارات المستمرة بشأن شؤون الموظفين."
+      ],
+  
+      "why_us_en": [
+        "Over 15 Years of Chartered Accountancy Experience",
+        "100% Compliance with UAE Labour & WPS Guidelines",
+        "Secure, Cloud-Based Payroll Software Integration",
+        "Dedicated Support for Small & Mid-Sized Businesses",
+        "Scalable Solutions for Growing Teams"
+      ],
+      "why_us_ar": [
+        "أكثر من 15 عامًا من الخبرة في المحاسبة القانونية",
+        "امتثال تام لقوانين العمل الإماراتية وإرشادات WPS",
+        "تكامل آمن مع برامج الرواتب السحابية",
+        "دعم مخصص للشركات الصغيرة والمتوسطة",
+        "حلول قابلة للتوسع للفرق المتنامية"
+      ],
+  
+      "cta_en": "From onboarding employees to processing final settlements — we handle it all. Let us manage your payroll, so you can manage your team.",
+      "cta_ar": "من تسجيل الموظفين الجدد إلى معالجة المستحقات النهائية – نحن نعتني بكل شيء. دعنا ندير نظام الرواتب لديك، لتتمكن من إدارة فريقك بكفاءة."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Payroll Services UAE",
+      "description": "Reliable payroll processing in UAE with WPS-compliant salary transfers, payslip generation, leave & gratuity calculations, and labour law compliance.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Countify AE",
+        "url": "https://countify.ae"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "serviceType": "Payroll Processing",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://countify.ae/services/payroll-services"
+      }
+    }
+  },
+  {
+    "title": {
+      "en": "VAT Registration & Filing",
+      "ar": "تسجيل ضريبة القيمة المضافة وتقديم الإقرارات"
+    },
+    "description": {
+      "en": "From FTA registration to quarterly return filing — we help you stay VAT compliant and penalty-free.",
+      "ar": "من تسجيل الهيئة الاتحادية للضرائب إلى تقديم الإقرارات الفصلية - نساعدك على الالتزام بضريبة القيمة المضافة وتجنب الغرامات."
+    },
+    "image": "/images/services/vat-registration-and-filling.webp",
+    "link": "/services/vat-return",
+    "id": "vat-return",
+    "slug": "vat-return",
+    "canonical": "https://countify.ae/services/vat-return",
+    "meta": {
+      "title_en": "VAT Services UAE | VAT Registration & Return Filing in Dubai",
+      "description_en": "Get expert VAT registration and return filing in UAE. We ensure timely submissions, VAT audits, and FTA compliance to avoid penalties. Register VAT and stay compliant.",
+      "title_ar": "خدمات ضريبة القيمة المضافة في الإمارات | تسجيل وتقديم الإقرارات الضريبية في دبي",
+      "description_ar": "احصل على خدمات احترافية في تسجيل وتقديم ضريبة القيمة المضافة في الإمارات. نضمن التقديم في الوقت المناسب، ودعم الفحص الضريبي، والامتثال للهيئة الاتحادية للضرائب لتجنب الغرامات."
+    },
+    "content": {
+      "h1_en": "Expert VAT Return Filing Services in UAE – Stay Compliant & Penalty-Free",
+      "h1_ar": "خدمات تقديم ضريبة القيمة المضافة في الإمارات – امتثل للوائح وتجنب الغرامات",
+  
+      "intro_en": "Since the introduction of VAT in the UAE, businesses are required to stay compliant with the Federal Tax Authority’s (FTA) strict regulations. We offer professional VAT services in UAE to help you register, file, and manage your VAT obligations with confidence. Whether you are a newly established company or an existing business needing support, our VAT consultants in Dubai and across the UAE ensure that your business remains penalty-free and audit-ready.",
+      "intro_ar": "منذ تطبيق ضريبة القيمة المضافة في الإمارات، أصبح من الضروري على الشركات الامتثال للوائح الصارمة الصادرة عن الهيئة الاتحادية للضرائب. نحن نقدم خدمات ضريبة قيمة مضافة احترافية لمساعدتك في التسجيل، وتقديم الإقرارات، وإدارة التزاماتك الضريبية بثقة. سواء كنت شركة جديدة أو قائمة، يضمن لك مستشارونا في دبي والإمارات الامتثال الكامل دون غرامات، والاستعداد للفحص الضريبي.",
+  
+      "services_en": [
+        "VAT Registration with FTA – Complete assistance in obtaining your TRN (Tax Registration Number) and preparing documentation for FTA submission.",
+        "Quarterly VAT Return Filing – Accurate preparation and electronic filing of VAT returns on a quarterly basis, as required by UAE law.",
+        "VAT Audit Support & Recordkeeping – Organised documentation and preparation for FTA audits, with guidance on responding to notices and maintaining statutory records.",
+        "VAT Health Checks & Reviews – We conduct internal VAT compliance audits to identify errors, reduce risks, and ensure your business follows all applicable laws."
+      ],
+      "services_ar": [
+        "تسجيل ضريبة القيمة المضافة لدى الهيئة – مساعدة كاملة في الحصول على رقم التسجيل الضريبي (TRN) وتجهيز المستندات لتقديمها للهيئة.",
+        "تقديم الإقرارات الضريبية ربع السنوية – إعداد وتقديم دقيق للإقرارات إلكترونيًا كل ربع سنة وفقًا للقانون الإماراتي.",
+        "دعم الفحص الضريبي وحفظ السجلات – تنظيم الوثائق والاستعداد للفحص الضريبي، وتقديم الإرشادات للرد على الإشعارات والامتثال لمتطلبات حفظ السجلات.",
+        "مراجعة ضريبة القيمة المضافة – إجراء تدقيق داخلي لاكتشاف الأخطاء وتقليل المخاطر وضمان الالتزام الكامل بالتشريعات المعمول بها."
+      ],
+  
+      "why_us_en": [
+        "15+ Years of Chartered Accountancy Expertise",
+        "Fully Compliant with UAE VAT Law & FTA Guidelines",
+        "Avoid Penalties with Timely, Accurate Submissions",
+        "Proactive Guidance on VAT Input/Output Management",
+        "Trusted by SMEs, Freezone Entities & Multinationals"
+      ],
+      "why_us_ar": [
+        "أكثر من 15 عامًا من الخبرة في المحاسبة القانونية",
+        "امتثال كامل لقوانين ضريبة القيمة المضافة وتعليمات الهيئة الاتحادية للضرائب",
+        "تجنب الغرامات من خلال تقديم الإقرارات بدقة وفي الوقت المناسب",
+        "توجيه استباقي بشأن ضريبة المدخلات والمخرجات",
+        "موثوق من قبل الشركات الصغيرة والمتوسطة والمناطق الحرة والشركات العالمية"
+      ],
+  
+      "cta_en": "Avoid late filing penalties, incorrect submissions, or audit issues. Let our experts manage your VAT obligations — the right way.",
+      "cta_ar": "تجنب الغرامات، أو الأخطاء في التقديم، أو مشكلات الفحص الضريبي. دع خبراءنا يديرون التزاماتك الضريبية بالشكل الصحيح."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "VAT Return Filing UAE",
+      "description": "Professional VAT services in UAE including VAT registration with FTA, quarterly return filing, VAT audits, and compliance checks. Stay penalty-free and FTA compliant.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Countify AE",
+        "url": "https://countify.ae"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "serviceType": "VAT Return Filing",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://countify.ae/services/vat-return"
+      }
+    }
+  },
+  {
+    "title": {
+      "en": "Corporate Tax Registration & Filing",
+      "ar": "تسجيل وتقديم الإقرارات الضريبية للشركات"
+    },
+    "description": {
+      "en": "Get your business registered and compliant with UAE’s corporate tax laws. We also offer tax planning and transfer pricing support.",
+      "ar": "قم بتسجيل عملك والامتثال لقوانين الضرائب على الشركات في الإمارات. نقدم أيضًا دعمًا للتخطيط الضريبي وتسعير التحويل."
+    },
+    "image": "/images/services/corporate-tax-registration.webp",
+    "link": "/services/corporate-tax",
+    "id": "corporate-tax",
+    "slug": "corporate-tax",
+    "canonical": "https://countify.ae/services/corporate-tax",
+    "meta": {
+      "title_en": "UAE Corporate Tax Filing | Corporation Tax Registration & Advisory Dubai",
+      "description_en": "Register and file your corporate tax in the UAE with expert support. FTA registration, tax computation, advisory & transfer pricing assistance. Stay compliant and reduce liabilities.",
+      "title_ar": "تقديم ضريبة الشركات في الإمارات | تسجيل ضريبة الشركات واستشارات ضريبية في دبي",
+      "description_ar": "سجل وقدم ضريبة الشركات في الإمارات بدعم احترافي. تسجيل الهيئة الاتحادية للضرائب، حساب الضريبة، استشارات ضريبية، ودعم تسعير التحويل. امتثل وقلل من التزاماتك الضريبية."
+    },
+    "content": {
+      "h1_en": "Corporate Tax Registration & Filing in UAE – Compliant, Accurate, Strategic",
+      "h1_ar": "تسجيل وتقديم ضريبة الشركات في الإمارات – دقيق، متوافق، واستراتيجي",
+  
+      "intro_en": "With the implementation of Corporate Tax in the UAE, businesses must now align their financial practices with new tax regulations issued by the Federal Tax Authority (FTA). We help you manage this transition smoothly — from registration to advisory and return filing. Whether you're a Free Zone entity or a mainland company, we offer end-to-end corporate tax registration and filing services in Dubai and across the UAE, ensuring full compliance while helping you optimise your tax exposure.",
+      "intro_ar": "مع تطبيق ضريبة الشركات في الإمارات، يجب على الشركات الآن مواءمة ممارساتها المالية مع اللوائح الضريبية الجديدة الصادرة عن الهيئة الاتحادية للضرائب (FTA). نحن نساعدك في إدارة هذا الانتقال بسلاسة – من التسجيل إلى الاستشارات وتقديم الإقرارات. سواء كنت في منطقة حرة أو شركة في البر الرئيسي، نقدم خدمات شاملة في تسجيل وتقديم ضريبة الشركات في دبي وجميع أنحاء الإمارات، لضمان الامتثال الكامل وتحقيق أقصى فائدة ضريبية.",
+  
+      "services_en": [
+        "Corporate Tax Registration with the FTA – Get your business registered for UAE Corporate Tax with complete documentation and regulatory support.",
+        "Tax Computation & Return Filing – Accurate calculation of taxable profits and timely submission of tax returns to avoid penalties or late fees.",
+        "Tax Planning & Advisory – Strategic structuring of your business operations to reduce tax liability and ensure long-term compliance.",
+        "Transfer Pricing Compliance – Assistance with related party transactions, documentation, and adherence to OECD-aligned UAE Transfer Pricing rules."
+      ],
+      "services_ar": [
+        "تسجيل ضريبة الشركات لدى الهيئة – تسجيل شركتك في ضريبة الشركات الإماراتية مع دعم كامل في التوثيق والامتثال.",
+        "حساب الضريبة وتقديم الإقرارات – حساب دقيق للأرباح الخاضعة للضريبة وتقديم الإقرارات في الوقت المحدد لتجنب الغرامات.",
+        "التخطيط والاستشارات الضريبية – هيكلة أعمالك بطريقة استراتيجية لتقليل العبء الضريبي وضمان الامتثال طويل الأجل.",
+        "الامتثال لتسعير التحويل – دعم في التعاملات بين الأطراف المرتبطة والامتثال للوائح تسعير التحويل وفقًا لمعايير منظمة التعاون والتنمية الاقتصادية (OECD)."
+      ],
+  
+      "why_us_en": [
+        "Chartered Accountant with 15+ Years of Tax & Compliance Expertise",
+        "Up-to-date Knowledge of UAE Corporate Tax Laws",
+        "FTA-Compliant Processes & Documentation",
+        "Strategic Advisory to Optimise Tax Position",
+        "Trusted by SMEs, Freezone Entities, Holding Companies & More"
+      ],
+      "why_us_ar": [
+        "محاسب قانوني معتمد بخبرة تزيد عن 15 عامًا في الضرائب والامتثال",
+        "إلمام كامل بأحدث قوانين ضريبة الشركات في الإمارات",
+        "إجراءات ومستندات متوافقة مع الهيئة الاتحادية للضرائب",
+        "استشارات استراتيجية لتحسين الوضع الضريبي",
+        "موثوق من قبل الشركات الصغيرة والمتوسطة، والمناطق الحرة، والشركات القابضة والمزيد"
+      ],
+  
+      "cta_en": "Let us handle your corporate tax filing and advisory, while you focus on growing your business. Stay compliant. Stay confident.",
+      "cta_ar": "دعنا نتولى مهمة تقديم ضريبة الشركات والاستشارات الضريبية، حتى تتمكن من التركيز على تنمية أعمالك. امتثل بثقة."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Corporate Tax Registration & Filing UAE",
+      "description": "Corporate tax services in UAE including FTA registration, corporation tax return filing, tax advisory, and transfer pricing compliance. Stay compliant with UAE tax law.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Countify AE",
+        "url": "https://countify.ae"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "serviceType": "Corporate Tax Filing",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://countify.ae/services/corporate-tax"
+      }
+    }
+  },
+  {
+    "title": {
+      "en": "Year-End Financial Accounts",
+      "ar": "الحسابات المالية لنهاية العام"
+    },
+    "description": {
+      "en": "Professionally prepared P&L, balance sheet, and cash flow statements — audit-ready and IFRS-compliant.",
+      "ar": "إعداد احترافي لقائمة الأرباح والخسائر، والميزانية العمومية، وبيانات التدفقات النقدية - جاهزة للتدقيق ومتوافقة مع المعايير الدولية للتقارير المالية."
+    },
+    "image": "/images/services/year-end-financial-accounts.webp",
+    "link": "/services/year-end-accounts",
+    "id": "year-end-accounts",
+    "slug": "year-end-accounts",
+    "canonical": "https://countify.ae/services/year-end-accounts",
+    "meta": {
+      "title_en": "Year-End Financial Accounts UAE | Audited Financial Statements Dubai",
+      "description_en": "Get professional year-end financial statements in UAE. Accurate P&L, balance sheets, and cash flow reports for audit, compliance, or strategic planning. Trusted by UAE businesses.",
+      "title_ar": "الحسابات المالية الختامية في الإمارات | بيانات مالية مدققة في دبي",
+      "description_ar": "احصل على بيانات مالية ختامية احترافية في الإمارات. بيان الأرباح والخسائر، الميزانية العمومية، وتدفق الأموال لأغراض التدقيق والامتثال والتخطيط الاستراتيجي. موثوق من قبل الشركات الإماراتية."
+    },
+    "content": {
+      "h1_en": "Year-End Financial Accounts Preparation in UAE – Accurate, Timely & Audit-Ready",
+      "h1_ar": "إعداد الحسابات الختامية في الإمارات – دقيقة، وفي الوقت المناسب، وجاهزة للتدقيق",
+  
+      "intro_en": "Closing your financial year with accuracy is crucial — whether for internal performance review, external audit, or compliance reporting. We offer year-end accounts preparation in Dubai and across the UAE, tailored to meet the needs of small businesses, growing enterprises, and multinational entities. Our service ensures all statements are prepared in accordance with International Financial Reporting Standards (IFRS) and ready for FTA, banks, auditors, and investors.",
+      "intro_ar": "إغلاق السنة المالية بدقة أمر بالغ الأهمية – سواء للمراجعة الداخلية أو التدقيق الخارجي أو التقارير التنظيمية. نحن نقدم خدمات إعداد الحسابات الختامية في دبي وجميع أنحاء الإمارات، مصممة لتلبية احتياجات الشركات الصغيرة والمتوسطة والشركات العالمية. يتم إعداد جميع البيانات المالية وفقًا لمعايير التقارير المالية الدولية (IFRS) وجاهزة للهيئة الاتحادية للضرائب، البنوك، المدققين، والمستثمرين.",
+  
+      "services_en": [
+        "Profit & Loss Statement (Income Statement) – Clearly summarises your company’s revenues, costs, and net profit/loss over the year.",
+        "Balance Sheet Preparation – A full view of your assets, liabilities, and shareholder equity as of your financial year-end.",
+        "Cash Flow Statement – Tracks your company’s operational, investing, and financing cash movements, ensuring you stay in control of liquidity.",
+        "Year-End Closing Entries – We process adjusting and closing journal entries to finalise your accounts for audit and reporting."
+      ],
+      "services_ar": [
+        "بيان الأرباح والخسائر – ملخص واضح لإيرادات وتكاليف وأرباح/خسائر الشركة على مدار العام.",
+        "إعداد الميزانية العمومية – عرض كامل لأصولك والتزاماتك وحقوق المساهمين في نهاية السنة المالية.",
+        "بيان التدفقات النقدية – تتبع حركة النقد في التشغيل والاستثمار والتمويل لضمان السيطرة على السيولة.",
+        "قيود الإغلاق الختامي – نقوم بإعداد قيود التعديل والإغلاق النهائية لتجهيز الحسابات للتدقيق والتقارير."
+      ],
+  
+      "why_us_en": [
+        "15+ Years of Chartered Accountancy Expertise",
+        "IFRS-Compliant Statements for All UAE Jurisdictions",
+        "Quick Turnaround for Internal or External Use",
+        "Trusted by SMEs, Corporates & Free Zone Companies",
+        "Compatible with all major audit and banking requirements"
+      ],
+      "why_us_ar": [
+        "أكثر من 15 عامًا من الخبرة في المحاسبة القانونية",
+        "بيانات مالية متوافقة مع IFRS لجميع الولايات القضائية الإماراتية",
+        "تسليم سريع للاستخدام الداخلي أو الخارجي",
+        "موثوق من قبل الشركات الصغيرة والمتوسطة، والشركات الكبرى، وشركات المناطق الحرة",
+        "متوافق مع جميع متطلبات التدقيق والبنوك الرئيسية"
+      ],
+  
+      "cta_en": "Whether you're preparing for audit, applying for a loan, or just need clear financials — we deliver precision and insight with every report.",
+      "cta_ar": "سواء كنت تستعد للتدقيق، أو تتقدم للحصول على قرض، أو تحتاج فقط إلى بيانات مالية واضحة – نحن نضمن لك الدقة والرؤية في كل تقرير."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Year-End Financial Accounts UAE",
+      "description": "Professional year-end financial accounts in UAE including P&L, balance sheet, cash flow statements, and closing entries. Audit-ready, IFRS-compliant reports for internal or external use.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Countify AE",
+        "url": "https://countify.ae"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+      },
+      "serviceType": "Year-End Financial Statements",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://countify.ae/services/year-end-accounts"
+      }
+    }
+  }
+]
