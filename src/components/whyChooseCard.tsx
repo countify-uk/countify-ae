@@ -57,7 +57,7 @@ const WhyChooseCard = () => {
     },
     {
       title: {
-        en: "Based in Dubai – Serving All Emirates",
+        en: "Based in Sharjah – Serving All Emirates",
         ar: "مقرنا في دبي - نخدم جميع الإمارات",
       },
       description: {

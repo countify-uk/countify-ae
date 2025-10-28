@@ -30,7 +30,7 @@ const AboutPage = () => {
         {
           content: [
             "At Countify AE, we are your trusted partner for reliable, efficient, and fully compliant accounting, tax, and business setup services across the United Arab Emirates. As an extension of our UK head office based in Glasgow, Countify brings over 15 years of Chartered Accountancy expertise to support startups, SMEs, and growing businesses in the UAE.",
-            "Whether you're launching a company in a Freezone or Mainland, need help with bookkeeping, payroll, VAT, or corporate tax — our Dubai-based team ensures everything is handled professionally and in full alignment with FTA and IFRS regulations.",
+            "Whether you're launching a company in a Freezone or Mainland, need help with bookkeeping, payroll, VAT, or corporate tax — our team ensures everything is handled professionally and in full alignment with FTA and IFRS regulations.",
             "We combine global knowledge with local insight to simplify your financial, tax, and compliance responsibilities — so you can focus on what matters most: growing your business.",
           ],
         },

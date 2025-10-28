@@ -64,7 +64,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.point2': 'Fully FTA & IFRS Compliant Services',
     'why.point3': 'Trusted by Startups, Freezone Companies & SMEs',
     'why.point4': 'Transparent Pricing, Personalised Support',
-    'why.point5': 'Based in Dubai – Serving All Emirates',
+    'why.point5': 'Based in UAE – Serving All Emirates',
     
     // CTA
     'cta.title': 'Start with a Free Consultation',
@@ -72,7 +72,7 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.subtext': 'Contact us now for expert support and personalised solutions.',
     'cta.email': 'Email',
     'cta.whatsapp': 'WhatsApp',
-    'cta.visit': 'Visit us in Dubai',
+    'cta.visit': 'Visit us in UAE',
     
     // Footer
     'footer.rights': 'All Rights Reserved',

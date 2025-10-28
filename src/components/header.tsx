@@ -51,7 +51,7 @@ const {t} = useLanguage();
               {t("home.hero.title","Expert Accounting & Business Setup Services in the UAE")}
               </p>
             {/* <p className="text-xl lg:text-3xl text-slate-50 text-center pt-3">
-            15+ Years of Chartered Accountancy Excellence in Dubai and Beyond </p> */}
+            15+ Years of Chartered Accountancy Excellence in Sharjah and Beyond </p> */}
             
           </div>
         </div>

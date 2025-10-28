@@ -85,7 +85,7 @@ export interface FaqItem {
         ar: "هل تقدمون استشارات عن بُعد أو حضورياً في الإمارات؟",
       },
       answer: {
-        en: "Yes, you can book a free consultation either online or visit our Dubai office. Our team is available to discuss your business needs and provide tailored solutions.",
+        en: "Yes, you can book a free consultation either online or visit our Sharjah office. Our team is available to discuss your business needs and provide tailored solutions.",
         ar: "نعم، يمكنك حجز استشارة مجانية عبر الإنترنت أو زيارة مكتبنا في دبي. فريقنا متاح لمناقشة احتياجات عملك وتقديم حلول مخصصة.",
       },
     },

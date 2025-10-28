@@ -147,7 +147,7 @@ const Footer = () => {
               </h4>
               <div className="mt-4 text-gray-300 flex items-start">
                
-                Office 123, Business Bay, Dubai, UAE
+                1 Shams Business Centre Sharjah Media City Shams Free Zone SHARJAH
               </div>
               <h4 className="text-white text-md font-bold mt-4 flex">
                 Main Office

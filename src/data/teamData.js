@@ -27,7 +27,19 @@ export const teamMembers = [
   },
 
   {
-    id: 3,
+  id: 3,
+  name: "Rabia Ali",
+  role: "HR Manager",
+  image: "/images/team/mrs-hannan.webp",
+  profileLink: "#",
+  description:
+    "Meet Rabia Ali, the HR Manager responsible for all Countify staff remote and onsite, with her expertise in managing teams in previous employments Rabia Ali bring operational excellence and strategy for growth to Countify.",
+  socials: {},
+},
+
+
+  {
+    id: 4,
     name: "Arslan Saleem",
     role: "Senior Manager",
     image: "/images/team/arslan-saleem.webp",
@@ -37,7 +49,7 @@ export const teamMembers = [
     socials: {},
   },
   {
-    id: 4,
+    id: 5,
     name: "Muhammad Hasnain",
     role: "Accounts Assistant",
     image: "/images/team/muhammad-hasnain.webp",
@@ -49,7 +61,7 @@ export const teamMembers = [
     },
   },
   {
-    id: 5,
+    id: 6,
     name: "Umar Iqbal",
     role: "Bookkeeper",
     image: "/images/team/umar-iqbal.webp",

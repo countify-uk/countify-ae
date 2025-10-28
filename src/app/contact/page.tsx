@@ -378,8 +378,8 @@ const ContactPage = () => {
                             </h6>
                             <p className="font-semibold">Countify UAE</p>
                             <p className="text-gray-ebb mb-4">
-                              3008 Churchill Tower Al Marasi Drive Business Bay
-                              Dubai UAE
+                              1 Shams Business Centre Sharjah Media
+                              City Shams Free Zone SHARJAH
                             </p>
                           </div>
                         </div>
@@ -398,10 +398,10 @@ const ContactPage = () => {
                               Call us
                             </h6>
                             <a
-                              href="tel:+97100000000"
+                              href="tel:+97585117901"
                               className="text-gray-ebb text-lg text-white transition-colors relative group"
                             >
-                              + 971 000 00000
+                              058 511 7901
                               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-700"></span>
                             </a>
                           </div>
