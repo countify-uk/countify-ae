@@ -111,11 +111,11 @@ export default function RDAdvisoryPage() {
 
       <div className="mx-auto max-w-6xl px-5 py-6 pb-10 mb-12 rounded-lg bg-white text-black shadow">
         <div className="prose mt-8 max-w-none">
-          <h1 className="text-[#1a3a8f] font-bold text-3xl mb-4">
+          <h2 className="text-[#1a3a8f] font-bold text-3xl mb-4">
             {lang === "ar"
               ? "استشارات ضريبة البحث والتطوير في الإمارات — احصل على حوافز البحث والتطوير"
               : "R&D Tax Advisory UAE — Claim Your Research & Development Incentives"}
-          </h1>
+          </h2>
           <p className="text-lg text-gray-700 mb-8">
             {lang === "ar"
               ? "قدمت دولة الإمارات حوافز البحث والتطوير كجزء من إطار ضريبة الشركات، وتقدم للشركات المؤهلة خصومات ضريبية معززة تتراوح بين 30% إلى 50% فوق نفقات البحث والتطوير المؤهلة. تعد Countify واحدة من القلائل في الإمارات التي تقدم استشارات شاملة للبحث والتطوير، بقيادة حنان خوخار FCCA مع أكثر من 7 سنوات من الخبرة المتخصصة."

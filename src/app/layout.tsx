@@ -25,12 +25,39 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.countify.ae"),
   title: {
-    default: "Accountants in UAE │ VAT, Corporate Tax, R&D & Company Formation │ Countify",
+    default: "Accountants in UAE | VAT, Tax & R&D Advisory | Countify",
     template: "%s │ Countify",
   },
-  description: "Countify offers expert accounting, VAT, corporate tax, R&D advisory and company formation services across Dubai, Abu Dhabi and Sharjah. ACCA-qualified chartered accountants with Big 4 experience.",
+  description:
+    "ACCA-qualified accountants in the UAE for VAT, corporate tax, R&D advisory, company formation, bookkeeping and payroll.",
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "Accountants in UAE | VAT, Tax & R&D Advisory | Countify",
+    description:
+      "ACCA-qualified accountants helping UAE businesses with VAT, corporate tax, R&D advisory, company formation and bookkeeping.",
+    url: "/",
+    siteName: "Countify UAE",
+    images: [
+      {
+        url: "/images/countify-og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Countify UAE chartered accountants",
+      },
+    ],
+    locale: "en_AE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@CountifyUAE",
+    creator: "@CountifyUAE",
+    title: "Accountants in UAE | VAT, Tax & R&D Advisory | Countify",
+    description:
+      "ACCA-qualified accountants helping UAE businesses stay compliant and ready for growth.",
+    images: ["/images/countify-og.webp"],
   },
   icons: {
     icon: [

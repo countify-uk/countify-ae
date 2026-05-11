@@ -5,9 +5,21 @@ export const metadata: Metadata = {
     absolute: "Contact Countify UAE │ Accountants in Dubai, Abu Dhabi & Sharjah",
   },
   description:
-    "Get in touch with Countify UAE. Chartered accountants serving businesses across Dubai, Abu Dhabi and Sharjah. Call +971 58 511 7901 or email info@countify.ae for a free consultation.",
+    "Contact Countify UAE for accounting, VAT, corporate tax and R&D advisory support. Call +971 58 511 7901 or email info@countify.ae.",
   alternates: {
     canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Countify UAE",
+    description:
+      "Speak with ACCA-qualified accountants for UAE accounting, tax and compliance support.",
+    url: "/contact",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Countify UAE",
+    description:
+      "Contact Countify UAE for accounting, VAT and corporate tax support.",
   },
 };
 

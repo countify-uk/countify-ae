@@ -11,8 +11,8 @@
     "slug": "rd-advisory",
     "canonical": "https://www.countify.ae/services/rd-advisory",
     "meta": {
-      "title_en": "R&D Tax Advisory UAE │ Research & Development Incentives │ Countify",
-      "description_en": "Claim your UAE R&D tax incentives with Countify. End-to-end R&D advisory led by Hannan Khokhar FCCA with 7+ years specialist experience. We identify qualifying expenditure, prepare submissions and maximise your R&D benefit.",
+      "title_en": "R&D Tax Advisory UAE | Development Incentives | Countify",
+      "description_en": "Claim UAE R&D tax incentives with Countify. We identify qualifying spend, prepare documentation and help maximise your corporate tax benefit.",
       "title_ar": "استشارات ضريبة البحث والتطوير في الإمارات │ حوافز البحث والتطوير │ Countify",
       "description_ar": "احصل على حوافز ضريبة البحث والتطوير في الإمارات مع Countify."
     },
@@ -64,7 +64,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -73,7 +73,7 @@
       "serviceType": "R&D Tax Advisory",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/rd-advisory"
+        "serviceUrl": "https://www.countify.ae/services/rd-advisory"
       }
     }
   },
@@ -89,8 +89,8 @@
     "slug": "audit-preparation",
     "canonical": "https://www.countify.ae/services/audit-preparation",
     "meta": {
-      "title_en": "Audit Preparation Services UAE │ Get Audit-Ready │ Dubai & Sharjah │ Countify",
-      "description_en": "Prepare your business for a clean, smooth statutory audit. Countify's audit preparation service ensures your financial records, documentation and internal controls are fully audit-ready across Dubai, Abu Dhabi and Sharjah.",
+      "title_en": "Audit Preparation Services UAE | Get Audit-Ready | Countify",
+      "description_en": "Get audit-ready in the UAE with organised records, reconciliations, schedules and auditor support from Countify's accounting team.",
       "title_ar": "خدمات التحضير للتدقيق في الإمارات │ كن مستعداً للتدقيق │ Countify",
       "description_ar": "حضّر عملك لتدقيق قانوني سلس. تضمن خدمة إعداد التدقيق من Countify أن سجلاتك المالية ووثائقك جاهزة تمامًا."
     },
@@ -136,7 +136,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -145,7 +145,7 @@
       "serviceType": "Audit Preparation",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/audit-preparation"
+        "serviceUrl": "https://www.countify.ae/services/audit-preparation"
       }
     }
   },
@@ -164,8 +164,8 @@
     "slug": "company-formation",
     "canonical": "https://www.countify.ae/services/company-formation",
     "meta": {
-      "title_en": "Company Formation UAE │ Freezone & Mainland Setup │ Dubai & Sharjah │ Countify",
-      "description_en": "Set up your company in UAE with expert guidance. Freezone and mainland company formation in Dubai, Abu Dhabi and Sharjah. Full support including trade licence, MOA, PRO services and bank account opening.",
+      "title_en": "Company Formation UAE | Free Zone & Mainland | Countify",
+      "description_en": "Set up a UAE company with free zone or mainland guidance, trade licence support, PRO services and bank account preparation.",
       "title_ar": "تأسيس الشركات في الإمارات │ المناطق الحرة والبر الرئيسي │ دبي والشارقة │ Countify",
       "description_ar": "أسس شركتك في الإمارات بإرشاد خبراء. تأسيس شركات في المناطق الحرة والبر الرئيسي في دبي وأبوظبي والشارقة. دعم شامل يشمل الرخصة التجارية وعقد التأسيس وخدمات PRO وفتح الحساب البنكي."
     },
@@ -258,7 +258,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -267,7 +267,7 @@
       "serviceType": "Company Formation",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/company-formation"
+        "serviceUrl": "https://www.countify.ae/services/company-formation"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -307,8 +307,8 @@
     "slug": "bookkeeping",
     "canonical": "https://www.countify.ae/services/bookkeeping",
     "meta": {
-      "title_en": "Bookkeeping Services UAE │ Xero, QuickBooks, Zoho │ Dubai & Sharjah │ Countify",
-      "description_en": "Professional bookkeeping services for UAE businesses. Monthly and quarterly bookkeeping on Xero, QuickBooks and Zoho. Accurate, audit-ready records for SMEs, startups and freezone companies across Dubai and Sharjah.",
+      "title_en": "Bookkeeping Services UAE | Xero, QuickBooks, Zoho | Countify",
+      "description_en": "Professional UAE bookkeeping on Xero, QuickBooks and Zoho, with accurate monthly records for SMEs, startups and free zone companies.",
       "title_ar": "خدمات مسك الدفاتر في الإمارات │ Xero وQuickBooks وZoho │ دبي والشارقة │ Countify",
       "description_ar": "خدمات مسك دفاتر احترافية للشركات في الإمارات. مسك دفاتر شهري وربع سنوي على Xero وQuickBooks وZoho. سجلات دقيقة وجاهزة للتدقيق للشركات الناشئة والصغيرة والمتوسطة وشركات المناطق الحرة في دبي والشارقة."
     },
@@ -364,7 +364,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -373,7 +373,7 @@
       "serviceType": "Outsourced Bookkeeping",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/bookkeeping"
+        "serviceUrl": "https://www.countify.ae/services/bookkeeping"
       }
     }
   },
@@ -392,8 +392,8 @@
     "slug": "payroll-services",
     "canonical": "https://www.countify.ae/services/payroll-services",
     "meta": {
-      "title_en": "Payroll Services UAE │ WPS Compliant │ HR & Labour Law │ Countify",
-      "description_en": "WPS-compliant payroll management for UAE businesses. We handle salary processing, payslips, leave calculations and UAE labour law compliance. Serving companies in Dubai, Abu Dhabi and Sharjah.",
+      "title_en": "Payroll Services UAE | WPS & HR Compliance | Countify",
+      "description_en": "WPS-compliant UAE payroll support for salary processing, payslips, leave calculations and practical HR record keeping.",
       "title_ar": "خدمات الرواتب في الإمارات │ متوافق مع WPS │ الموارد البشرية وقانون العمل │ Countify",
       "description_ar": "إدارة رواتب متوافقة مع نظام حماية الأجور للشركات في الإمارات. نتولى معالجة الرواتب وكشوف المرتبات وحساب الإجازات والامتثال لقانون العمل الإماراتي. نخدم الشركات في دبي وأبوظبي والشارقة."
     },
@@ -445,7 +445,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -454,7 +454,7 @@
       "serviceType": "Payroll Processing",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/payroll-services"
+        "serviceUrl": "https://www.countify.ae/services/payroll-services"
       }
     }
   },
@@ -473,8 +473,8 @@
     "slug": "vat-return",
     "canonical": "https://www.countify.ae/services/vat-return",
     "meta": {
-      "title_en": "VAT Registration & Filing UAE │ FTA Compliance │ Dubai & Sharjah │ Countify",
-      "description_en": "Expert VAT registration and return filing services across UAE. Stay FTA-compliant and penalty-free. Countify handles everything from initial registration to quarterly returns for businesses in Dubai, Abu Dhabi and Sharjah.",
+      "title_en": "VAT Registration & Filing UAE | FTA Compliance | Countify",
+      "description_en": "UAE VAT registration and return filing support to keep your business FTA-compliant, organised and ready for each deadline.",
       "title_ar": "تسجيل وتقديم ضريبة القيمة المضافة في الإمارات │ الامتثال للهيئة الاتحادية للضرائب │ دبي والشارقة │ Countify",
       "description_ar": "خدمات احترافية في تسجيل وتقديم إقرارات ضريبة القيمة المضافة في الإمارات. التزم بمتطلبات الهيئة الاتحادية للضرائب وتجنب الغرامات. Countify يتولى كل شيء من التسجيل الأولي إلى الإقرارات الربعية للشركات في دبي وأبوظبي والشارقة."
     },
@@ -530,7 +530,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -539,7 +539,7 @@
       "serviceType": "VAT Return Filing",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/vat-return"
+        "serviceUrl": "https://www.countify.ae/services/vat-return"
       }
     }
   },
@@ -558,8 +558,8 @@
     "slug": "corporate-tax",
     "canonical": "https://www.countify.ae/services/corporate-tax",
     "meta": {
-      "title_en": "UAE Corporate Tax Registration & Filing │ FTA Compliant │ Countify",
-      "description_en": "Register and file UAE corporate tax with confidence. Expert FTA registration, tax computation, transfer pricing and advisory services for mainland and freezone companies. Serving Dubai, Abu Dhabi and Sharjah.",
+      "title_en": "UAE Corporate Tax Registration & Filing | Countify",
+      "description_en": "UAE corporate tax registration, computation and filing support for mainland and free zone companies from Countify's tax team.",
       "title_ar": "تسجيل وتقديم ضريبة الشركات في الإمارات │ متوافق مع الهيئة الاتحادية للضرائب │ Countify",
       "description_ar": "سجل وقدم ضريبة الشركات في الإمارات بثقة. تسجيل لدى الهيئة الاتحادية للضرائب، حساب الضريبة، تسعير التحويل وخدمات استشارية لشركات البر الرئيسي والمناطق الحرة. نخدم دبي وأبوظبي والشارقة."
     },
@@ -622,7 +622,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -631,7 +631,7 @@
       "serviceType": "Corporate Tax Filing",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/corporate-tax"
+        "serviceUrl": "https://www.countify.ae/services/corporate-tax"
       }
     }
   },
@@ -650,8 +650,8 @@
     "slug": "year-end-accounts",
     "canonical": "https://www.countify.ae/services/year-end-accounts",
     "meta": {
-      "title_en": "Year-End Accounts UAE │ IFRS-Compliant Financial Statements │ Countify",
-      "description_en": "Professionally prepared year-end financial accounts for UAE businesses. IFRS-compliant P&L, balance sheet and cash flow statements. Audit-ready financials for SMEs, freezone entities and mainland companies.",
+      "title_en": "Year-End Accounts UAE | IFRS Financial Statements | Countify",
+      "description_en": "Year-end accounts and IFRS financial statements for UAE SMEs, free zone entities and mainland companies needing audit-ready records.",
       "title_ar": "الحسابات الختامية في الإمارات │ بيانات مالية متوافقة مع IFRS │ Countify",
       "description_ar": "إعداد احترافي للحسابات المالية الختامية للشركات في الإمارات. بيانات أرباح وخسائر وميزانية عمومية وتدفقات نقدية متوافقة مع معايير IFRS. بيانات مالية جاهزة للتدقيق للشركات الصغيرة والمتوسطة وشركات المناطق الحرة والبر الرئيسي."
     },
@@ -701,7 +701,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Countify AE",
-        "url": "https://countify.ae"
+        "url": "https://www.countify.ae"
       },
       "areaServed": {
         "@type": "Country",
@@ -710,7 +710,7 @@
       "serviceType": "Year-End Financial Statements",
       "availableChannel": {
         "@type": "ServiceChannel",
-        "serviceUrl": "https://countify.ae/services/year-end-accounts"
+        "serviceUrl": "https://www.countify.ae/services/year-end-accounts"
       }
     }
   }

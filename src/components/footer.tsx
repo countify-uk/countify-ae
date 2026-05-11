@@ -80,7 +80,7 @@ const Footer = () => {
               </p>
               <div className="flex space-x-3 mt-6">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/Countify/100094716728290/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
@@ -88,7 +88,7 @@ const Footer = () => {
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/93373167/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"

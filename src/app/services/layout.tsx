@@ -2,12 +2,24 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Accounting & Tax Services UAE │ VAT, Corporate Tax, R&D, Payroll │ Countify",
+    absolute: "Accounting & Tax Services UAE | VAT, R&D, Payroll | Countify",
   },
   description:
-    "Full-service accountancy for UAE businesses — VAT filing, corporate tax, R&D advisory, company formation, bookkeeping and payroll. Serving startups, SMEs and growing businesses in Dubai, Abu Dhabi and Sharjah.",
+    "UAE accounting, VAT, corporate tax, R&D advisory, company formation, bookkeeping and payroll support for startups, SMEs and growing companies.",
   alternates: {
     canonical: "/services",
+  },
+  openGraph: {
+    title: "Accounting & Tax Services UAE | Countify",
+    description:
+      "Explore Countify services for UAE VAT, corporate tax, R&D advisory, bookkeeping, payroll and company formation.",
+    url: "/services",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Accounting & Tax Services UAE | Countify",
+    description:
+      "UAE accounting, tax and compliance services for startups and SMEs.",
   },
 };
 

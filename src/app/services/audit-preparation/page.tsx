@@ -90,11 +90,11 @@ export default function AuditPreparationPage() {
 
       <div className="mx-auto max-w-6xl px-5 py-6 pb-10 mb-12 rounded-lg bg-white text-black shadow">
         <div className="prose mt-8 max-w-none">
-          <h1 className="text-[#1a3a8f] font-bold text-3xl mb-4">
+          <h2 className="text-[#1a3a8f] font-bold text-3xl mb-4">
             {lang === "ar"
               ? "خدمات التحضير للتدقيق في الإمارات — كن مستعداً بالكامل"
               : "Audit Preparation Services UAE — Get Fully Audit-Ready"}
-          </h1>
+          </h2>
           <p className="text-lg text-gray-700 mb-8">
             {lang === "ar"
               ? "مع تطبيق ضريبة الشركات في الإمارات وزيادة نشاط التدقيق من الهيئة الاتحادية للضرائب، يجب على الشركات التأكد من أن سجلاتها المالية تستوفي معايير IFRS وتتحمل التدقيق. تضمن خدمة إعداد التدقيق من Countify أن دفاترك ووثائقك وضوابطك الداخلية جاهزة تمامًا — حتى يتم تدقيقك القانوني بسلاسة وفي الوقت المحدد وبدون مفاجآت."

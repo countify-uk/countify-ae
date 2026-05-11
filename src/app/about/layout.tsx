@@ -5,9 +5,21 @@ export const metadata: Metadata = {
     absolute: "About Countify UAE │ ACCA Chartered Accountants │ Big 4 Experience",
   },
   description:
-    "Countify is an ACCA-qualified chartered accountancy firm serving businesses across the UAE. Founded by Big 4 alumni with 20+ years combined experience. Based in Sharjah, serving Dubai, Abu Dhabi and beyond.",
+    "Meet Countify UAE, ACCA-qualified chartered accountants founded by Big 4 alumni and serving businesses across Dubai, Abu Dhabi and Sharjah.",
   alternates: {
     canonical: "/about",
+  },
+  openGraph: {
+    title: "About Countify UAE │ ACCA Chartered Accountants",
+    description:
+      "ACCA-qualified UAE accountants with Big 4 experience, practical advice and responsive support for growing businesses.",
+    url: "/about",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Countify UAE │ ACCA Chartered Accountants",
+    description:
+      "Meet the ACCA-qualified accountants behind Countify UAE.",
   },
 };
 

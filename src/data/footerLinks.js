@@ -9,8 +9,10 @@ export const useFooterLinks = () => {
         { label: t("nav.home", "Home"), href: "/" },
         { label: t("nav.about", "About Countify"), href: "/about" },
         { label: t("nav.services", "Our Services"), href: "/services" },
+        { label: t("nav.blog", "Blog"), href: "/blog" },
         { label: t("nav.team", "Our Team"), href: "/team" },
         { label: t("nav.contact", "Contact"), href: "/contact" },
+        { label: "Privacy Policy", href: "/privacy-policy" },
       ],
     },
     {

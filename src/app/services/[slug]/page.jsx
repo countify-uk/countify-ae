@@ -18,7 +18,9 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: service.meta.title_en,
+    title: {
+      absolute: service.meta.title_en,
+    },
     description: service.meta.description_en,
     alternates: {
       canonical: service.canonical,

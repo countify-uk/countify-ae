@@ -61,7 +61,7 @@ const WhyChooseCard = () => {
       <div className="absolute z-0 inset-0 opacity-5">
         <Image
           src="/images/svgexport-1.svg"
-          alt=""
+          alt="Subtle Countify background pattern"
           fill
           className="object-cover object-center"
           priority={false}

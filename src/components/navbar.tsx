@@ -255,7 +255,7 @@ const Navbar = () => {
                         </div>
                       ))}
                       <div className="block lg:hidden items-center space-y-4 mt-6">
-                        <Link href="/contact-us" onClick={() => setOpen(false)}>
+                        <Link href="/contact" onClick={() => setOpen(false)}>
                           <motion.button
                             type="button"
                             className="py-2.5 flex items-center gap-2 text-sm max-h-max text-gray-800 rounded-full cursor-pointer font-medium text-center shadow-xs transition-all duration-500 hover:text-primary-color"

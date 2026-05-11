@@ -2,12 +2,24 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "R&D Tax Advisory UAE │ Research & Development Incentives │ Countify",
+    absolute: "R&D Tax Advisory UAE | Development Incentives | Countify",
   },
   description:
-    "Claim your UAE R&D tax incentives with Countify. End-to-end R&D advisory led by Hannan Khokhar FCCA with 7+ years specialist experience. We identify qualifying expenditure, prepare submissions and maximise your R&D benefit.",
+    "Claim UAE R&D tax incentives with Countify. We identify qualifying spend, prepare documentation and help maximise your corporate tax benefit.",
   alternates: {
     canonical: "/services/rd-advisory",
+  },
+  openGraph: {
+    title: "R&D Tax Advisory UAE | Countify",
+    description:
+      "End-to-end UAE R&D advisory for identifying qualifying expenditure and preparing robust claims.",
+    url: "/services/rd-advisory",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "R&D Tax Advisory UAE | Countify",
+    description:
+      "Practical UAE R&D tax incentive support from Countify.",
   },
 };
 

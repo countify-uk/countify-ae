@@ -2,7 +2,16 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['www.countify.ae', 'countify.ae'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.countify.ae",
+      },
+      {
+        protocol: "https",
+        hostname: "countify.ae",
+      },
+    ],
   },
 };
 

@@ -29,6 +29,7 @@ export const NavMenu = (): MenuItem[] => {
         { label: t("services.audit.title"), href: "/services/audit-preparation" },
       ],
     },
+    { label: t("nav.blog", "Blog"), href: "/blog" },
     { label: t("nav.team"), href: "/team" },
     { label: t("nav.contact"), href: "/contact" },
   ];
