@@ -263,7 +263,7 @@ const Navbar = () => {
                             whileTap={{ scale: 0.95 }}
                           >
                             <PhoneCall className="bg-white text-gray-800 rounded-full p-1.5 w-8 h-8" />
-                            +971 50 123 4567
+                            +971 58 511 7901
                           </motion.button>
                         </Link>
                         <div className="mb-4">

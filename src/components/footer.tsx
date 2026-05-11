@@ -154,9 +154,9 @@ const Footer = () => {
                 {language === "ar" ? "موقعنا" : "Locate Us"}
               </h4>
               <p className="text-sm text-white/60 leading-relaxed">
-                1 Shams Business Centre<br />
-                Sharjah Media City<br />
-                Shams Free Zone, Sharjah
+                Meydan Grandstand, 6th floor<br />
+                Meydan Road, Nad Al Sheba<br />
+                Dubai, U.A.E.
               </p>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mt-6 mb-3">
                 {language === "ar" ? "المكتب الرئيسي" : "Main Office"}

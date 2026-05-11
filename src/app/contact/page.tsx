@@ -234,9 +234,9 @@ const ContactPage = () => {
                 </div>
               </div>
               <p className="text-white/70 text-sm leading-relaxed mb-4">
-                1 Shams Business Centre<br />
-                Sharjah Media City (Shams)<br />
-                Free Zone, Sharjah, UAE
+                Meydan Grandstand, 6th floor<br />
+                Meydan Road, Nad Al Sheba<br />
+                Dubai, U.A.E.
               </p>
               <div className="flex items-center gap-2 text-white/70 text-sm mb-2">
                 <Phone className="w-4 h-4 text-[#dca958]" />

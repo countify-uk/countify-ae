@@ -23,11 +23,23 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.countify.ae"),
   title: {
     default: "Accountants in UAE │ VAT, Corporate Tax, R&D & Company Formation │ Countify",
     template: "%s │ Countify",
   },
   description: "Countify offers expert accounting, VAT, corporate tax, R&D advisory and company formation services across Dubai, Abu Dhabi and Sharjah. ACCA-qualified chartered accountants with Big 4 experience.",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,12 +48,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <LanguageProvider>
-      <ClientLayoutWrapper
-        fontVariables={`${geistSans.variable} ${inter.variable} ${ibmPlexArabic.variable}`}
-      >
-        {children}
-      </ClientLayoutWrapper>
-    </LanguageProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${inter.variable} ${ibmPlexArabic.variable} antialiased`}>
+        <LanguageProvider>
+          <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
+        </LanguageProvider>
+      </body>
+    </html>
   );
 }
