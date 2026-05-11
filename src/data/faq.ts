@@ -11,92 +11,62 @@ export interface FaqItem {
  export const faqData: FaqItem[] = [
     {
       question: {
-        en: "Is Countify based in the UAE?",
-        ar: "هل شركة Countify موجودة في الإمارات؟",
+        en: "Do I need to register for corporate tax in UAE?",
+        ar: "هل أحتاج إلى التسجيل لضريبة الشركات في الإمارات؟",
       },
       answer: {
-        en: "Yes, Countify operates a dedicated UAE branch offering accounting, tax, and business setup services locally. Our head office is based in Glasgow, UK",
-        ar: "نعم، لدى Countify فرع مخصص في الإمارات يقدم خدمات المحاسبة والضرائب وتأسيس الشركات محليًا. يقع المقر الرئيسي لنا في غلاسكو، المملكة المتحدة.",
+        en: "Yes. Since the introduction of UAE Corporate Tax in June 2023, most businesses with taxable income above AED 375,000 must register with the FTA and file a return. Countify handles the full registration and filing process.",
+        ar: "نعم. منذ تطبيق ضريبة الشركات في الإمارات في يونيو 2023، يجب على معظم الشركات التي يتجاوز دخلها الخاضع للضريبة 375,000 درهم التسجيل لدى الهيئة الاتحادية للضرائب وتقديم إقرار ضريبي. تتولى Countify عملية التسجيل والتقديم بالكامل.",
       },
     },
     {
       question: {
-        en: "What services does Countify UAE offer?",
-        ar: "ما هي الخدمات التي تقدمها Countify في الإمارات؟",
+        en: "What is the UAE corporate tax rate?",
+        ar: "ما هو معدل ضريبة الشركات في الإمارات؟",
       },
       answer: {
-        en: "We provide a wide range of services, including:\n- Company formation and business setup\n- Bookkeeping and accounting\n- Payroll management\n- VAT and corporate tax filing\n- Year-end accounts preparation\n- Financial advisory and compliance services.",
-        ar: "نقدم مجموعة واسعة من الخدمات، بما في ذلك:\n- تأسيس الشركات وإعداد الأعمال\n- مسك الدفاتر والمحاسبة\n- إدارة الرواتب\n- تقديم إقرارات ضريبة القيمة المضافة وضريبة الشركات\n- إعداد الحسابات الختامية\n- الاستشارات المالية وخدمات الامتثال.",
+        en: "The standard rate is 9% on taxable income above AED 375,000. Income below this threshold is taxed at 0%. Small Business Relief may apply for businesses with revenue under AED 3 million. Free Zone entities may qualify for 0% on qualifying income.",
+        ar: "المعدل القياسي هو 9% على الدخل الخاضع للضريبة الذي يتجاوز 375,000 درهم. الدخل الأقل من هذا الحد يخضع لنسبة 0%. قد ينطبق إعفاء الأعمال الصغيرة على الشركات ذات الإيرادات الأقل من 3 ملايين درهم. قد تتأهل كيانات المناطق الحرة لنسبة 0% على الدخل المؤهل.",
       },
     },
     {
       question: {
-        en: "How does Countify assist with company formation in the UAE?",
-        ar: "كيف تساعد Countify في تأسيس الشركات في الإمارات؟",
+        en: "Do UAE businesses qualify for R&D tax incentives?",
+        ar: "هل تتأهل الشركات الإماراتية لحوافز ضريبية للبحث والتطوير؟",
       },
       answer: {
-        en: "We guide you through the entire process of company formation, including:\n- Choosing the right business structure\n- Registering your company with relevant authorities\n- Obtaining trade licenses\n- Setting up bank accounts\n- Ensuring compliance with UAE regulations.",
-        ar: "نرشدك خلال عملية تأسيس الشركة بالكامل، بما في ذلك:\n- اختيار الهيكل التجاري المناسب\n- تسجيل شركتك لدى الجهات المختصة\n- الحصول على التراخيص التجارية\n- فتح حسابات بنكية\n- ضمان الامتثال للوائح الإماراتية.",
+        en: "Yes. The UAE introduced R&D incentives as part of the corporate tax framework. Qualifying R&D expenditure may attract a 30–50% deduction above cost. Countify provides end-to-end R&D advisory to help you claim the maximum benefit.",
+        ar: "نعم. قدمت الإمارات حوافز البحث والتطوير كجزء من إطار ضريبة الشركات. قد يحصل الإنفاق المؤهل على البحث والتطوير على خصم بنسبة 30-50% فوق التكلفة. تقدم Countify استشارات شاملة للبحث والتطوير لمساعدتك في المطالبة بأقصى فائدة.",
       },
     },
     {
       question: {
-        en: "What bookkeeping and accounting services does Countify provide?",
-        ar: "ما هي خدمات مسك الدفاتر والمحاسبة التي تقدمها Countify؟",
+        en: "How long does it take to set up a company in UAE?",
+        ar: "كم من الوقت يستغرق تأسيس شركة في الإمارات؟",
       },
       answer: {
-        en: "Our bookkeeping and accounting services include:\n- Recording financial transactions\n- Preparing financial statements\n- Managing accounts payable and receivable\n- Reconciling bank statements\n- Providing monthly and quarterly financial reports.",
-        ar: "تشمل خدمات مسك الدفاتر والمحاسبة لدينا:\n- تسجيل المعاملات المالية\n- إعداد البيانات المالية\n- إدارة الحسابات الدائنة والمدينة\n- تسوية كشوف الحسابات البنكية\n- تقديم تقارير مالية شهرية وربع سنوية.",
+        en: "A freezone company can typically be set up within 3 to 7 working days with the right documents in place. Mainland setup takes slightly longer. Countify manages the full process.",
+        ar: "يمكن عادةً تأسيس شركة في المنطقة الحرة خلال 3 إلى 7 أيام عمل مع توفر المستندات المطلوبة. يستغرق التأسيس في البر الرئيسي وقتًا أطول قليلاً. تدير Countify العملية بالكامل.",
       },
     },
     {
       question: {
-        en: "How does Countify handle payroll services?",
-        ar: "كيف تتعامل Countify مع خدمات الرواتب؟",
+        en: "Do I need to register for VAT in UAE?",
+        ar: "هل أحتاج إلى التسجيل لضريبة القيمة المضافة في الإمارات؟",
       },
       answer: {
-        en: "We manage payroll services by:\n- Calculating employee salaries and deductions\n- Ensuring compliance with WPS (Wage Protection System)\n- Preparing payslips and payroll reports\n- Managing end-of-service benefits and gratuities.",
-        ar: "نقوم بإدارة خدمات الرواتب من خلال:\n- حساب رواتب الموظفين والخصومات\n- ضمان الامتثال لنظام حماية الأجور (WPS)\n- إعداد كشوف الرواتب والتقارير\n- إدارة مكافآت نهاية الخدمة.",
+        en: "Businesses with taxable turnover exceeding AED 375,000 must register for VAT. Voluntary registration is available from AED 187,500. Countify handles registration and ongoing quarterly filing.",
+        ar: "يجب على الشركات التي يتجاوز حجم مبيعاتها الخاضعة للضريبة 375,000 درهم التسجيل لضريبة القيمة المضافة. التسجيل الطوعي متاح ابتداءً من 187,500 درهم. تتولى Countify التسجيل والتقديم الربعي المستمر.",
       },
     },
     {
       question: {
-        en: "What is Countify's approach to VAT and corporate tax filing?",
-        ar: "ما هو نهج Countify في تقديم إقرارات ضريبة القيمة المضافة وضريبة الشركات؟",
+        en: "Can Countify help a UK business set up in UAE?",
+        ar: "هل يمكن لـ Countify مساعدة شركة بريطانية في التأسيس في الإمارات؟",
       },
       answer: {
-        en: "We ensure accurate and timely VAT and corporate tax filing by:\n- Registering your business for VAT and corporate tax\n- Preparing and submitting tax returns\n- Advising on tax planning and compliance\n- Representing your business during tax audits.",
-        ar: "نضمن تقديم إقرارات ضريبة القيمة المضافة وضريبة الشركات بدقة وفي الوقت المناسب من خلال:\n- تسجيل عملك لضريبة القيمة المضافة وضريبة الشركات\n- إعداد وتقديم الإقرارات الضريبية\n- تقديم المشورة بشأن التخطيط الضريبي والامتثال\n- تمثيل عملك أثناء التدقيق الضريبي.",
-      },
-    },
-    {
-      question: {
-        en: "Can Countify help with year-end accounts preparation?",
-        ar: "هل يمكن لـ Countify المساعدة في إعداد الحسابات الختامية؟",
-      },
-      answer: {
-        en: "Yes, we assist with year-end accounts by:\n- Preparing financial statements\n- Conducting audits and reviews\n- Ensuring compliance with IFRS standards\n- Providing insights for better financial planning.",
-        ar: "نعم، نحن نساعد في إعداد الحسابات الختامية من خلال:\n- إعداد البيانات المالية\n- إجراء التدقيق والمراجعات\n- ضمان الامتثال لمعايير IFRS\n- تقديم رؤى لتحسين التخطيط المالي.",
-      },
-    },
-    {
-      question: {
-        en: "Do you offer virtual or in-person consultations in the UAE?",
-        ar: "هل تقدمون استشارات عن بُعد أو حضورياً في الإمارات؟",
-      },
-      answer: {
-        en: "Yes, you can book a free consultation either online or visit our Sharjah office. Our team is available to discuss your business needs and provide tailored solutions.",
-        ar: "نعم، يمكنك حجز استشارة مجانية عبر الإنترنت أو زيارة مكتبنا في دبي. فريقنا متاح لمناقشة احتياجات عملك وتقديم حلول مخصصة.",
-      },
-    },
-    {
-      question: {
-        en: "Can I switch to Countify from my current accountant?",
-        ar: "هل يمكنني التحويل إلى Countify من محاسبي الحالي؟",
-      },
-      answer: {
-        en: "Absolutely! We make the transition smooth by:\n- Handling all necessary paperwork\n- Ensuring compliance with UAE regulations\n- Providing a seamless onboarding process.",
-        ar: "بالتأكيد! نحن نوفر عملية انتقال سلسة من خلال:\n- التعامل مع جميع الأوراق اللازمة\n- ضمان الامتثال للوائح الإماراتية\n- تقديم عملية انضمام سلسة.",
+        en: "Absolutely. Countify operates in both the UK and UAE. We help UK businesses navigate the full UAE setup process — company formation, banking, VAT, corporate tax and ongoing accounting — with the benefit of understanding both jurisdictions.",
+        ar: "بالتأكيد. تعمل Countify في كل من المملكة المتحدة والإمارات. نساعد الشركات البريطانية في التعامل مع عملية التأسيس الكاملة في الإمارات — تأسيس الشركات، الخدمات المصرفية، ضريبة القيمة المضافة، ضريبة الشركات والمحاسبة المستمرة — مع ميزة فهم كلا النظامين القانونيين.",
       },
     },
   ];

@@ -21,6 +21,8 @@ export const useFooterLinks = () => {
         { label: t("services.payroll.title"), href: "/services/payroll-services" },
         { label: t("services.vat.title"), href: "/services/vat-return" },
         { label: t("services.accounts.title"), href: "/services/year-end-accounts" },
+        { label: t("services.rd.title", "R&D Advisory"), href: "/services/rd-advisory" },
+        { label: t("services.audit.title", "Audit Preparation"), href: "/services/audit-preparation" },
       ],
     },
 ];

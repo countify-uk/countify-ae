@@ -46,6 +46,7 @@ const TeamPage = () => {
                     <p className="mt-4 text-gray-900 capitalize ">
                       {member.description}
                     </p>
+                  </Link>
                     <div className="flex mt-4 -mx-2">
                     {member.socials.facebook && (
                           <a
@@ -82,7 +83,6 @@ const TeamPage = () => {
                           </a>
                         )}
                     </div>
-                  </Link>
                 </motion.div>
               ))}
           

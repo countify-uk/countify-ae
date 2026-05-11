@@ -22,7 +22,19 @@ html {
 
 body {
   font-family: var(--font-inter), sans-serif;
-  
+}
+
+[lang="ar"] body {
+  font-family: var(--font-arabic), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+[lang="ar"] h1,
+[lang="ar"] h2,
+[lang="ar"] h3,
+[lang="ar"] h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 .hover\:bg-\[\#e69c31\]:hover {
   --tw-bg-opacity: 1;
@@ -128,6 +140,10 @@ img {
   100% {
     transform: rotate(360deg);
   }
+}
+.homeHeader {
+  min-height: 100vh;
+  min-height: 100svh;
 }
 .bg-contact{
   background-image: url('/images/bg-contact.svg') !important;

@@ -10,9 +10,11 @@ import { useLanguage } from "@/context/LanguageContext";
 const Footer = () => {
   const footerLinks = useFooterLinks();
   const [openSections, setOpenSections] = useState<Record<number, boolean>>(
-    footerLinks.reduce((acc, _, index) => ({ ...acc, [index]: true }), {})
+    typeof window !== 'undefined' && window.innerWidth < 768
+      ? footerLinks.reduce((acc, _, index) => ({ ...acc, [index]: false }), {})
+      : footerLinks.reduce((acc, _, index) => ({ ...acc, [index]: true }), {})
   );
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const toggleSection = (section: number) => {
     setOpenSections((prevState) => ({
       ...prevState,
@@ -21,174 +23,178 @@ const Footer = () => {
   };
 
   return (
-    <footer
-      className="relative 
-        bg-inherit
-        text-white py-0 px-0  h-full 
-        bg-gradient-to-r from-[#020B2D] to-[#0A2A88]
-        "
-    >
-      <section className="w-full mx-auto px-4 sm:px-6 lg:px-8 z-10 relative py-0 xl:px-20">
-        <div className="text-center block py-16 lg:py-24">
-          <motion.h2
-            className="text-3xl md:text-6xl lg:text-8xl font-bold mb-10"
-            initial={{ opacity: 0, y: 50 }}
+    <footer className="relative text-white overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#020B2D] via-[#061640] to-[#0A2A88]"></div>
+      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url(/images/bg-footer.svg)", backgroundSize: "cover" }}></div>
+
+      <section className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
+        <div className="text-center py-24 lg:py-36 border-b border-white/10">
+          <motion.p
+            className="text-sm font-medium text-[#dca958] uppercase tracking-widest mb-4"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             {t("footer.cta", "Let’s work together")}
+          </motion.p>
+          <motion.h2
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            {language === "ar" ? "هل أنت مستعد للبدء؟" : <>Ready to get<br className="hidden sm:block" /> started?</>}
           </motion.h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.div
-              className="flex items-center justify-center md:mt-4"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
+          <motion.div
+            className="mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-10 py-4 text-base font-semibold text-white uppercase tracking-wider rounded-full bg-gradient-to-r from-[#dca958] to-[#e69c31] hover:from-[#e69c31] hover:to-[#dca958] transition-all duration-300 shadow-lg shadow-[#dca958]/20 hover:shadow-[#dca958]/40"
             >
-              <Link href="/contact">
-                <button className="rounded-full bg-gray-400  text-xl mx-auto px-12 inline-flex items-center w-auto p-4 py-4 space-x-1 font-semibold text-white transition-all duration-300 shadow-md hover:from-[#dca958] hover:via-[#ffa424] uppercase hover:to-[#e69c31] bg-gradient-to-tr from-[#dca958] via-[#fbbc57] to-[#e69c31]">
-                  {t("button.contactUs", "Contact Us")}
-                </button>
-              </Link>
-            </motion.div>
-          </div>
+              {t("button.contactUs", "Contact Us")}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
+          </motion.div>
         </div>
-        <div className="max-w-screen-xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 mt-4 gap-12 border-t border-t-white/15 py-10">
-            <div>
-              <div className="mb-4">
+
+        <div className="max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
+            <div className="lg:col-span-1">
+              <div className="mb-5">
                 <Image
-                  alt="Countify Footer Logo"
+                  alt="Countify UAE Logo"
                   src="/images/countify-logo-light.png"
                   width={120}
                   height={90}
                   loading="lazy"
                 />
               </div>
-              <p className="text-sm text-white">
+              <p className="text-sm text-white/60 leading-relaxed">
                 {t("footer.description" , "Countify is your trusted partner for accounting, tax, and business solutions in the UAE and beyond. We simplify your financial processes so you can focus on growing your business.")}
               </p>
-              <div className="flex space-x-4 mt-6">
+              <div className="flex space-x-3 mt-6">
                 <a
                   href="#"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-white hover:text-secondary-color transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
-                  <Facebook className="text-xl" />
+                  <Facebook className="w-5 h-5" />
                 </a>
                 <a
                   href="#"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-white hover:text-secondary-color transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
-                  <Linkedin className="text-xl" />
+                  <Linkedin className="w-5 h-5" />
                 </a>
                 <a
                   href="mailto:info@countify.ae"
-                  className="text-white hover:text-secondary-color transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
-                  <Mail className="text-xl" />
+                  <Mail className="w-5 h-5" />
                 </a>
               </div>
             </div>
             {footerLinks.map((section, index) => (
               <div key={index} className="hidden lg:block">
-                <h2 className="text-lg font-bold">{section.title}</h2>
-                <ul className="mt-6 space-y-4 text-sm">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">{section.title}</h2>
+                <ul className="space-y-3 text-sm">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <Link
                         href={link.href}
-                        className="hover:text-gray-300 transition-colors relative group"
+                        className="text-white/70 hover:text-[#dca958] transition-colors duration-200"
                       >
                         {link.label}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-500"></span>
                       </Link>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
-            <div className="lg:hidden flex flex-col gap-6">
-            {footerLinks.map((section, index) => (
-              <div key={index} className="mb-6">
-                <button
-                  onClick={() => toggleSection(index)}
-                  className="w-full text-left text-lg font-bold flex justify-between items-center"
-                >
-                  {section.title}
-                  <span className="text-sm">
-                    {openSections[index] ? "-" : "+"}
-                  </span>
-                </button>
-                {openSections[index] && (
-                  <ul className="mt-4 space-y-2 text-sm">
-                    {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
-                        <Link
-                          href={link.href}
-                          className="hover:text-gray-300 transition-colors relative group"
-                        >
-                          {link.label}
-                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-500"></span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-            <div>
-              <h4 className="text-white text-lg font-bold mb-4 flex">
-                Locate Us
-              </h4>
-              <div className="mt-4 text-gray-300 flex items-start">
-               
-                1 Shams Business Centre Sharjah Media City Shams Free Zone SHARJAH
-              </div>
-              <h4 className="text-white text-md font-bold mt-4 flex">
-                Main Office
-              </h4>
-              <div className="mt-2 text-gray-300 flex items-start">
-               
-                3rd Floor, St. Georges Building, 5 St. Vincent Place, Glasgow, G1 2DH</div>
+            <div className="lg:hidden flex flex-col gap-4">
+              {footerLinks.map((section, index) => (
+                <div key={index}>
+                  <button
+                    onClick={() => toggleSection(index)}
+                    className="w-full text-left text-sm font-semibold uppercase tracking-wider text-white/40 flex justify-between items-center py-2 border-b border-white/5"
+                  >
+                    {section.title}
+                    <span className="text-white/40 text-lg">
+                      {openSections[index] ? "−" : "+"}
+                    </span>
+                  </button>
+                  {openSections[index] && (
+                    <ul className="mt-3 space-y-2 text-sm pb-3">
+                      {section.links.map((link, linkIndex) => (
+                        <li key={linkIndex}>
+                          <Link
+                            href={link.href}
+                            className="text-white/70 hover:text-[#dca958] transition-colors duration-200"
+                          >
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
             <div>
-              <h4 className="text-white text-lg font-bold mb-4">Write to us</h4>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
+                {language === "ar" ? "موقعنا" : "Locate Us"}
+              </h4>
+              <p className="text-sm text-white/60 leading-relaxed">
+                1 Shams Business Centre<br />
+                Sharjah Media City<br />
+                Shams Free Zone, Sharjah
+              </p>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mt-6 mb-3">
+                {language === "ar" ? "المكتب الرئيسي" : "Main Office"}
+              </h4>
+              <p className="text-sm text-white/60 leading-relaxed">
+                3rd Floor, St. Georges Building<br />
+                5 St. Vincent Place<br />
+                Glasgow, G1 2DH
+              </p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
+                {language === "ar" ? "تواصل معنا" : "Get in Touch"}
+              </h4>
               <a
                 href="mailto:info@countify.ae"
-                className="text-white transition-colors relative group"
+                className="text-white/80 hover:text-[#dca958] transition-colors text-sm"
               >
                 info@countify.ae
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-500"></span>
               </a>
-              <p className="mt-4 text-gray-300">
-                or call
-                <br />
-                <a
-                  href="tel:+970585117901"
-                  className="text-white mt-4 transition-colors relative group"
-                >
-                  058 511 7901
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-500"></span>
-                </a>
+              <p className="mt-4 text-sm text-white/50">
+                {language === "ar" ? "أو اتصل" : "or call"}
               </p>
-              {/* <Link
-                className="mt-4 inline-block border duration-300 transition hover:bg-gray-100 hover:text-secondary-color px-4 py-1.5 rounded-full"
-                href="/contact"
+              <a
+                href="tel:+971585117901"
+                className="text-white font-semibold hover:text-[#dca958] transition-colors text-lg mt-1 inline-block"
               >
-                Contact Us
-              </Link> */}
+                +971 58 511 7901
+              </a>
             </div>
           </div>
-       
 
-          <div className="mt-8 border-t border-t-white/15 pt-8">
-            <p className="text-sm text-center">
+          <div className="mt-12 border-t border-white/10 pt-8 pb-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-white/40">
               Countify © {new Date().getFullYear()} All rights reserved
+            </p>
+            <p className="text-xs text-white/40">
+              Chartered Accountants │ Dubai │ Abu Dhabi │ Sharjah
             </p>
           </div>
         </div>

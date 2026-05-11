@@ -1,5 +1,5 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { cookies } from "next/headers";
 import services from "@/data/services.json";
 import MainHeader from "@/components/mainHeader";
 import Image from "next/image";
@@ -7,8 +7,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export async function generateMetadata({ params }) {
-  // Find the service based on the slug
-  const service = services.find((s) => s.slug === params.slug);
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
 
   if (!service) {
     return {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
       type: "website",
       images: [
         {
-          url: service.image,
+          url: `https://www.countify.ae${service.image}`,
           width: 1200,
           height: 630,
           alt: service.title.en,
@@ -47,9 +47,11 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ServicePage({ params, searchParams }) {
-  const service = services.find((s) => s.slug === params.slug);
-  const lang = searchParams.lang === "ar" ? "ar" : "en";
+export default async function ServicePage({ params }) {
+  const { slug } = await params;
+  const cookieStore = await cookies();
+  const service = services.find((s) => s.slug === slug);
+  const lang = cookieStore.get("language")?.value === "ar" ? "ar" : "en";
 
   if (!service) return notFound();
 
@@ -94,7 +96,7 @@ export default function ServicePage({ params, searchParams }) {
           <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
             <Image
               src={service.image}
-              alt="Service Image"
+              alt={`${service.title[lang]} — Countify UAE`}
               fill
               className="object-cover"
               priority
@@ -106,10 +108,22 @@ export default function ServicePage({ params, searchParams }) {
             </h2>
             <p>{t("intro")}</p>
 
+            {service.content[`why_2026_${lang}`] && (
+              <div className="bg-amber-50 border-l-4 border-[#dca958] p-4 my-6 rounded">
+                <p className="text-gray-800 font-medium">{service.content[`why_2026_${lang}`]}</p>
+              </div>
+            )}
+
+            {service.content[`why_bookkeeping_${lang}`] && (
+              <div className="bg-blue-50 border-l-4 border-[#1a3a8f] p-4 my-6 rounded">
+                <p className="text-gray-800 font-medium">{service.content[`why_bookkeeping_${lang}`]}</p>
+              </div>
+            )}
+
             <h3 className="text-[#1a3a8f] font-bold text-2xl my-4">
               {lang === "ar" ? "خدماتنا تشمل" : "Our Services Include"}
             </h3>
-              
+
             <ul className="space-y-4 pl-4 pb-6">
                 {service.content[`services_${lang}`]?.map(
                   (item, i) => (
@@ -137,6 +151,30 @@ export default function ServicePage({ params, searchParams }) {
                   )
                 )}
               </ul>
+
+              {service.content[`faq_${lang}`] && (
+                <>
+                  <h3 className="text-[#1a3a8f] font-bold text-2xl my-4">
+                    {lang === "ar" ? "الأسئلة الشائعة" : "Frequently Asked Questions"}
+                  </h3>
+                  <div className="space-y-4 my-6">
+                    {service.content[`faq_${lang}`].map((faq, i) => (
+                      <details key={i} className="border border-gray-200 rounded-lg overflow-hidden group">
+                        <summary className="flex items-center justify-between p-5 cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors font-medium text-gray-900">
+                          {faq.q}
+                          <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="p-5 border-t border-gray-200">
+                          <p className="text-gray-700">{faq.a}</p>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </>
+              )}
+
               <section className="bg-gradient-to-tl from-[rgb(45,79,142)] via-[#0a112d] to-[#1a3a8f] p-8 rounded-xl text-white">
               <div className="max-w-2xl mx-auto text-center">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">

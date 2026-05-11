@@ -14,49 +14,53 @@ const ServiceSection = () => {
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       {" "}
-      <section className="pt-16 bg-no-repeat bg-cover bg-center text-gray-900">
-        <div className="text-center mb-8 lg:mb-12 px-5">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight relative z-10">
+      <section className="py-16 lg:py-24 bg-no-repeat bg-cover bg-center text-gray-900">
+        <div className="text-center mb-12 lg:mb-16 px-5">
+          <p className="text-sm font-medium text-[#dca958] uppercase tracking-widest mb-3 relative z-10">
+            {language === "ar" ? "ما نقدمه" : "What We Offer"}
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight relative z-10">
             {t("servicessection.title", "Services")}
           </h2>
-          <p className="mt-3 text-base md:text-lg max-w-3xl mx-auto relative z-10">
+          <p className="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto relative z-10">
             {t(
               "servicessection.subtitle",
-              "Comprehensive IT services tailored to your business needs"
+              "Expert accounting, tax and business setup services across the UAE"
             )}
           </p>
+          <div className="w-16 h-1 bg-gradient-to-r from-[#dca958] to-[#e69c31] mx-auto mt-6 rounded-full"></div>
         </div>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 px-4">
           {services.map((service, index) => (
             <Link
               key={index}
               href={service.link}
-              className="group inset-0 z-30"
-
+              className="group z-30"
             >
               <article
-                className={`card-wrapper flex gap-4 group overflow-hidden border border-slate-50/40 h-[300px] rounded-xl transition duration-300 ${
+                className={`overflow-hidden border border-gray-100 h-[320px] rounded-2xl transition-all duration-300 shadow-sm hover:shadow-xl ${
                   language === "ar" ? "text-right" : "text-left"
                 }`}
                 role="article"
               >
-                <div className="text-left relative w-full card-content overflow-hidden">
-                  <div className="absolute z-20 bottom-5 px-5 space-y-2 h-auto w-full transition-all duration-300 inset-0 flex flex-col justify-end">
-                    <h2 className="font-bold relative text-xl text-white group-hover:text-[#dca958] duration-300 transition">
-                      {service.title[language]}{" "}
+                <div className="relative w-full h-full overflow-hidden rounded-2xl">
+                  <div className="absolute z-20 bottom-0 px-6 py-6 space-y-2 w-full flex flex-col justify-end">
+                    <h2 className="font-bold text-xl text-white group-hover:text-[#dca958] duration-300 transition">
+                      {service.title[language]}
                     </h2>
-                    <p className="text-sm font-normal relative text-white/80">
-                      {service.description[language]}{" "}
+                    <p className="text-sm font-normal text-white/70 line-clamp-2">
+                      {service.description[language]}
                     </p>
                   </div>
-                  <div className="bg-gradient-to-t from-[#0a112d] w-full h-full absolute rounded-b-xl group-hover:opacity-100 opacity-70 transition duration-300 z-10"></div>
+                  <div className="bg-gradient-to-t from-[#0a112d] via-[#0a112d]/60 to-transparent w-full h-full absolute rounded-2xl group-hover:from-[#0a112d]/95 transition duration-500 z-10"></div>
                   <Image
-                    alt={`Image of ${service.title[language]}`}
+                    alt={service.title[language]}
                     loading="lazy"
                     width={612}
                     height={344}
                     decoding="async"
-                    className="w-full object-cover h-full rounded-xl group-hover:scale-110 duration-500 transition"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="w-full object-cover h-full rounded-2xl group-hover:scale-105 duration-700 transition ease-out"
                     src={service.image}
                   />
                 </div>
@@ -64,16 +68,15 @@ const ServiceSection = () => {
             </Link>
           ))}
         </div>
-        <div className="text-center py-12 ">
+        <div className="text-center pt-14">
           <Link
-            className="relative border border-white/60 bg-[#0a112d] inline-flex items-center tracking-wider justify-center px-6 py-2 uppercase overflow-hidden rounded-full  text-white   group"
+            className="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white bg-[#0a112d] border border-white/20 rounded-full hover:bg-[#dca958] hover:border-[#dca958] transition-all duration-300"
             href="/services"
           >
-            <span className="absolute inset-0 w-full h-full transition-all duration-700 transform skew-x-[-20deg] bg-gradient-to-r from-[#f5222200] via-[rgba(255,255,255,0.25)] to-[#f5000000] group-hover:left-[-150%] left-[100%]"></span>
-            <span className="relative z-10">
-              {" "}
-              {t("servicessection.button", "View All")}
-            </span>
+            {t("servicessection.button", "View All")}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
           </Link>
         </div>
       </section>

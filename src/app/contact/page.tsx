@@ -2,16 +2,18 @@
 import MainHeader from "@/components/mainHeader";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
+  const { t, language } = useLanguage();
   const name = searchParams.get("name") || "";
   const email = searchParams.get("email") || "";
   const service = searchParams.get("service") || "";
   const phone = searchParams.get("phone") || "";
-  const company = searchParams.get("company") || "";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -19,403 +21,341 @@ const ContactForm = () => {
     service: "",
     phone: "",
     company: "",
+    message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const services = [
-    { value: "bookkeeping", label: "Bookkeeping" },
+    { value: "rd-advisory", label: "R&D Advisory" },
+    { value: "corporate-tax", label: "Corporate Tax" },
+    { value: "vat-return", label: "VAT Registration & Filing" },
     { value: "company-formation", label: "Company Formation" },
+    { value: "bookkeeping", label: "Bookkeeping" },
     { value: "payroll-services", label: "Payroll Services" },
-    { value: "vat-return", label: "VAT Return" },
-    { value: "year-end-accounts", label: "Year-end Accounts" },
+    { value: "year-end-accounts", label: "Year-End Accounts" },
+    { value: "audit-preparation", label: "Audit Preparation" },
   ];
+
   useEffect(() => {
-    setFormData({
+    setFormData((prev) => ({
+      ...prev,
       name,
       email,
       service,
       phone,
-      company,
-    });
-  }, [name, email, service, phone, company]);
+    }));
+  }, [name, email, service, phone]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setTimeout(() => setIsSubmitting(false), 2000);
+  };
 
   return (
-    <form className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid md:grid-cols-2 gap-4">
-        <div className="space-y-2">
-          <label htmlFor="name" className="font-medium text-white/80 text-base">
-            Full Name *
+        <div className="space-y-1.5">
+          <label htmlFor="name" className="text-sm font-medium text-white/70">
+            {language === "ar" ? "الاسم الكامل" : "Full Name"} *
           </label>
           <input
             id="name"
             name="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="bg-white py-3 px-4 text-gray-900 text-lg w-full rounded-md"
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#dca958] focus:ring-1 focus:ring-[#dca958]/50 transition-all"
+            placeholder={language === "ar" ? "اسمك الكامل" : "John Smith"}
             required
           />
         </div>
-        <div className="space-y-2">
-          <label
-            htmlFor="email"
-            className="font-medium text-white/80 text-base"
-          >
-            Email *
+        <div className="space-y-1.5">
+          <label htmlFor="email" className="text-sm font-medium text-white/70">
+            {language === "ar" ? "البريد الإلكتروني" : "Email"} *
           </label>
           <input
             id="email"
             name="email"
             type="email"
             value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            className="bg-white py-3 px-4 text-gray-900 text-lg w-full rounded-md"
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#dca958] focus:ring-1 focus:ring-[#dca958]/50 transition-all"
+            placeholder="you@company.com"
             required
           />
         </div>
       </div>
       <div className="grid md:grid-cols-2 gap-4">
-        {/* Phone */}
-        <div className="space-y-2">
-          <label
-            htmlFor="phone"
-            className="font-medium text-white/80 text-base"
-          >
-            Phone
+        <div className="space-y-1.5">
+          <label htmlFor="phone" className="text-sm font-medium text-white/70">
+            {language === "ar" ? "رقم الهاتف" : "Phone (UAE)"}
           </label>
           <input
             id="phone"
             name="phone"
+            type="tel"
             value={formData.phone}
-            onChange={(e) =>
-              setFormData({ ...formData, phone: e.target.value })
-            }
-            className="bg-white py-3 px-4 text-gray-900 text-lg w-full rounded-md"
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#dca958] focus:ring-1 focus:ring-[#dca958]/50 transition-all"
+            placeholder="+971 5X XXX XXXX"
           />
         </div>
-
-        {/* Company */}
-        <div className="space-y-2">
-          <label
-            htmlFor="company"
-            className="font-medium text-white/80 text-base"
-          >
-            Company
+        <div className="space-y-1.5">
+          <label htmlFor="company" className="text-sm font-medium text-white/70">
+            {language === "ar" ? "الشركة" : "Company"}
           </label>
           <input
             id="company"
             name="company"
             value={formData.company}
-            onChange={(e) =>
-              setFormData({ ...formData, company: e.target.value })
-            }
-            className="bg-white py-3 px-4 text-gray-900 text-lg w-full rounded-md"
+            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#dca958] focus:ring-1 focus:ring-[#dca958]/50 transition-all"
+            placeholder={language === "ar" ? "اسم الشركة" : "Company name"}
           />
         </div>
       </div>
-      <div className="space-y-2">
-        <label
-          htmlFor="service"
-          className="font-medium text-white/80 text-base"
-        >
-          Service
+      <div className="space-y-1.5">
+        <label htmlFor="service" className="text-sm font-medium text-white/70">
+          {language === "ar" ? "الخدمة المطلوبة" : "Service Required"}
         </label>
         <select
           id="service"
           name="service"
           value={formData.service}
-          onChange={(e) =>
-            setFormData({ ...formData, service: e.target.value })
-          }
-          className="bg-white py-3 px-4 text-gray-900 text-lg w-full rounded-md"
+          onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#dca958] focus:ring-1 focus:ring-[#dca958]/50 transition-all"
         >
-          <option value="">Select a Service</option>
-          {services.map((service) => (
-            <option key={service.value} value={service.value}>
-              {service.label}
+          <option value="" className="bg-[#0a112d]">{language === "ar" ? "اختر خدمة" : "Select a service"}</option>
+          {services.map((s) => (
+            <option key={s.value} value={s.value} className="bg-[#0a112d]">
+              {s.label}
             </option>
           ))}
         </select>
       </div>
+      <div className="space-y-1.5">
+        <label htmlFor="message" className="text-sm font-medium text-white/70">
+          {language === "ar" ? "رسالتك" : "Message"}
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={4}
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#dca958] focus:ring-1 focus:ring-[#dca958]/50 transition-all resize-none"
+          placeholder={language === "ar" ? "أخبرنا عن احتياجاتك..." : "Tell us about your requirements..."}
+        />
+      </div>
       <button
         type="submit"
-        className="bg-[#dca958] hover:bg-[#e69c31] text-white md:py-4 py-2 text-lg w-full rounded-md"
+        disabled={isSubmitting}
+        className="w-full py-3.5 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-[#dca958] to-[#e69c31] hover:shadow-lg hover:shadow-[#dca958]/20 transition-all duration-300 disabled:opacity-60"
       >
-        Send
+        {isSubmitting
+          ? (language === "ar" ? "جارٍ الإرسال..." : "Sending...")
+          : (language === "ar" ? "أرسل رسالتك" : "Send Message")}
       </button>
     </form>
   );
 };
 
 const ContactPage = () => {
-  const [activeLocation, setActiveLocation] = useState("uk");
-  const toggleLocation = (location: string) => {
-    setActiveLocation((prev) => (prev === location ? "" : location));
-  };
+  const { language } = useLanguage();
+
   return (
-    <section className="bg-contact bg-cover bg-no-repeat bg-fixed bg-center relative">
+    <div className="bg-gradient-to-b from-[#0a112d] via-[#061640] to-[#0a112d] min-h-screen">
       <MainHeader
-        title="Contact Us"
-        description="Get in touch with us for any inquiries or assistance."
+        title={language === "ar" ? "تواصل معنا" : "Get in Touch"}
+        description={
+          language === "ar"
+            ? "نحن هنا لمساعدتك. تواصل مع فريقنا اليوم."
+            : "We're here to help. Reach out to our team today."
+        }
+        breadcrumb={[
+          { label: language === "ar" ? "الرئيسية" : "Home", href: "/" },
+          { label: language === "ar" ? "تواصل معنا" : "Contact" },
+        ]}
       />
-      <div className="container py-16">
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <Suspense fallback={<div>Loading...</div>}>
+
+      <section className="container mx-auto px-5 py-12 lg:py-16">
+        <motion.div
+          className="max-w-5xl mx-auto text-center mb-14"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            {language === "ar"
+              ? "سواء كنت تبدأ عملك في الإمارات أو تحتاج إلى دعم ضريبي مستمر — فريقنا من المحاسبين المعتمدين مستعد لمساعدتك. استشارة أولية مجانية لجميع العملاء الجدد."
+              : "Whether you're launching a business in the UAE or need ongoing tax and compliance support — our ACCA-qualified team is ready to help. Free initial consultation for all new clients."}
+          </p>
+        </motion.div>
+
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-10">
+          <motion.div
+            className="lg:col-span-3 bg-white/[0.03] border border-white/10 rounded-2xl p-8"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h2 className="text-xl font-bold text-white mb-1">
+              {language === "ar" ? "أرسل لنا رسالة" : "Send us a message"}
+            </h2>
+            <p className="text-white/40 text-sm mb-6">
+              {language === "ar"
+                ? "سنرد خلال ساعات العمل"
+                : "We'll respond within 1 business day"}
+            </p>
+            <Suspense fallback={<div className="text-white/40">Loading...</div>}>
               <ContactForm />
             </Suspense>
-          </div>
-          <div className="space-y-6">
-            <div className="rounded-lg border text-card-foreground shadow-sm p-6 bg-white/10 backdrop-blur-lg">
-              <div data-orientation="vertical">
-                <div
-                  data-state={activeLocation === "uk" ? "closed" : "open"}
-                  className="border-none border-2 border-b-slate-200"
-                >
-                  <h3 className="flex">
-                    <button
-                      type="button"
-                      onClick={() => toggleLocation("uk")}
-                      aria-controls="uk-section"
-                      aria-expanded={activeLocation === "uk"}
-                      className={`flex flex-1 items-center justify-between py-4 transition-all [&[data-state=open]>svg]:rotate-180 border-none font-bold text-xl hover:no-underline ${
-                        activeLocation === "uk"
-                          ? "text-[#fbc670]"
-                          : "text-white"
-                      }`}
-                    >
-                      Countify UK
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`h-6 w-6 shrink-0 text-muted-foreground transition-transform duration-200 ${
-                          activeLocation === "uk" ? "rotate-180" : ""
-                        }`}
-                      >
-                        <path
-                          d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </button>
-                  </h3>
-                  <motion.div
-                    id="uk-section"
-                    role="region"
-                    aria-labelledby="uk-button"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={
-                      activeLocation === "uk"
-                        ? { height: "auto", opacity: 1 }
-                        : { height: 0, opacity: 0 }
-                    }
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden text-sm text-white"
-                  >
-                    <div className="pb-4 pt-0">
-                      <div className="flex flex-col items-center lg:items-start text-white px-0">
-                        <div className="py-2 lg:py-3 w-full flex items-center mb-0">
-                          <Image
-                            alt="Write to us"
-                            loading="lazy"
-                            width={72}
-                            height={72}
-                            decoding="async"
-                            className="lg:w-18 lg:h-18 mr-6"
-                            src="/images/chat-ic.png"
-                          />
-                          <div>
-                            <h6 className="text-white-lilac mb-3 text-lg lg:text-[24px] leading-[26px] lg:leading-[34px] font-medium">
-                              Write to us
-                            </h6>
-                            <a
-                              href="mailto:info@countify.co.uk"
-                              className="text-gray-ebb text-white transition-colors relative group"
-                            >
-                              info@countify.co.uk
-                              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-700"></span>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="py-2 lg:py-3 w-full flex items-center mb-0 border-t border-slate-50/20">
-                          <Image
-                            alt="UK office"
-                            loading="lazy"
-                            width={200}
-                            height={200}
-                            decoding="async"
-                            className="lg:w-24 lg:h-24 mr-6"
-                            src="/images/location-ic.png"
-                          />
-                          <div>
-                            <h6 className="text-white-lilac mb-3 text-lg lg:text-[24px] leading-[26px] lg:leading-[34px] font-medium">
-                              UK Office
-                            </h6>
-                            <p className="font-semibold">Countify UK</p>
-                            <p className="text-gray-ebb mb-4">
-                              3rd Floor, St. Georges Building, 5 St. Vincent
-                              Place, Glasgow, G1 2DH
-                            </p>
-                          </div>
-                        </div>
-                        <div className="py-2 lg:py-3 border-t border-slate-50/20 w-full flex items-center">
-                          <Image
-                            alt="Call us"
-                            loading="lazy"
-                            width={72}
-                            height={72}
-                            decoding="async"
-                            className="lg:w-18 lg:h-18 mr-6"
-                            src="/images/phone-ic.png"
-                          />
-                          <div>
-                            <h6 className="text-white-lilac mb-3 text-lg lg:text-[24px] leading-[26px] lg:leading-[34px] font-medium">
-                              Call us
-                            </h6>
-                            <a
-                              href="tel:+01412754860"
-                              className="text-gray-ebb text-lg text-white transition-colors relative group"
-                            >
-                              + 014 127 54860
-                              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-700"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
+          </motion.div>
 
-                {/* Countify UAE */}
-                <div
-                  data-state={activeLocation === "uae" ? "open" : "closed"}
-                  className="border-none border-2 border-b-slate-200"
-                >
-                  <h3 className="flex">
-                    <button
-                      type="button"
-                      onClick={() => toggleLocation("uae")}
-                      aria-controls="uae-section"
-                      aria-expanded={activeLocation === "uae"}
-                      className={`flex flex-1 items-center justify-between py-4 transition-all [&[data-state=open]>svg]:rotate-180 border-none font-bold text-xl hover:no-underline ${
-                        activeLocation === "uae"
-                          ? "text-[#fbc670]"
-                          : "text-white"
-                      }`}
-                    >
-                      Countify UAE
-                      <svg
-                        width="15"
-                        height="15"
-                        viewBox="0 0 15 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`h-6 w-6 shrink-0 text-muted-foreground transition-transform duration-200 ${
-                          activeLocation === "uae" ? "rotate-180" : ""
-                        }`}
-                      >
-                        <path
-                          d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </button>
+          <motion.div
+            className="lg:col-span-2 space-y-6"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="bg-gradient-to-br from-[#dca958]/10 to-[#dca958]/5 border-2 border-[#dca958]/30 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#dca958] flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-lg">
+                    {language === "ar" ? "مكتب الإمارات" : "UAE Office"}
                   </h3>
-                  <motion.div
-                    id="uae-section"
-                    role="region"
-                    aria-labelledby="uae-button"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={
-                      activeLocation === "uae"
-                        ? { height: "auto", opacity: 1 }
-                        : { height: 0, opacity: 0 }
-                    }
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden text-sm text-white"
-                  >
-                    <div className="pb-4 pt-0">
-                      <div className="flex flex-col items-center lg:items-start text-white px-0">
-                        <div className="py-2 lg:py-3 w-full flex items-center mb-0">
-                          <Image
-                            alt="Write to us"
-                            loading="lazy"
-                            width={72}
-                            height={72}
-                            decoding="async"
-                            className="lg:w-18 lg:h-18 mr-6"
-                            src="/images/chat-ic.png"
-                          />
-                          <div>
-                            <h6 className="text-white-lilac mb-3 text-lg lg:text-[24px] leading-[26px] lg:leading-[34px] font-medium">
-                              Write to us
-                            </h6>
-                            <a
-                              href="mailto:info@countify.ae"
-                              className="text-gray-ebb text-white transition-colors relative group"
-                            >
-                              info@countify.ae
-                              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-700"></span>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="py-2 lg:py-3 w-full flex items-center mb-0 border-t border-slate-50/20">
-                          <Image
-                            alt="UAE office"
-                            loading="lazy"
-                            width={200}
-                            height={200}
-                            decoding="async"
-                            className="lg:w-18 lg:h-18 mr-6"
-                            src="/images/location-ic.png"
-                          />
-                          <div>
-                            <h6 className="text-white-lilac mb-3 text-lg lg:text-[24px] leading-[26px] lg:leading-[34px] font-medium">
-                              UAE Office
-                            </h6>
-                            <p className="font-semibold">Countify UAE</p>
-                            <p className="text-gray-ebb mb-4">
-                              1 Shams Business Centre Sharjah Media
-                              City Shams Free Zone SHARJAH
-                            </p>
-                          </div>
-                        </div>
-                        <div className="py-2 lg:py-3 border-t border-slate-50/20 w-full flex items-center">
-                          <Image
-                            alt="Call us"
-                            loading="lazy"
-                            width={72}
-                            height={72}
-                            decoding="async"
-                            className="lg:w-18 lg:h-18 mr-6"
-                            src="/images/phone-ic.png"
-                          />
-                          <div>
-                            <h6 className="text-white-lilac mb-3 text-lg lg:text-[24px] leading-[26px] lg:leading-[34px] font-medium">
-                              Call us
-                            </h6>
-                            <a
-                              href="tel:+97585117901"
-                              className="text-gray-ebb text-lg text-white transition-colors relative group"
-                            >
-                              058 511 7901
-                              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-700"></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
+                  <span className="text-[#dca958] text-xs font-semibold uppercase tracking-wider">
+                    {language === "ar" ? "المقر الرئيسي" : "Primary"}
+                  </span>
                 </div>
               </div>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                1 Shams Business Centre<br />
+                Sharjah Media City (Shams)<br />
+                Free Zone, Sharjah, UAE
+              </p>
+              <div className="flex items-center gap-2 text-white/70 text-sm mb-2">
+                <Phone className="w-4 h-4 text-[#dca958]" />
+                <a href="tel:+971585117901" className="hover:text-[#dca958] transition-colors font-medium">
+                  +971 58 511 7901
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-white/70 text-sm mb-2">
+                <Mail className="w-4 h-4 text-[#dca958]" />
+                <a href="mailto:info@countify.ae" className="hover:text-[#dca958] transition-colors">
+                  info@countify.ae
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-white/50 text-xs mt-3">
+                <Clock className="w-3.5 h-3.5" />
+                <span>{language === "ar" ? "الأحد – الخميس: 9 ص – 6 م" : "Sun – Thu: 9 AM – 6 PM GST"}</span>
+              </div>
             </div>
-          </div>{" "}
+
+            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-white/60" />
+                </div>
+                <div>
+                  <h3 className="text-white font-bold text-lg">
+                    {language === "ar" ? "مكتب المملكة المتحدة" : "UK Office"}
+                  </h3>
+                  <span className="text-white/40 text-xs font-medium uppercase tracking-wider">
+                    {language === "ar" ? "المقر الرئيسي" : "Head Office"}
+                  </span>
+                </div>
+              </div>
+              <p className="text-white/50 text-sm leading-relaxed mb-4">
+                3rd Floor, St. Georges Building<br />
+                5 St. Vincent Place<br />
+                Glasgow, G1 2DH
+              </p>
+              <div className="flex items-center gap-2 text-white/50 text-sm mb-2">
+                <Mail className="w-4 h-4 text-white/40" />
+                <a href="mailto:info@countify.co.uk" className="hover:text-white transition-colors">
+                  info@countify.co.uk
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-5">
+              <a
+                href="https://wa.me/971585117901"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-green-500 flex items-center justify-center group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-sm">
+                    {language === "ar" ? "تحدث عبر واتساب" : "Chat on WhatsApp"}
+                  </p>
+                  <p className="text-white/40 text-xs">
+                    {language === "ar" ? "رد فوري خلال ساعات العمل" : "Instant reply during business hours"}
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-5">
+              <p className="text-white/40 text-xs uppercase tracking-wider font-semibold mb-3">
+                {language === "ar" ? "نخدم" : "Serving"}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "RAK", "Fujairah"].map((city) => (
+                  <span key={city} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/60 text-xs">
+                    {city}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="container mx-auto px-5 pb-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: language === "ar" ? "استشارة مجانية" : "Free Consultation",
+              desc: language === "ar"
+                ? "استشارة أولية مجانية لجميع العملاء الجدد بدون أي التزام."
+                : "No-obligation initial consultation for all new clients. Let's discuss your needs.",
+            },
+            {
+              title: language === "ar" ? "رد سريع" : "Fast Response",
+              desc: language === "ar"
+                ? "نرد خلال يوم عمل واحد. أسرع عبر واتساب."
+                : "We respond within 1 business day. Faster via WhatsApp during office hours.",
+            },
+            {
+              title: language === "ar" ? "مؤهلون من ACCA" : "ACCA Qualified",
+              desc: language === "ar"
+                ? "تتحدث مباشرة مع محاسبين قانونيين معتمدين، وليس مندوبي مبيعات."
+                : "You speak directly with qualified chartered accountants, not salespeople.",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className="bg-white/[0.03] border border-white/10 rounded-xl p-6 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+            >
+              <h3 className="text-white font-bold text-base mb-2">{item.title}</h3>
+              <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

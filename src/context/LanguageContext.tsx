@@ -28,15 +28,20 @@ const translations: Record<Language, Record<string, string>> = {
     "services.vat.title": "VAT Return",
     "services.accounts.title": "Year-End Accounts",
     "services.corporate-tax.title": "Corporate Tax",
+    "services.rd.title": "R&D Advisory",
+    "services.audit.title": "Audit Preparation",
     //servicessection
     "servicessection.title": "Our Services",
-    "servicessection.subtitle": "Comprehensive IT services tailored to your business needs",
+    "servicessection.subtitle": "Expert accounting, tax and business setup services across the UAE",
     "servicessection.button": "View All",
     //.. Faq Section
     "faq.title": "Frequently Asked Questions",
     "faq.subtitle": "Find answers to common questions about our services, processes, and business solutions.",
     // Home Page
     'home.hero.title': 'Expert Accounting & Business Setup Services in the UAE',
+    'home.hero.h1': 'Expert Accountants in UAE — VAT, Corporate Tax, R&D & Company Formation',
+    'home.hero.subtitle': 'Countify brings Big 4 expertise to growing businesses across Dubai, Abu Dhabi and Sharjah. ACCA-qualified. FTA-compliant. Results-driven.',
+    'home.hero.trust': 'Trusted by businesses across the UAE │ UK-backed expertise since 2021',
     'home.hero.description': 'Welcome to your reliable partner for accounting, tax, and business setup services across the UAE. Backed by 15+ years of Chartered Accountancy expertise, we serve startups, SMEs, and established enterprises with precision, compliance, and care.',
     'home.hero.subtext': 'Whether you need help setting up your company, managing monthly bookkeeping, filing VAT or corporate tax, or finalising year-end accounts, our experienced team ensures you remain compliant and focused on growth.',
     'home.services.title': 'What We Do Best',
@@ -52,11 +57,17 @@ const translations: Record<Language, Record<string, string>> = {
     'form.submit': 'Get Started',
     'form.disclaimer': 'By submitting this form, you agree to our',
     'form.privacy': 'Privacy Policy',
+    'form.phone': 'Phone Number (UAE)',
+    'form.message': 'Message',
+    'form.submitting': 'Sending...',
+    'form.whatsapp': 'Or chat on WhatsApp',
     'form.services.bookkeeping': 'Bookkeeping',
     'form.services.company-formation': 'Company Formation',
     'form.services.payroll-services': 'Payroll Services',
     'form.services.vat-return': 'VAT Return',
     'form.services.year-end-accounts': 'Year-end Accounts',
+    'form.services.rd-advisory': 'R&D Advisory',
+    'form.services.audit-preparation': 'Audit Preparation',
   //
     // Why Choose Us
     'why.title': 'Why Choose Us?',
@@ -64,7 +75,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.point2': 'Fully FTA & IFRS Compliant Services',
     'why.point3': 'Trusted by Startups, Freezone Companies & SMEs',
     'why.point4': 'Transparent Pricing, Personalised Support',
-    'why.point5': 'Based in UAE – Serving All Emirates',
+    'why.point5': 'Based in Sharjah – Serving All Emirates',
     
     // CTA
     'cta.title': 'Start with a Free Consultation',
@@ -108,16 +119,21 @@ const translations: Record<Language, Record<string, string>> = {
     "services.vat.title": "الإقرار الضريبي",
     "services.accounts.title": "الحسابات السنوية",
     "services.corporate-tax.title": "الضريبة على الشركات",
-    
+    "services.rd.title": "استشارات البحث والتطوير",
+    "services.audit.title": "خدمات التدقيق",
+
     // Home Page
     'home.hero.title': 'خدمات المحاسبة وتأسيس الأعمال الاحترافية في الإمارات العربية المتحدة',
+    'home.hero.h1': 'محاسبون خبراء في الإمارات — ضريبة القيمة المضافة وضريبة الشركات والبحث والتطوير وتأسيس الشركات',
+    'home.hero.subtitle': 'تجلب Countify خبرة Big 4 للشركات النامية في دبي وأبوظبي والشارقة. مؤهل ACCA. متوافق مع الهيئة الاتحادية للضرائب. نتائج ملموسة.',
+    'home.hero.trust': 'موثوق من قبل الشركات في الإمارات │ خبرة مدعومة من المملكة المتحدة منذ 2021',
     'home.hero.description': 'مرحبًا بكم في شريككم الموثوق لخدمات المحاسبة، الضرائب، وتأسيس الأعمال في جميع أنحاء الإمارات العربية المتحدة. مدعومين بأكثر من 15 عامًا من الخبرة في المحاسبة القانونية، نخدم الشركات الناشئة، والشركات الصغيرة والمتوسطة، والمؤسسات الراسخة بدقة والتزام واهتمام.',
     'home.hero.subtext': 'سواء كنت بحاجة إلى مساعدة في تأسيس شركتك، أو إدارة المحاسبة الشهرية، أو تقديم ضريبة القيمة المضافة أو الضريبة على الشركات، أو إنهاء حسابات نهاية العام، فريقنا المتمرس يضمن بقاءك ملتزمًا بالقوانين ومركزًا على النمو.',
     'home.services.title': 'ما نتميز به',
     'home.intro':'مرحبًا بك مع شريكك الموثوق به لخدمات المحاسبة والضرائب وتأسيس الأعمال في جميع أنحاء دولة الإمارات. بدعم من أكثر من 15 عامًا من الخبرة في المحاسبة القانونية، نخدم الشركات الناشئة، والشركات الصغيرة والمتوسطة، والمؤسسات القائمة بدقة وامتثال وعناية.سواء كنت بحاجة إلى مساعدة في تأسيس شركتك، أو إدارة الدفاتر الشهرية، أو تقديم إقرارات ضريبة القيمة المضافة أو الضريبة على الشركات، أو إعداد الحسابات الختامية، فإن فريقنا الخبير يضمن لك الالتزام التام والتركيز على النمو.', 
       // ...existing Arabic translations...
       "servicessection.title": "خدماتنا",
-      "servicessection.subtitle": "خدمات تقنية شاملة مصممة لتلبية احتياجات عملك",
+      "servicessection.subtitle": "خدمات محاسبة وضرائب وتأسيس أعمال متخصصة في جميع أنحاء الإمارات",
       "servicessection.button": "عرض الكل",
       //.. Faq Section
       "faq.title": "الأسئلة الشائعة",
@@ -131,11 +147,17 @@ const translations: Record<Language, Record<string, string>> = {
     'form.submit': 'ابدأ الآن',
     'form.disclaimer': 'بتقديم هذا النموذج، فإنك توافق على',
     'form.privacy': 'سياسة الخصوصية',
+    'form.phone': 'رقم الهاتف (الإمارات)',
+    'form.message': 'الرسالة',
+    'form.submitting': 'جارٍ الإرسال...',
+    'form.whatsapp': 'أو تواصل عبر واتساب',
     'form.services.bookkeeping': 'مسك الدفاتر',
     'form.services.company-formation': 'تأسيس الشركات',
     'form.services.payroll-services': 'خدمات الرواتب',
     'form.services.vat-return': 'الإقرار الضريبي',
     'form.services.year-end-accounts': 'الحسابات السنوية',
+    'form.services.rd-advisory': 'استشارات البحث والتطوير',
+    'form.services.audit-preparation': 'خدمات التدقيق',
     
     // Why Choose Us
     'why.title': 'لماذا تختارنا؟',
@@ -143,7 +165,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.point2': 'خدمات متوافقة تمامًا مع الهيئة الاتحادية للضرائب والمعايير الدولية للتقارير المالية',
     'why.point3': 'موثوق به من قبل الشركات الناشئة، وشركات المنطقة الحرة، والشركات الصغيرة والمتوسطة',
     'why.point4': 'أسعار شفافة، ودعم شخصي',
-    'why.point5': 'مقرنا في دبي – نخدم جميع الإمارات',
+    'why.point5': 'مقرنا في الشارقة – نخدم جميع الإمارات',
     
     // CTA
     'cta.title': 'ابدأ باستشارة مجانية',
@@ -151,7 +173,7 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.subtext': 'اتصل بنا الآن للحصول على دعم متخصص وحلول مخصصة.',
     'cta.email': 'البريد الإلكتروني',
     'cta.whatsapp': 'واتساب',
-    'cta.visit': 'زيارتنا في دبي',
+    'cta.visit': 'زيارتنا في الشارقة',
     
     // Footer
     'footer.rights': 'جميع الحقوق محفوظة',
@@ -196,7 +218,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     setLanguageState(lang);
   };
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "ar" : "en"); 
+    const newLang = language === 'en' ? 'ar' : 'en';
+    setLanguage(newLang);
+    document.cookie = `language=${newLang};path=/;max-age=31536000`;
   };
   const t = (key: string, fallback?: string): string => {
     return translations[language]?.[key] || fallback || key;

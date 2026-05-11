@@ -2,6 +2,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PhoneCall, Menu, X, ChevronUp, ChevronDown } from "lucide-react";
 import { Dialog, Transition } from "@headlessui/react";
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<number | null>(null);
   const { language, toggleLanguage } = useLanguage();
+  const pathname = usePathname();
   const menuItems = NavMenu();
   const firstMenuWithChildren = menuItems.findIndex((menu) => menu.children);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<number | null>(
@@ -43,25 +45,29 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-primary-color shadow-md text-white" : "bg-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-[#020B2D]/95 backdrop-blur-md shadow-lg shadow-black/10 border-b border-white/5"
+          : "bg-transparent"
       }`}
       dir={language === "ar" ? "rtl" : "ltr"}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[60] focus:bg-white focus:text-black focus:p-2"
+      >
+        Skip to main content
+      </a>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-5 py-3">
         <div className="flex items-center gap-5 lg:w-auto w-full">
           <div className="flex items-center justify-between lg:w-auto w-full">
-            <Link href="/" className="">
+            <Link href="/" className="transition-opacity hover:opacity-80">
               <Image
-                src={
-                  isScrolled
-                    ? "/images/countify-logo-light.png"
-                    : "/images/countify-logo-light.png"
-                }
-                className={`${isScrolled ? "w-28" : ""} ${
+                src="/images/countify-logo-light.png"
+                className={`transition-all duration-300 ${isScrolled ? "w-24" : "w-32"} ${
                   language === "ar" ? "ml-12" : "mr-12"
                 } object-cover`}
-                alt="Countify"
+                alt="Countify UAE — Chartered Accountants"
                 width={140}
                 height={100}
                 priority
@@ -73,13 +79,13 @@ const Navbar = () => {
               aria-expanded={open}
               aria-controls="mobile-menu"
               onClick={handleToggle}
-              className="flex h-10 w-10 items-center justify-center lg:hidden"
+              className="flex h-10 w-10 items-center justify-center lg:hidden rounded-lg hover:bg-white/10 transition-colors"
             >
-              <Menu className="w-8 h-8 text-secondary-color" />
+              <Menu className="w-7 h-7 text-white" />
             </button>
           </div>
         </div>
-        <nav className="hidden lg:flex flex-1 space-x-6 text-sm relative mx-auto justify-center">
+        <nav className="hidden lg:flex flex-1 space-x-8 text-sm relative mx-auto justify-center">
           {menuItems.map((menu, index) => (
             <div
               key={index}
@@ -87,45 +93,41 @@ const Navbar = () => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              {/* Parent Menu Item */}
               <Link href={menu.href || "#"}>
                 <span
-                  className={`${
-                    isScrolled ? "text-white" : "text-white"
-                  } hover:text-[#dca958] font-medium text-lg relative`}
+                  className={`text-white/90 hover:text-[#dca958] font-medium text-[15px] relative transition-colors duration-200 pb-1 ${
+                    pathname === menu.href || (menu.href !== "/" && pathname?.startsWith(menu.href || ""))
+                      ? "!text-[#dca958] border-b-2 border-[#dca958]"
+                      : ""
+                  }`}
                 >
                   {menu.label}
                 </span>
               </Link>
 
-              {/* Dropdown Menu */}
               <AnimatePresence>
                 {menu.children && activeMenu === index && (
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 20 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute left-0 w-max mt-3 max-w-none bg-white shadow-lg p-6 rounded-lg z-50"
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                    className="absolute w-max mt-4 bg-white/95 backdrop-blur-md shadow-xl shadow-black/10 p-4 rounded-xl z-50 border border-gray-100"
                     style={{
                       [language === "ar" ? "right" : "left"]: 0,
                     }}
                   >
-                    <div className="space-y-2 gap-4">
+                    <div className="space-y-1">
                       {menu.children?.map(
                         (
                           child: { label: string; href: string },
                           idx: number
                         ) => (
-                          <div key={idx}>
-                            <ul className="mt-2 space-y-2">
-                              <li className="text-gray-800 hover:text-[#dca958] transition-colors duration-300 p-1">
-                                <Link href={child.href}>
-                                  <span className="">{child.label}</span>
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
+                          <Link key={idx} href={child.href}>
+                            <div className="px-4 py-2.5 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-[#dca958] transition-all duration-200 text-sm font-medium">
+                              {child.label}
+                            </div>
+                          </Link>
                         )
                       )}
                     </div>
@@ -138,10 +140,10 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-4">
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
             onClick={toggleLanguage}
-            className="px-4 lg:px-8 py-2 bg-[#dca958] hover:bg-[#e69c31] text-white rounded-full text-lg __className_962c5a"
+            className="px-5 py-2 bg-[#dca958] hover:bg-[#e69c31] text-white rounded-full text-sm font-semibold tracking-wide transition-colors duration-200 shadow-sm"
           >
             {language === "en" ? "العربية" : "English"}
           </motion.button>

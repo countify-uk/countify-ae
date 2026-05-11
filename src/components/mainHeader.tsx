@@ -1,13 +1,20 @@
 'use client';
 
 import React from "react";
+import Link from "next/link";
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 interface MainHeaderProps {
   title: string;
   description: string;
+  breadcrumb?: BreadcrumbItem[];
 }
 
-const MainHeader: React.FC<MainHeaderProps> = ({ title, description }) => {
+const MainHeader: React.FC<MainHeaderProps> = ({ title, description, breadcrumb }) => {
   return (
     <section
       className="mx-auto justify-center w-full h-[200px] sm:h-[264px] text-center pt-28 font-bold relative flex flex-col items-center"
@@ -28,6 +35,41 @@ const MainHeader: React.FC<MainHeaderProps> = ({ title, description }) => {
           >
             {description}
           </p>
+          {breadcrumb && breadcrumb.length > 0 && (
+            <>
+              <nav aria-label="Breadcrumb" className="mt-4">
+                <ol className="flex flex-wrap items-center justify-center gap-1.5 text-sm">
+                  {breadcrumb.map((item, index) => (
+                    <li key={index} className="inline-flex items-center gap-1.5">
+                      {index > 0 && <span className="text-white/60 mx-1">/</span>}
+                      {item.href ? (
+                        <Link href={item.href} className="text-white hover:text-white/60 transition-colors">
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <span className="text-white/60">{item.label}</span>
+                      )}
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": breadcrumb.map((item, index) => ({
+                      "@type": "ListItem",
+                      "position": index + 1,
+                      "name": item.label,
+                      ...(item.href ? { "item": `https://www.countify.ae${item.href}` } : {}),
+                    })),
+                  })
+                }}
+              />
+            </>
+          )}
         </div>
       </div>
     </section>
