@@ -10,7 +10,6 @@ import { ArrowRight } from 'lucide-react';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLanguage } from '@/context/LanguageContext';
-import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 
 const formSchema = z.object({
@@ -26,7 +25,6 @@ type FormValues = z.infer<typeof formSchema>;
 
 const ConsultationForm = () => {
   const { t } = useLanguage();
-  const { toast } = useToast();
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -44,46 +42,18 @@ const ConsultationForm = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          formType: "consultation",
-          source: window.location.href,
-        }),
-      });
-      const result = (await response.json().catch(() => null)) as
-        | { message?: string }
-        | null;
 
-      if (!response.ok) {
-        toast({
-          title: "Could not send request",
-          description:
-            result?.message ||
-            "Please try again or contact us directly at info@countify.ae.",
-          variant: "destructive",
-        });
-        return;
-      }
+    const params = new URLSearchParams({
+      name: data.name,
+      email: data.email,
+      service: data.service,
+    });
 
-      toast({
-        title: "Consultation Request Received",
-        description: result?.message || "We'll contact you shortly to discuss your needs.",
-      });
-      router.push(
-        `/contact?name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(
-          data.email
-        )}&phone=${encodeURIComponent(data.phone || '')}&service=${encodeURIComponent(data.service)}`
-      );
-      form.reset();
-    } finally {
-      setIsSubmitting(false);
-    }
+    if (data.phone) params.set("phone", data.phone);
+    if (data.message) params.set("message", data.message);
+
+    router.push(`/contact?${params.toString()}`);
+    setIsSubmitting(false);
   };
 
   const services = [
@@ -219,13 +189,13 @@ const ConsultationForm = () => {
               className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium"
               disabled={isSubmitting}
             >
-              {isSubmitting ? t('form.submitting', 'Sending...') : t('form.submit', 'Get Started')}
+              {isSubmitting ? t('form.submitting', 'Continuing...') : t('form.submit', 'Get Started')}
               {!isSubmitting && <ArrowRight className="w-5 h-5 ml-1" />}
             </Button>
           </div>
 
           <div className="text-xs text-center text-muted-foreground mt-2">
-            {t('form.disclaimer', 'By submitting this form, you agree to our')}{' '}
+            {t('form.disclaimer', 'By continuing, you agree to our')}{' '}
             <a href="/privacy-policy" className="text-secondary hover:underline">
               {t('form.privacy', 'Privacy Policy')}
             </a>

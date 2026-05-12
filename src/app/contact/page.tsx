@@ -4,7 +4,27 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { CheckCircle2, MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+
+type ContactFormData = {
+  name: string;
+  email: string;
+  service: string;
+  phone: string;
+  company: string;
+  message: string;
+  website: string;
+};
+
+const emptyFormData: ContactFormData = {
+  name: "",
+  email: "",
+  service: "",
+  phone: "",
+  company: "",
+  message: "",
+  website: "",
+};
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
@@ -13,22 +33,16 @@ const ContactForm = () => {
   const email = searchParams.get("email") || "";
   const service = searchParams.get("service") || "";
   const phone = searchParams.get("phone") || "";
+  const message = searchParams.get("message") || "";
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    service: "",
-    phone: "",
-    company: "",
-    message: "",
-    website: "",
-  });
+  const [formData, setFormData] = useState<ContactFormData>(emptyFormData);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error";
     message: string;
   } | null>(null);
+  const [submittedData, setSubmittedData] = useState<ContactFormData | null>(null);
 
   const services = [
     { value: "rd-advisory", label: "R&D Advisory" },
@@ -41,6 +55,9 @@ const ContactForm = () => {
     { value: "audit-preparation", label: "Audit Preparation" },
   ];
 
+  const getServiceLabel = (value: string) =>
+    services.find((item) => item.value === value)?.label || value || "Not selected";
+
   useEffect(() => {
     setFormData((prev) => ({
       ...prev,
@@ -48,8 +65,9 @@ const ContactForm = () => {
       email,
       service,
       phone,
+      message,
     }));
-  }, [name, email, service, phone]);
+  }, [name, email, service, phone, message]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,15 +104,7 @@ const ContactForm = () => {
         type: "success",
         message: result?.message || "Thank you. We will contact you shortly.",
       });
-      setFormData({
-        name: "",
-        email: "",
-        service: "",
-        phone: "",
-        company: "",
-        message: "",
-        website: "",
-      });
+      setSubmittedData(formData);
     } catch {
       setSubmitStatus({
         type: "error",
@@ -105,6 +115,58 @@ const ContactForm = () => {
       setIsSubmitting(false);
     }
   };
+
+  if (submitStatus?.type === "success" && submittedData) {
+    const summaryRows = [
+      { label: "Name", value: submittedData.name },
+      { label: "Email", value: submittedData.email },
+      { label: "Phone", value: submittedData.phone },
+      { label: "Company", value: submittedData.company },
+      { label: "Service", value: getServiceLabel(submittedData.service) },
+      { label: "Message", value: submittedData.message },
+    ].filter((item) => item.value);
+
+    return (
+      <motion.div
+        role="status"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+        className="rounded-2xl border border-green-400/25 bg-green-400/10 p-6 text-center"
+      >
+        <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-green-400/15 ring-1 ring-green-300/30">
+          <CheckCircle2 className="h-12 w-12 text-green-300" strokeWidth={1.8} />
+        </div>
+        <h3 className="text-2xl font-bold text-white">
+          {language === "ar" ? "ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨Ùƒ" : "Your enquiry has been sent"}
+        </h3>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/65">
+          {submitStatus.message}{" "}
+          {language === "ar"
+            ? "Ø£Ø±Ø³Ù„Ù†Ø§ Ø£ÙŠØ¶Ù‹Ø§ ØªØ£ÙƒÙŠØ¯Ù‹Ø§ Ø¥Ù„Ù‰ Ø¨Ø±ÙŠØ¯Ùƒ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ."
+            : "We have also sent a confirmation email to your inbox."}
+        </p>
+
+        <div className="mt-7 rounded-xl border border-white/10 bg-[#0a112d]/60 p-5 text-left">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#dca958]">
+            {language === "ar" ? "Ù…Ù„Ø®Øµ Ø§Ù„Ø·Ù„Ø¨" : "Submission summary"}
+          </p>
+          <dl className="grid gap-4 sm:grid-cols-2">
+            {summaryRows.map((item) => (
+              <div key={item.label}>
+                <dt className="text-xs font-medium uppercase tracking-wide text-white/40">
+                  {item.label}
+                </dt>
+                <dd className="mt-1 break-words text-sm font-semibold text-white">
+                  {item.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
