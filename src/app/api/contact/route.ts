@@ -27,6 +27,22 @@ const formLabels = {
   consultation: "Consultation Form",
 } as const;
 
+const serviceLabels: Record<string, string> = {
+  "rd-advisory": "R&D Advisory",
+  "corporate-tax": "Corporate Tax",
+  "vat-return": "VAT Registration & Filing",
+  "company-formation": "Company Formation",
+  bookkeeping: "Bookkeeping",
+  "payroll-services": "Payroll Services",
+  "year-end-accounts": "Year-End Accounts",
+  "audit-preparation": "Audit Preparation",
+};
+
+function formatService(service?: string) {
+  if (!service) return service;
+  return serviceLabels[service] || service;
+}
+
 export async function POST(request: Request) {
   let payload: unknown;
 
@@ -68,7 +84,7 @@ export async function POST(request: Request) {
       Email: data.email,
       Phone: data.phone,
       Company: data.company,
-      Service: data.service,
+      Service: formatService(data.service),
       Message: data.message,
     },
   });
