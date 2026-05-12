@@ -39,7 +39,7 @@ const WhyChooseCard = () => {
     {
       title: { en: "R&D Specialists", ar: "متخصصون في البحث والتطوير" },
       description: {
-        en: "One of the very few UAE firms offering genuine end-to-end R&D advisory. Led by Hannan Khokhar FCCA with 7+ years specialist experience.",
+        en: "One of the very few UAE firms offering compliant end-to-end R&D advisory. Led by an experienced R&D team with 7+ years specialist experience.",
         ar: "من بين القلة في الإمارات التي تقدم استشارات شاملة للبحث والتطوير."
       },
       icon: ChartLine,

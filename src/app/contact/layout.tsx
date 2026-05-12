@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Contact Countify UAE for accounting, VAT, corporate tax and R&D advisory support. Call +971 58 511 7901 or email info@countify.ae.",
   alternates: {
-    canonical: "/contact",
+    canonical: "https://www.countify.ae/contact",
   },
   openGraph: {
     title: "Contact Countify UAE",
     description:
       "Speak with ACCA-qualified accountants for UAE accounting, tax and compliance support.",
-    url: "/contact",
+    url: "https://www.countify.ae/contact",
   },
   twitter: {
     card: "summary_large_image",

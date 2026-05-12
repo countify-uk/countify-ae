@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Meet the Countify UAE team of ACCA-qualified accountants and specialists in tax, R&D, VAT, company formation and bookkeeping.",
   alternates: {
-    canonical: "/team",
+    canonical: "https://www.countify.ae/team",
   },
   openGraph: {
     title: "Our Team | Countify UAE",
     description:
       "Meet the accountants and specialists supporting Countify clients across the UAE.",
-    url: "/team",
+    url: "https://www.countify.ae/team",
   },
   twitter: {
     card: "summary_large_image",

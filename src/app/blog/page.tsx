@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Practical UAE accounting, VAT, corporate tax, R&D advisory and company formation guides from Countify's chartered accountants.",
   alternates: {
-    canonical: "/blog",
+    canonical: "https://www.countify.ae/blog",
   },
   openGraph: {
     title: "UAE Accounting & Tax Blog | Countify",
     description:
       "Plain-English accounting and tax guides for UAE founders, SMEs and overseas owners.",
-    url: "/blog",
+    url: "https://www.countify.ae/blog",
   },
   twitter: {
     card: "summary_large_image",

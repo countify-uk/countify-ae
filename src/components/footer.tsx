@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import { useFooterLinks } from "@/data/footerLinks";
 import { useLanguage } from "@/context/LanguageContext";
@@ -80,15 +80,15 @@ const Footer = () => {
               </p>
               <div className="flex space-x-3 mt-6">
                 <a
-                  href="https://www.facebook.com/people/Countify/100094716728290/"
+                  href="https://www.instagram.com/countifyuae/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <Instagram className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/93373167/"
+                  href="https://www.linkedin.com/company/countify-uae/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
@@ -159,7 +159,7 @@ const Footer = () => {
                 Dubai, U.A.E.
               </p>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mt-6 mb-3">
-                {language === "ar" ? "المكتب الرئيسي" : "Main Office"}
+                {language === "ar" ? "المكتب الرئيسي" : "UK Office"}
               </h4>
               <p className="text-sm text-white/60 leading-relaxed">
                 3rd Floor, St. Georges Building<br />

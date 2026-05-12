@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "UAE accounting, VAT, corporate tax, R&D advisory, company formation, bookkeeping and payroll support for startups, SMEs and growing companies.",
   alternates: {
-    canonical: "/services",
+    canonical: "https://www.countify.ae/services",
   },
   openGraph: {
     title: "Accounting & Tax Services UAE | Countify",
     description:
       "Explore Countify services for UAE VAT, corporate tax, R&D advisory, bookkeeping, payroll and company formation.",
-    url: "/services",
+    url: "https://www.countify.ae/services",
   },
   twitter: {
     card: "summary_large_image",

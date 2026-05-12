@@ -19,6 +19,7 @@ const formSchema = z.object({
   phone: z.string().optional(),
   service: z.string().min(1, { message: "Please select a service" }),
   message: z.string().optional(),
+  website: z.string().max(0).optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -37,16 +38,42 @@ const ConsultationForm = () => {
       phone: "",
       service: "",
       message: "",
+      website: "",
     },
   });
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      if (process.env.NODE_ENV === 'development') console.log("Form submitted:", data);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          formType: "consultation",
+          source: window.location.href,
+        }),
+      });
+      const result = (await response.json().catch(() => null)) as
+        | { message?: string }
+        | null;
+
+      if (!response.ok) {
+        toast({
+          title: "Could not send request",
+          description:
+            result?.message ||
+            "Please try again or contact us directly at info@countify.ae.",
+          variant: "destructive",
+        });
+        return;
+      }
+
       toast({
         title: "Consultation Request Received",
-        description: "We'll contact you shortly to discuss your needs.",
+        description: result?.message || "We'll contact you shortly to discuss your needs.",
       });
       router.push(
         `/contact?name=${encodeURIComponent(data.name)}&email=${encodeURIComponent(
@@ -80,6 +107,13 @@ const ConsultationForm = () => {
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+            {...form.register("website")}
+          />
           <FormField
             control={form.control}
             name="name"

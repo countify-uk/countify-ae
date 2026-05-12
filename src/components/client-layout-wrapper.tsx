@@ -53,7 +53,10 @@ export default function ClientLayoutWrapper({
                 { "@type": "Offer", itemOffered: { "@type": "Service", name: "Payroll Services UAE" } },
               ],
             },
-            sameAs: ["https://www.countify.co.uk"],
+            sameAs: [
+              "https://www.instagram.com/countifyuae/",
+              "https://www.linkedin.com/company/countify-uae/",
+            ],
           }),
         }}
       />
@@ -71,7 +74,7 @@ export default function ClientLayoutWrapper({
                 name: "Do I need to register for corporate tax in UAE?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes. Since the introduction of UAE Corporate Tax in June 2023, most businesses with taxable income above AED 375,000 must register with the FTA and file a return. Countify handles the full registration and filing process.",
+                  text: "Yes. Since the introduction of UAE Corporate Tax in June 2023, all businesses must register with the FTA and file a corporation tax return. Countify handles the full registration and filing process.",
                 },
               },
               {
@@ -87,7 +90,7 @@ export default function ClientLayoutWrapper({
                 name: "Do UAE businesses qualify for R&D tax incentives?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes. The UAE introduced R&D incentives as part of the corporate tax framework. Qualifying R&D expenditure may attract a 30% to 50% deduction above cost. Countify provides end-to-end R&D advisory to help you claim the maximum benefit.",
+                  text: "The UAE has introduced R&D incentives as part of its Corporate Tax framework, offering qualifying businesses enhanced tax deductions of 30% to 50% above qualifying R&D expenditure. Countify is one of the very few UAE accountancy firms offering compliant end-to-end R&D advisory, led by an experienced R&D team with over 7 years of specialist R&D experience.",
                 },
               },
               {

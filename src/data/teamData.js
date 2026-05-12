@@ -8,8 +8,8 @@ export const teamMembers = [
     description:
       "Meet Hannan Khokhar, the visionary CEO of Countify. With a distinguished background as a Fellow Chartered Certified Accountant (FCCA), Hannan leads the company with innovation and a client-focused approach.",
     socials: {
-      facebook: "https://www.facebook.com/people/Countify/100094716728290/",
-      linkedin: "https://www.linkedin.com/company/93373167/admin/feed/posts/",
+      instagram: "https://www.instagram.com/countifyuae/",
+      linkedin: "https://www.linkedin.com/company/countify-uae/",
     },
   },
   {
@@ -20,10 +20,7 @@ export const teamMembers = [
     profileLink: "#",
     description:
       "Meet Kamran Ishaq, the dedicated Chief Operating Officer of Countify. With his expertise as an Association of Chartered Certified Accountants (ACCA), Kamran ensures operational excellence and strategic growth for the company.",
-    socials: {
-      // facebook: "https://www.facebook.com/people/Countify/100094716728290/",
-      // linkedin: "https://www.linkedin.com/company/93373167/admin/feed/posts/",
-    },
+    socials: {},
   },
 
   {
@@ -56,9 +53,7 @@ export const teamMembers = [
     profileLink: "#",
     description:
       "Introducing Muhammad Hasnain, our dedicated Accounts Assistant at Countify. With expertise in bookkeeping, R&D tax credits, and accounts preparation, Hasnain plays a vital role in supporting our clients' financial needs with precision and care.",
-    socials: {
-      // facebook: "https://www.facebook.com/people/Countify/100094716728290/",
-    },
+    socials: {},
   },
   {
     id: 6,
@@ -68,8 +63,6 @@ export const teamMembers = [
     profileLink: "#",
     description:
       "Meet Umar Iqbal, our skilled Bookkeeper at Countify. With a strong grasp of accounting principles and meticulous attention to detail, Umar ensures accurate and efficient bookkeeping for our clients.",
-    socials: {
-      // facebook: "https://www.facebook.com/people/Countify/100094716728290/",
-    },
+    socials: {},
   },
 ];

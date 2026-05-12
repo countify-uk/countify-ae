@@ -31,12 +31,12 @@ export async function generateMetadata({
     },
     description: post.metaDescription,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `https://www.countify.ae/blog/${post.slug}`,
     },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
-      url: `/blog/${post.slug}`,
+      url: `https://www.countify.ae/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
     },

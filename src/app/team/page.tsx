@@ -5,6 +5,7 @@ import { teamMembers } from "@/data/teamData";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 const TeamPage = () => {
   return (
     <>
@@ -48,21 +49,14 @@ const TeamPage = () => {
                     </p>
                   </Link>
                     <div className="flex mt-4 -mx-2">
-                    {member.socials.facebook && (
+                    {member.socials.instagram && (
                           <a
-                            href={member.socials.facebook}
+                            href={member.socials.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-6 h-6 mx-2 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700"
+                            className="w-6 h-6 mx-2 flex items-center justify-center rounded-full bg-pink-600 hover:bg-pink-700"
                           >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="14px"
-                              fill="#fff"
-                              viewBox="0 0 155.139 155.139"
-                            >
-                              <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
-                            </svg>
+                            <Instagram className="w-3.5 h-3.5 text-white" />
                           </a>
                         )}
                       {member.socials.linkedin && (

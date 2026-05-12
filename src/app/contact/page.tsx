@@ -5,11 +5,10 @@ import { useEffect, useState, Suspense } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
-import Link from "next/link";
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const name = searchParams.get("name") || "";
   const email = searchParams.get("email") || "";
   const service = searchParams.get("service") || "";
@@ -22,9 +21,14 @@ const ContactForm = () => {
     phone: "",
     company: "",
     message: "",
+    website: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const services = [
     { value: "rd-advisory", label: "R&D Advisory" },
@@ -47,14 +51,72 @@ const ContactForm = () => {
     }));
   }, [name, email, service, phone]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => setIsSubmitting(false), 2000);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType: "contact",
+          source: window.location.href,
+        }),
+      });
+      const result = (await response.json().catch(() => null)) as
+        | { message?: string }
+        | null;
+
+      if (!response.ok) {
+        setSubmitStatus({
+          type: "error",
+          message:
+            result?.message ||
+            "Your message could not be sent. Please try again or contact us directly.",
+        });
+        return;
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: result?.message || "Thank you. We will contact you shortly.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        service: "",
+        phone: "",
+        company: "",
+        message: "",
+        website: "",
+      });
+    } catch {
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Your message could not be sent. Please try again or contact us directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      <input
+        type="text"
+        name="website"
+        value={formData.website}
+        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+      />
       <div className="grid md:grid-cols-2 gap-4">
         <div className="space-y-1.5">
           <label htmlFor="name" className="text-sm font-medium text-white/70">
@@ -157,6 +219,16 @@ const ContactForm = () => {
           ? (language === "ar" ? "جارٍ الإرسال..." : "Sending...")
           : (language === "ar" ? "أرسل رسالتك" : "Send Message")}
       </button>
+      {submitStatus && (
+        <p
+          role="status"
+          className={`text-sm ${
+            submitStatus.type === "success" ? "text-green-300" : "text-red-300"
+          }`}
+        >
+          {submitStatus.message}
+        </p>
+      )}
     </form>
   );
 };
@@ -252,7 +324,7 @@ const ContactPage = () => {
               </div>
               <div className="flex items-center gap-2 text-white/50 text-xs mt-3">
                 <Clock className="w-3.5 h-3.5" />
-                <span>{language === "ar" ? "الأحد – الخميس: 9 ص – 6 م" : "Sun – Thu: 9 AM – 6 PM GST"}</span>
+                <span>{language === "ar" ? "الأحد – الخميس: 9 ص – 6 م" : "Mon-Fri 9am – 6pm"}</span>
               </div>
             </div>
 

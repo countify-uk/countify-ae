@@ -15,7 +15,7 @@ export interface FaqItem {
         ar: "هل أحتاج إلى التسجيل لضريبة الشركات في الإمارات؟",
       },
       answer: {
-        en: "Yes. Since the introduction of UAE Corporate Tax in June 2023, most businesses with taxable income above AED 375,000 must register with the FTA and file a return. Countify handles the full registration and filing process.",
+        en: "Yes. Since the introduction of UAE Corporate Tax in June 2023, all businesses must register with the FTA and file a corporation tax return. Countify handles the full registration and filing process.",
         ar: "نعم. منذ تطبيق ضريبة الشركات في الإمارات في يونيو 2023، يجب على معظم الشركات التي يتجاوز دخلها الخاضع للضريبة 375,000 درهم التسجيل لدى الهيئة الاتحادية للضرائب وتقديم إقرار ضريبي. تتولى Countify عملية التسجيل والتقديم بالكامل.",
       },
     },
@@ -35,7 +35,7 @@ export interface FaqItem {
         ar: "هل تتأهل الشركات الإماراتية لحوافز ضريبية للبحث والتطوير؟",
       },
       answer: {
-        en: "Yes. The UAE introduced R&D incentives as part of the corporate tax framework. Qualifying R&D expenditure may attract a 30–50% deduction above cost. Countify provides end-to-end R&D advisory to help you claim the maximum benefit.",
+        en: "The UAE has introduced R&D incentives as part of its Corporate Tax framework, offering qualifying businesses enhanced tax deductions of 30% to 50% above qualifying R&D expenditure. Countify is one of the very few UAE accountancy firms offering compliant end-to-end R&D advisory, led by an experienced R&D team with over 7 years of specialist R&D experience.",
         ar: "نعم. قدمت الإمارات حوافز البحث والتطوير كجزء من إطار ضريبة الشركات. قد يحصل الإنفاق المؤهل على البحث والتطوير على خصم بنسبة 30-50% فوق التكلفة. تقدم Countify استشارات شاملة للبحث والتطوير لمساعدتك في المطالبة بأقصى فائدة.",
       },
     },

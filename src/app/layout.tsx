@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   description:
     "ACCA-qualified accountants in the UAE for VAT, corporate tax, R&D advisory, company formation, bookkeeping and payroll.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.countify.ae/",
   },
   openGraph: {
     title: "Accountants in UAE | VAT, Tax & R&D Advisory | Countify",
     description:
       "ACCA-qualified accountants helping UAE businesses with VAT, corporate tax, R&D advisory, company formation and bookkeeping.",
-    url: "/",
+    url: "https://www.countify.ae/",
     siteName: "Countify UAE",
     images: [
       {

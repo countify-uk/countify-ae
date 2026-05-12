@@ -1,5 +1,5 @@
 'use client';
-export default function Error({ error, reset }: { error: Error; reset: () => void }) {
+export default function Error({ reset }: { error: Error; reset: () => void }) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#0a112d] text-white">
       <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>

@@ -42,12 +42,12 @@ const process = {
 
 const whyUs = {
   en: [
-    "7+ Years Specialist R&D Advisory Experience (Hannan Khokhar FCCA)",
+    "7+ Years Specialist R&D Advisory Experience",
     "Big 4 Background — Institutional-Grade Methodology",
     "ACCA Qualified — Chartered Accountancy Expertise on Every Claim",
     "End-to-End Service — From Technical Assessment to FTA Submission",
     "FTA-Compliant Documentation and Processes",
-    "One of Very Few UAE Firms Offering Genuine R&D Advisory",
+    "One of the Very Few UAE Firms offering Compliant R&D Advisory",
   ],
   ar: [
     "أكثر من 7 سنوات من الخبرة المتخصصة في استشارات البحث والتطوير (حنان خوخار FCCA)",
@@ -119,7 +119,7 @@ export default function RDAdvisoryPage() {
           <p className="text-lg text-gray-700 mb-8">
             {lang === "ar"
               ? "قدمت دولة الإمارات حوافز البحث والتطوير كجزء من إطار ضريبة الشركات، وتقدم للشركات المؤهلة خصومات ضريبية معززة تتراوح بين 30% إلى 50% فوق نفقات البحث والتطوير المؤهلة. تعد Countify واحدة من القلائل في الإمارات التي تقدم استشارات شاملة للبحث والتطوير، بقيادة حنان خوخار FCCA مع أكثر من 7 سنوات من الخبرة المتخصصة."
-              : "The UAE has introduced R&D incentives as part of its Corporate Tax framework, offering qualifying businesses enhanced tax deductions of 30% to 50% above qualifying R&D expenditure. Countify is one of the very few UAE accountancy firms offering genuine end-to-end R&D advisory, led by Hannan Khokhar FCCA with over 7 years of specialist R&D experience."}
+              : "The UAE has introduced R&D incentives as part of its Corporate Tax framework, offering qualifying businesses enhanced tax deductions of 30% to 50% above qualifying R&D expenditure. Countify is one of the very few UAE accountancy firms offering compliant end-to-end R&D advisory, led by an experienced R&D team with over 7 years of specialist R&D experience."}
           </p>
 
           <h2 className="text-[#1a3a8f] font-bold text-2xl my-4">
