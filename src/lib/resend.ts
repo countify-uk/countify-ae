@@ -20,8 +20,40 @@ const requiredEnvVars = [
   "RESEND_TO_EMAIL",
 ] as const;
 
+function readEnvValue(key: (typeof requiredEnvVars)[number]) {
+  const rawValue = process.env[key];
+
+  if (!rawValue) return "";
+
+  let value = rawValue.trim();
+
+  if (value.startsWith(`${key}=`)) {
+    value = value.slice(key.length + 1).trim();
+  }
+
+  if (
+    (value.startsWith('"') && value.endsWith('"')) ||
+    (value.startsWith("'") && value.endsWith("'"))
+  ) {
+    value = value.slice(1, -1).trim();
+  }
+
+  return value;
+}
+
+function redactEmailConfigIssue(key: string, value: string) {
+  if (!value) return `${key} is empty`;
+
+  return `${key} has an invalid value format`;
+}
+
 function getEmailConfig() {
-  const missing = requiredEnvVars.filter((key) => !process.env[key]);
+  const env = {
+    RESEND_API_KEY: readEnvValue("RESEND_API_KEY"),
+    RESEND_FROM_EMAIL: readEnvValue("RESEND_FROM_EMAIL"),
+    RESEND_TO_EMAIL: readEnvValue("RESEND_TO_EMAIL"),
+  };
+  const missing = requiredEnvVars.filter((key) => !env[key]);
 
   if (missing.length > 0) {
     return {
@@ -30,11 +62,21 @@ function getEmailConfig() {
     };
   }
 
+  if (
+    !env.RESEND_API_KEY.startsWith("re_") ||
+    env.RESEND_API_KEY.includes("dummy_api_key_replace_me")
+  ) {
+    return {
+      success: false as const,
+      error: redactEmailConfigIssue("RESEND_API_KEY", env.RESEND_API_KEY),
+    };
+  }
+
   return {
     success: true as const,
-    apiKey: process.env.RESEND_API_KEY as string,
-    from: process.env.RESEND_FROM_EMAIL as string,
-    to: process.env.RESEND_TO_EMAIL as string,
+    apiKey: env.RESEND_API_KEY,
+    from: env.RESEND_FROM_EMAIL,
+    to: env.RESEND_TO_EMAIL,
   };
 }
 
