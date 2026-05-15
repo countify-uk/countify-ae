@@ -4,7 +4,7 @@ export const useFooterLinks = () => {
     
   return [
     {
-      title: "Quick Links",
+      title: t("footer.quick", "Quick Links"),
       links: [
         { label: t("nav.home", "Home"), href: "/" },
         { label: t("nav.about", "About Countify"), href: "/about" },
@@ -12,11 +12,11 @@ export const useFooterLinks = () => {
         { label: t("nav.blog", "Blog"), href: "/blog" },
         { label: t("nav.team", "Our Team"), href: "/team" },
         { label: t("nav.contact", "Contact"), href: "/contact" },
-        { label: "Privacy Policy", href: "/privacy-policy" },
+        { label: t("cookie.policy", "Privacy Policy"), href: "/privacy-policy" },
       ],
     },
     {
-      title: "Services",
+      title: t("footer.services", "Services"),
       links: [
         { label: t("services.bookkeeping.title"), href: "/services/bookkeeping" },
         { label: t("services.formation.title"), href: "/services/company-formation" },

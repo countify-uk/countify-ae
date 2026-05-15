@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "Claim UAE R&D tax incentives with Countify. We identify qualifying spend, prepare documentation and help maximise your corporate tax benefit.",
   alternates: {
     canonical: "https://www.countify.ae/services/rd-advisory",
+    languages: {
+      "en-AE": "https://www.countify.ae/services/rd-advisory",
+      "ar-AE": "https://www.countify.ae/services/rd-advisory?lang=ar",
+    },
   },
   openGraph: {
     title: "R&D Tax Advisory UAE | Countify",

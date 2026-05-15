@@ -12,6 +12,8 @@ export type BlogPost = {
   category: string;
   metaTitle: string;
   metaDescription: string;
+  image?: string;
+  author?: string;
   sections: BlogSection[];
 };
 

@@ -23,11 +23,11 @@ const item = {
 const Services = () => {
   const { t, language } = useLanguage();
 
-  const title = language === "ar" ? "خدماتنا" : "Our Services";
-  const description =
-    language === "ar"
-      ? "استكشف مجموعة خدماتنا الشاملة في المحاسبة والضرائب وتأسيس الأعمال المصممة لتلبية احتياجاتك."
-      : "Explore our comprehensive range of accounting, tax, and business setup services tailored to meet your needs.";
+  const title = t("services.title", "Our Services");
+  const description = t(
+    "services.description",
+    "Explore our comprehensive range of accounting, tax, and business setup services tailored to meet your needs."
+  );
 
   return (
     <div className="bg-gradient-to-b from-[#0a112d] via-[#061640] to-[#0a112d] min-h-screen">
@@ -35,8 +35,8 @@ const Services = () => {
         title={title}
         description={description}
         breadcrumb={[
-          { label: language === "ar" ? "الرئيسية" : "Home", href: "/" },
-          { label: language === "ar" ? "الخدمات" : "Services" },
+          { label: t("nav.home", "Home"), href: "/" },
+          { label: t("nav.services", "Services") },
         ]}
       />
 
@@ -94,7 +94,7 @@ const Services = () => {
                       {service.description[language]}
                     </p>
                     <div className="flex items-center gap-1 text-[#dca958] text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                      <span>{language === "ar" ? "اقرأ المزيد" : "Learn more"}</span>
+                      <span>{t("button.learnMore", "Learn more")}</span>
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
@@ -108,14 +108,10 @@ const Services = () => {
       <section className="container mx-auto px-5 pb-24">
         <div className="bg-gradient-to-r from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-10 md:p-14 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            {language === "ar"
-              ? "لم تجد ما تبحث عنه؟"
-              : "Can't find what you're looking for?"}
+            {t("services.notFound.title", "Can't find what you're looking for?")}
           </h2>
           <p className="text-white/50 text-base max-w-xl mx-auto mb-8">
-            {language === "ar"
-              ? "اتصل بنا للحصول على استشارة مجانية وسنساعدك في العثور على الحل المناسب لعملك."
-              : "Get in touch for a free consultation and we'll help you find the right solution for your business."}
+            {t("services.notFound.body", "Get in touch for a free consultation and we'll help you find the right solution for your business.")}
           </p>
           <Link
             href="/contact"

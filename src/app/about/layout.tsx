@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "Meet Countify UAE, ACCA-qualified chartered accountants founded by Big 4 alumni and serving businesses across Dubai, Abu Dhabi and Sharjah.",
   alternates: {
     canonical: "https://www.countify.ae/about",
+    languages: {
+      "en-AE": "https://www.countify.ae/about",
+      "ar-AE": "https://www.countify.ae/about?lang=ar",
+    },
   },
   openGraph: {
     title: "About Countify UAE │ ACCA Chartered Accountants",

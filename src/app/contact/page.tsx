@@ -28,7 +28,7 @@ const emptyFormData: ContactFormData = {
 
 const ContactForm = () => {
   const searchParams = useSearchParams();
-  const { language } = useLanguage();
+  const { t, language } = useLanguage();
   const name = searchParams.get("name") || "";
   const email = searchParams.get("email") || "";
   const service = searchParams.get("service") || "";
@@ -45,18 +45,18 @@ const ContactForm = () => {
   const [submittedData, setSubmittedData] = useState<ContactFormData | null>(null);
 
   const services = [
-    { value: "rd-advisory", label: "R&D Advisory" },
-    { value: "corporate-tax", label: "Corporate Tax" },
-    { value: "vat-return", label: "VAT Registration & Filing" },
-    { value: "company-formation", label: "Company Formation" },
-    { value: "bookkeeping", label: "Bookkeeping" },
-    { value: "payroll-services", label: "Payroll Services" },
-    { value: "year-end-accounts", label: "Year-End Accounts" },
-    { value: "audit-preparation", label: "Audit Preparation" },
+    { value: "rd-advisory", label: t("form.services.rd-advisory", "R&D Advisory") },
+    { value: "corporate-tax", label: t("services.corporate-tax.title", "Corporate Tax") },
+    { value: "vat-return", label: t("form.services.vat-return", "VAT Registration & Filing") },
+    { value: "company-formation", label: t("form.services.company-formation", "Company Formation") },
+    { value: "bookkeeping", label: t("form.services.bookkeeping", "Bookkeeping") },
+    { value: "payroll-services", label: t("form.services.payroll-services", "Payroll Services") },
+    { value: "year-end-accounts", label: t("form.services.year-end-accounts", "Year-End Accounts") },
+    { value: "audit-preparation", label: t("form.services.audit-preparation", "Audit Preparation") },
   ];
 
   const getServiceLabel = (value: string) =>
-    services.find((item) => item.value === value)?.label || value || "Not selected";
+    services.find((item) => item.value === value)?.label || value || (language === "ar" ? "لم يتم الاختيار" : "Not selected");
 
   useEffect(() => {
     setFormData((prev) => ({
@@ -95,21 +95,25 @@ const ContactForm = () => {
           type: "error",
           message:
             result?.message ||
-            "Your message could not be sent. Please try again or contact us directly.",
+            language === "ar"
+              ? "تعذر إرسال رسالتك. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة."
+              : "Your message could not be sent. Please try again or contact us directly.",
         });
         return;
       }
 
       setSubmitStatus({
         type: "success",
-        message: result?.message || "Thank you. We will contact you shortly.",
+        message: result?.message || (language === "ar" ? "شكرًا لك. سنتواصل معك قريبًا." : "Thank you. We will contact you shortly."),
       });
       setSubmittedData(formData);
     } catch {
       setSubmitStatus({
         type: "error",
         message:
-          "Your message could not be sent. Please try again or contact us directly.",
+          language === "ar"
+            ? "تعذر إرسال رسالتك. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة."
+            : "Your message could not be sent. Please try again or contact us directly.",
       });
     } finally {
       setIsSubmitting(false);
@@ -118,12 +122,12 @@ const ContactForm = () => {
 
   if (submitStatus?.type === "success" && submittedData) {
     const summaryRows = [
-      { label: "Name", value: submittedData.name },
-      { label: "Email", value: submittedData.email },
-      { label: "Phone", value: submittedData.phone },
-      { label: "Company", value: submittedData.company },
-      { label: "Service", value: getServiceLabel(submittedData.service) },
-      { label: "Message", value: submittedData.message },
+      { label: language === "ar" ? "الاسم" : "Name", value: submittedData.name },
+      { label: language === "ar" ? "البريد الإلكتروني" : "Email", value: submittedData.email },
+      { label: language === "ar" ? "الهاتف" : "Phone", value: submittedData.phone },
+      { label: language === "ar" ? "الشركة" : "Company", value: submittedData.company },
+      { label: language === "ar" ? "الخدمة" : "Service", value: getServiceLabel(submittedData.service) },
+      { label: language === "ar" ? "الرسالة" : "Message", value: submittedData.message },
     ].filter((item) => item.value);
 
     return (
@@ -342,7 +346,7 @@ const ContactPage = () => {
                 ? "سنرد خلال ساعات العمل"
                 : "We'll respond within 1 business day"}
             </p>
-            <Suspense fallback={<div className="text-white/40">Loading...</div>}>
+            <Suspense fallback={<div className="text-white/40">{language === "ar" ? "جارٍ التحميل..." : "Loading..."}</div>}>
               <ContactForm />
             </Suspense>
           </motion.div>

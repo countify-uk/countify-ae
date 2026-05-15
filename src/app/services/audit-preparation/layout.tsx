@@ -8,6 +8,10 @@ export const metadata: Metadata = {
     "Get audit-ready in the UAE with organised records, reconciliations, schedules and auditor support from Countify's accounting team.",
   alternates: {
     canonical: "https://www.countify.ae/services/audit-preparation",
+    languages: {
+      "en-AE": "https://www.countify.ae/services/audit-preparation",
+      "ar-AE": "https://www.countify.ae/services/audit-preparation?lang=ar",
+    },
   },
   openGraph: {
     title: "Audit Preparation Services UAE | Countify",

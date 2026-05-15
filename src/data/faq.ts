@@ -69,4 +69,44 @@ export interface FaqItem {
         ar: "بالتأكيد. تعمل Countify في كل من المملكة المتحدة والإمارات. نساعد الشركات البريطانية في التعامل مع عملية التأسيس الكاملة في الإمارات — تأسيس الشركات، الخدمات المصرفية، ضريبة القيمة المضافة، ضريبة الشركات والمحاسبة المستمرة — مع ميزة فهم كلا النظامين القانونيين.",
       },
     },
+    {
+      question: {
+        en: "What is UAE Small Business Relief and who qualifies?",
+        ar: "ما هو إعفاء الأعمال الصغيرة في الإمارات ومن يستوفي الشروط؟",
+      },
+      answer: {
+        en: "UAE Small Business Relief allows businesses with annual revenue under AED 3 million to be treated as having zero taxable income for Corporate Tax purposes. To qualify, a business must elect for relief and meet FTA conditions. The relief is available for tax periods from 1 June 2023 to 31 December 2026. Countify can assess your eligibility and handle the election filing.",
+        ar: "يتيح إعفاء الأعمال الصغيرة في الإمارات للشركات ذات الإيرادات السنوية الأقل من 3 ملايين درهم التعامل معها على أنها لا تملك دخلاً خاضعاً للضريبة لأغراض ضريبة الشركات. تتولى Countify تقييم مدى أهليتك والتعامل مع إجراءات الانتخاب.",
+      },
+    },
+    {
+      question: {
+        en: "What is the difference between a Freezone and Mainland company in UAE?",
+        ar: "ما الفرق بين شركة المنطقة الحرة وشركة البر الرئيسي في الإمارات؟",
+      },
+      answer: {
+        en: "A Freezone company operates within a designated economic zone and can benefit from 0% corporate tax on qualifying income, 100% foreign ownership, and simplified customs processes. However, it cannot trade directly with the UAE mainland without a local distributor. A Mainland company allows unrestricted UAE market access but has different licensing and compliance requirements. Countify advises on the best structure for your business goals.",
+        ar: "تعمل شركة المنطقة الحرة ضمن منطقة اقتصادية مخصصة وقد تستفيد من ضريبة شركات بنسبة 0% على الدخل المؤهل وملكية أجنبية 100%. تتيح شركة البر الرئيسي الوصول غير المقيد إلى السوق الإماراتي. تقدم Countify المشورة بشأن أفضل هيكل لأهدافك التجارية.",
+      },
+    },
+    {
+      question: {
+        en: "What bookkeeping records must UAE businesses maintain?",
+        ar: "ما سجلات المحاسبة التي يجب على الشركات الإماراتية الاحتفاظ بها؟",
+      },
+      answer: {
+        en: "Under UAE Corporate Tax law, businesses must maintain accurate financial records and supporting documents for a minimum of 7 years from the end of the relevant tax period. This includes invoices, bank statements, contracts, and payroll records. Proper bookkeeping is also essential for FTA VAT audits. Countify provides monthly and quarterly bookkeeping services to keep your records audit-ready.",
+        ar: "بموجب قانون ضريبة الشركات في الإمارات، يجب على الشركات الاحتفاظ بسجلات مالية دقيقة ووثائق داعمة لمدة لا تقل عن 7 سنوات. تشمل هذه الفواتير وكشوف الحسابات المصرفية والعقود وسجلات الرواتب. تقدم Countify خدمات مسك الدفاتر الشهرية والربعية.",
+      },
+    },
+    {
+      question: {
+        en: "Does Countify serve businesses outside Dubai?",
+        ar: "هل تخدم Countify الشركات خارج دبي؟",
+      },
+      answer: {
+        en: "Yes. Countify serves businesses across all seven UAE emirates — Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah — as well as UK-based businesses expanding into the UAE. Services are delivered remotely and in-person, with dedicated account managers for each client.",
+        ar: "نعم. تخدم Countify الشركات في جميع الإمارات السبع — دبي وأبوظبي والشارقة وعجمان وأم القيوين ورأس الخيمة والفجيرة — فضلاً عن الشركات البريطانية التي تتوسع في الإمارات. تُقدَّم خدماتنا عن بُعد وحضورياً.",
+      },
+    },
   ];

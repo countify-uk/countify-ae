@@ -1,7 +1,8 @@
 'use client';
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface BreadcrumbItem {
   label: string;
@@ -15,6 +16,35 @@ interface MainHeaderProps {
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({ title, description, breadcrumb }) => {
+  const { language } = useLanguage();
+
+  useEffect(() => {
+    if (!breadcrumb || breadcrumb.length === 0) return;
+
+    const scriptId = `schema-breadcrumb-${breadcrumb.map((item) => item.label).join("-").toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+    const existingScript = document.getElementById(scriptId) as HTMLScriptElement | null;
+    const script = existingScript || document.createElement("script");
+
+    script.id = scriptId;
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumb.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.label,
+        ...(item.href ? { "item": `https://www.countify.ae${item.href}` } : {}),
+      })),
+    });
+
+    if (!existingScript) document.head.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, [breadcrumb]);
+
   return (
     <section
       className="mx-auto justify-center w-full h-[200px] sm:h-[264px] text-center pt-28 font-bold relative flex flex-col items-center"
@@ -37,7 +67,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({ title, description, breadcrumb 
           </p>
           {breadcrumb && breadcrumb.length > 0 && (
             <>
-              <nav aria-label="Breadcrumb" className="mt-4">
+              <nav aria-label={language === "ar" ? "مسار التنقل" : "Breadcrumb"} className="mt-4">
                 <ol className="flex flex-wrap items-center justify-center gap-1.5 text-sm">
                   {breadcrumb.map((item, index) => (
                     <li key={index} className="inline-flex items-center gap-1.5">
@@ -53,21 +83,6 @@ const MainHeader: React.FC<MainHeaderProps> = ({ title, description, breadcrumb 
                   ))}
                 </ol>
               </nav>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": breadcrumb.map((item, index) => ({
-                      "@type": "ListItem",
-                      "position": index + 1,
-                      "name": item.label,
-                      ...(item.href ? { "item": `https://www.countify.ae${item.href}` } : {}),
-                    })),
-                  })
-                }}
-              />
             </>
           )}
         </div>

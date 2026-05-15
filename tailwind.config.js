@@ -13,6 +13,20 @@ module.exports = {
           'tertiary-color': 'var(--color-tertiary)',
   
         },
+        keyframes: {
+          "hero-zoom": {
+            "0%": { transform: "scale(1)" },
+            "100%": { transform: "scale(1.12)" },
+          },
+          "scroll-line": {
+            "0%": { transform: "translateY(-100%)" },
+            "100%": { transform: "translateY(220%)" },
+          },
+        },
+        animation: {
+          "hero-zoom": "hero-zoom 12s ease-in-out infinite alternate",
+          "scroll-line": "scroll-line 1.8s ease-in-out infinite",
+        },
       },
     },
     plugins: [],

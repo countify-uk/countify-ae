@@ -67,14 +67,14 @@ export default async function ServicePage({ params }) {
           description={service.description[lang]}
         />
         <div className="flex justify-between max-w-6xl mx-auto py-10 text-white px-7">
-          <nav aria-label="breadcrumb">
+          <nav aria-label={lang === "ar" ? "مسار التنقل" : "breadcrumb"}>
             <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground sm:gap-2.5">
               <li className="inline-flex items-center gap-1.5">
                 <Link
                   className="transition-colors text-white hover:text-white/60"
                   href="/"
                 >
-                  Home
+                  {lang === "ar" ? "الرئيسية" : "Home"}
                 </Link>
               </li>
               <li className="text-white/60">/</li>
@@ -83,7 +83,7 @@ export default async function ServicePage({ params }) {
                   className="transition-colors text-white hover:text-white/60"
                   href="/services"
                 >
-                  Services
+                  {lang === "ar" ? "الخدمات" : "Services"}
                 </Link>
               </li>
               <li className="text-white/60">/</li>
@@ -187,7 +187,7 @@ export default async function ServicePage({ params }) {
                   href={`/contact?lang=${lang}`}
                   className="inline-flex items-center justify-center bg-[#dca958] hover:bg-[#e69c31] text-white font-bold py-3 px-8 rounded-full transition-colors duration-300"
                 >
-                  {lang === "ar" ? "اتصل بنا الآن" : "Contact Us Now"}
+                  {lang === "ar" ? "تواصل معنا الآن" : "Contact Us Now"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>

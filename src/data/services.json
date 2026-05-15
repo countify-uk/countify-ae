@@ -5,7 +5,7 @@
       "en": "Claim your UAE R&D tax incentives. Enhanced deductions of 30–50% above cost for qualifying R&D expenditure. End-to-end advisory from an experienced R&D team.",
       "ar": "احصل على حوافز ضريبة البحث والتطوير في الإمارات. خصومات معززة تصل إلى 30-50% فوق التكلفة للنفقات المؤهلة."
     },
-    "image": "/images/services/rd-advisory.webp",
+    "image": "/images/services/r-and-d-advisory.webp",
     "link": "/services/rd-advisory",
     "id": "rd-advisory",
     "slug": "rd-advisory",
@@ -158,7 +158,7 @@
       "en": "Launch your business in UAE or any Free Zone with full support — license applications, MOA drafting, PRO services, and bank account setup.",
       "ar": "ابدأ عملك في دبي أو أي منطقة حرة بدعم كامل - طلبات الترخيص، صياغة عقد التأسيس، خدمات العلاقات العامة، وفتح حساب بنكي."
     },
-    "image": "/images/services/company-formation.webp",
+    "image": "/images/services/company-registration.webp",
     "link": "/services/company-formation",
     "id": "company-formation",
     "slug": "company-formation",
@@ -386,7 +386,7 @@
       "en": "We manage WPS-compliant payroll, leave calculations, payslips, and labour law obligations.",
       "ar": "نقوم بإدارة الرواتب المتوافقة مع نظام حماية الأجور، وحساب الإجازات، وكشوف الرواتب، والالتزامات القانونية للعمل."
     },
-    "image": "/images/services/payroll-&-hr-compliance.webp",
+    "image": "/images/services/payroll-and-hr-compliance.webp",
     "link": "/services/payroll-services",
     "id": "payroll-services",
     "slug": "payroll-services",

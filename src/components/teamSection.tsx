@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { teamMembers } from "@/data/teamData";
+import { useLanguage } from "@/context/LanguageContext";
 
 const TeamSection = () => {
+  const { language } = useLanguage();
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -22,7 +24,9 @@ const TeamSection = () => {
 
   return (
     <section className="w-full py-10 text-center" id="team">
-      <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight relative z-10">OUR TEAM</h4>
+      <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight relative z-10">
+        {language === "ar" ? "فريقنا" : "OUR TEAM"}
+      </h4>
       <div className="text-base">
         <motion.div
           className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-7xl lg:px-8 mt-16"
@@ -54,9 +58,9 @@ const TeamSection = () => {
                 </div>
                 <div  className="cursor-pointer">
                   <div className="hover:text-secondary-color">
-                    <h2 className="text-lg font-bold">{member.name}</h2>
+                    <h2 className="text-lg font-bold">{language === "ar" ? member.nameAr || member.name : member.name}</h2>
                     <h3 className="text-base font-normal tracking-widest text-secondary-color">
-                      {member.role}
+                      {language === "ar" ? member.roleAr || member.role : member.role}
                     </h3>
                   </div>
                 </div>
@@ -68,7 +72,7 @@ const TeamSection = () => {
               href="/team"
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-[#dca958] via-[#fbbc57] to-[#e69c31] rounded-md shadow-sm hover:from-[#dca958] hover:via-[#ffa424] hover:to-[#e69c31]"
             >
-              View All Team Members
+              {language === "ar" ? "عرض جميع أعضاء الفريق" : "View All Team Members"}
             </Link>
           </div>
         </motion.div>

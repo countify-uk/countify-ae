@@ -1,20 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 import Image from "next/image";
 import { useFooterLinks } from "@/data/footerLinks";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
   const footerLinks = useFooterLinks();
+  const sectionCount = footerLinks.length;
   const [openSections, setOpenSections] = useState<Record<number, boolean>>(
-    typeof window !== 'undefined' && window.innerWidth < 768
-      ? footerLinks.reduce((acc, _, index) => ({ ...acc, [index]: false }), {})
-      : footerLinks.reduce((acc, _, index) => ({ ...acc, [index]: true }), {})
+    footerLinks.reduce((acc, _, index) => ({ ...acc, [index]: true }), {})
   );
-  const { t, language } = useLanguage();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      setOpenSections(
+        Array.from({ length: sectionCount }).reduce<Record<number, boolean>>(
+          (acc, _, index) => ({ ...acc, [index]: false }),
+          {}
+        )
+      );
+    }
+  }, [sectionCount]);
+
+  const { t } = useLanguage();
   const toggleSection = (section: number) => {
     setOpenSections((prevState) => ({
       ...prevState,
@@ -25,7 +36,7 @@ const Footer = () => {
   return (
     <footer className="relative text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#020B2D] via-[#061640] to-[#0A2A88]"></div>
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url(/images/bg-footer.svg)", backgroundSize: "cover" }}></div>
+      <div className="absolute inset-0 opacity-5 footer-bg-pattern"></div>
 
       <section className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-20">
         <div className="text-center py-24 lg:py-36 border-b border-white/10">
@@ -43,7 +54,7 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            {language === "ar" ? "هل أنت مستعد للبدء؟" : <>Ready to get<br className="hidden sm:block" /> started?</>}
+            {t("footer.ready", "Ready to get started?")}
           </motion.h2>
           <motion.div
             className="mt-10"
@@ -78,6 +89,30 @@ const Footer = () => {
               <p className="text-sm text-white/60 leading-relaxed">
                 {t("footer.description" , "Countify is your trusted partner for accounting, tax, and business solutions in the UAE and beyond. We simplify your financial processes so you can focus on growing your business.")}
               </p>
+              <address className="not-italic mt-4 text-sm text-white/50 leading-relaxed space-y-1">
+                <p>{t("footer.uaeAddress1", "Meydan Grandstand, 6th floor,")}</p>
+                <p>{t("footer.uaeAddress2", "Meydan Road, Nad Al Sheba, Dubai, UAE")}</p>
+                <p>
+                  <a href="tel:+971585117901" className="hover:text-[#dca958] transition-colors">
+                    +971 58 511 7901
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:info@countify.ae" className="hover:text-[#dca958] transition-colors">
+                    info@countify.ae
+                  </a>
+                </p>
+                <p className="mt-2">
+                  <a
+                    href="https://maps.app.goo.gl/pyYwD53Ce7BPrQkw9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#dca958] transition-colors underline underline-offset-2"
+                  >
+                    {t("footer.map", "View on Google Maps")}
+                  </a>
+                </p>
+              </address>
               <div className="flex space-x-3 mt-6">
                 <a
                   href="https://www.instagram.com/countifyuae/"
@@ -94,6 +129,15 @@ const Footer = () => {
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://x.com/CountifyUAE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Countify UAE on X (Twitter)"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
+                >
+                  <Twitter className="w-5 h-5" />
                 </a>
                 <a
                   href="mailto:info@countify.ae"
@@ -151,25 +195,24 @@ const Footer = () => {
             </div>
             <div>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
-                {language === "ar" ? "موقعنا" : "Locate Us"}
+                {t("footer.locate", "Locate Us")}
               </h4>
               <p className="text-sm text-white/60 leading-relaxed">
-                Meydan Grandstand, 6th floor<br />
-                Meydan Road, Nad Al Sheba<br />
-                Dubai, U.A.E.
+                {t("footer.uaeAddress1", "Meydan Grandstand, 6th floor,")}<br />
+                {t("footer.uaeAddress2", "Meydan Road, Nad Al Sheba, Dubai, UAE")}
               </p>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mt-6 mb-3">
-                {language === "ar" ? "المكتب الرئيسي" : "UK Office"}
+                {t("footer.ukOffice", "UK Office")}
               </h4>
               <p className="text-sm text-white/60 leading-relaxed">
-                3rd Floor, St. Georges Building<br />
-                5 St. Vincent Place<br />
-                Glasgow, G1 2DH
+                {t("footer.ukAddress1", "3rd Floor, St. Georges Building")}<br />
+                {t("footer.ukAddress2", "5 St. Vincent Place")}<br />
+                {t("footer.ukAddress3", "Glasgow, G1 2DH")}
               </p>
             </div>
             <div>
               <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
-                {language === "ar" ? "تواصل معنا" : "Get in Touch"}
+                {t("footer.getInTouch", "Get in Touch")}
               </h4>
               <a
                 href="mailto:info@countify.ae"
@@ -178,7 +221,7 @@ const Footer = () => {
                 info@countify.ae
               </a>
               <p className="mt-4 text-sm text-white/50">
-                {language === "ar" ? "أو اتصل" : "or call"}
+                {t("footer.orCall", "or call")}
               </p>
               <a
                 href="tel:+971585117901"
@@ -191,10 +234,10 @@ const Footer = () => {
 
           <div className="mt-12 border-t border-white/10 pt-8 pb-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-xs text-white/40">
-              Countify © {new Date().getFullYear()} All rights reserved
+              Countify © {new Date().getFullYear()} {t("footer.rights", "All rights reserved")}
             </p>
             <p className="text-xs text-white/40">
-              Chartered Accountants │ Dubai │ Abu Dhabi │ Sharjah
+              {t("footer.tagline", "Chartered Accountants · Dubai · Abu Dhabi · Sharjah")}
             </p>
           </div>
         </div>

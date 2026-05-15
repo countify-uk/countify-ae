@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -12,21 +12,31 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useLanguage } from '@/context/LanguageContext';
 import { useRouter } from 'next/navigation';
 
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Invalid email address" }),
-  phone: z.string().optional(),
-  service: z.string().min(1, { message: "Please select a service" }),
-  message: z.string().optional(),
-  website: z.string().max(0).optional(),
-});
-
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = {
+  name: string;
+  email: string;
+  phone?: string;
+  service: string;
+  message?: string;
+  website?: string;
+};
 
 const ConsultationForm = () => {
   const { t } = useLanguage();
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, { message: t("form.error.name", "Name must be at least 2 characters") }),
+        email: z.string().email({ message: t("form.error.email", "Invalid email address") }),
+        phone: z.string().optional(),
+        service: z.string().min(1, { message: t("form.error.service", "Please select a service") }),
+        message: z.string().optional(),
+        website: z.string().max(0).optional(),
+      }),
+    [t]
+  );
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -42,6 +52,16 @@ const ConsultationForm = () => {
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
+
+    // GA4 conversion event — fire before redirect.
+    if (typeof window !== "undefined" && typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", "generate_lead", {
+        currency: "AED",
+        value: 1,
+        service: data.service,
+        form_type: "consultation",
+      });
+    }
 
     const params = new URLSearchParams({
       name: data.name,
