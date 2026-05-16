@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
+    "critters": "^0.0.23",
     "framer-motion": "^12.9.4",
     "lucide-react": "^0.507.0",
     "next": "^16.2.6",
@@ -40,6 +41,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "webpack": "^5.106.2"
   }
 }

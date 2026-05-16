@@ -36,10 +36,7 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-.hover\:bg-\[\#e69c31\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(230 156 49 / var(--tw-bg-opacity, 1));
-}
+
 .__className_962c5a {
   font-family: __Cairo_962c5a, __Cairo_Fallback_962c5a;
   font-style: normal;

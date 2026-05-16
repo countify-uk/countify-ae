@@ -1,6 +1,7 @@
 [
   {
     "title": { "en": "R&D Tax Advisory UAE", "ar": "استشارات ضريبة البحث والتطوير في الإمارات" },
+    "button_text": { "en": "Claim R&D Tax", "ar": "اطلب ضريبة البحث والتطوير" },
     "description": {
       "en": "Claim your UAE R&D tax incentives. Enhanced deductions of 30–50% above cost for qualifying R&D expenditure. End-to-end advisory from an experienced R&D team.",
       "ar": "احصل على حوافز ضريبة البحث والتطوير في الإمارات. خصومات معززة تصل إلى 30-50% فوق التكلفة للنفقات المؤهلة."
@@ -79,6 +80,7 @@
   },
   {
     "title": { "en": "Audit Preparation Services UAE", "ar": "خدمات التحضير للتدقيق في الإمارات" },
+    "button_text": { "en": "Get Audit-Ready", "ar": "استعد للتدقيق" },
     "description": {
       "en": "Get your business fully audit-ready. We prepare your financial records, documentation and internal controls to ensure a clean, smooth statutory audit.",
       "ar": "جهّز عملك للتدقيق بشكل كامل. نعدّ سجلاتك المالية ووثائقك وضوابطك الداخلية لضمان تدقيق قانوني سلس."
@@ -154,6 +156,7 @@
       "en": "Company Formation – Freezone & Mainland",
       "ar": "تأسيس الشركات - المناطق الحرة والبر الرئيسي"
     },
+    "button_text": { "en": "Start Your Business", "ar": "ابدأ عملك" },
     "description": {
       "en": "Launch your business in UAE or any Free Zone with full support — license applications, MOA drafting, PRO services, and bank account setup.",
       "ar": "ابدأ عملك في دبي أو أي منطقة حرة بدعم كامل - طلبات الترخيص، صياغة عقد التأسيس، خدمات العلاقات العامة، وفتح حساب بنكي."
@@ -297,6 +300,7 @@
       "en": "Bookkeeping Services",
       "ar": "خدمات مسك الدفاتر"
     },
+    "button_text": { "en": "Manage Your Books", "ar": "أدر حساباتك" },
     "description": {
       "en": "Keep your financial records accurate and audit-ready with monthly or quarterly bookkeeping on Xero, Zoho, and QuickBooks.",
       "ar": "حافظ على سجلاتك المالية دقيقة وجاهزة للتدقيق مع خدمات مسك الدفاتر الشهرية أو الفصلية باستخدام Xero وZoho وQuickBooks."
@@ -382,6 +386,7 @@
       "en": "Payroll & HR Compliance",
       "ar": "الرواتب والامتثال لقوانين العمل"
     },
+    "button_text": { "en": "Streamline Payroll", "ar": "بسّط إدارة الرواتب" },
     "description": {
       "en": "We manage WPS-compliant payroll, leave calculations, payslips, and labour law obligations.",
       "ar": "نقوم بإدارة الرواتب المتوافقة مع نظام حماية الأجور، وحساب الإجازات، وكشوف الرواتب، والالتزامات القانونية للعمل."
@@ -463,6 +468,7 @@
       "en": "VAT Registration & Filing",
       "ar": "تسجيل ضريبة القيمة المضافة وتقديم الإقرارات"
     },
+    "button_text": { "en": "Register for VAT", "ar": "سجل لضريبة القيمة المضافة" },
     "description": {
       "en": "From FTA registration to quarterly return filing — we help you stay VAT compliant and penalty-free.",
       "ar": "من تسجيل الهيئة الاتحادية للضرائب إلى تقديم الإقرارات الفصلية - نساعدك على الالتزام بضريبة القيمة المضافة وتجنب الغرامات."
@@ -548,6 +554,7 @@
       "en": "Corporate Tax Registration & Filing",
       "ar": "تسجيل وتقديم الإقرارات الضريبية للشركات"
     },
+    "button_text": { "en": "File Corporate Tax", "ar": "قدم ضريبة الشركات" },
     "description": {
       "en": "Get your business registered and compliant with UAE’s corporate tax laws. We also offer tax planning and transfer pricing support.",
       "ar": "قم بتسجيل عملك والامتثال لقوانين الضرائب على الشركات في الإمارات. نقدم أيضًا دعمًا للتخطيط الضريبي وتسعير التحويل."
@@ -640,6 +647,7 @@
       "en": "Year-End Financial Accounts",
       "ar": "الحسابات المالية لنهاية العام"
     },
+    "button_text": { "en": "Prepare Accounts", "ar": "إعداد الحسابات" },
     "description": {
       "en": "Professionally prepared P&L, balance sheet, and cash flow statements — audit-ready and IFRS-compliant.",
       "ar": "إعداد احترافي لقائمة الأرباح والخسائر، والميزانية العمومية، وبيانات التدفقات النقدية - جاهزة للتدقيق ومتوافقة مع المعايير الدولية للتقارير المالية."

@@ -82,14 +82,17 @@ const ServiceSection = () => {
 
                   {/* Body */}
                   <div className="p-6 lg:p-7">
-                    <h3 className="text-lg lg:text-xl font-bold text-[#0a112d] group-hover:text-[#dca958] transition-colors leading-snug mb-3">
+                    <h3 className="text-lg lg:text-xl font-bold text-[#0a112d] group-hover:text-[#9a6d1a] transition-colors leading-snug mb-3">
                       {service.title[language]}
                     </h3>
                     <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-5">
                       {service.description[language]}
                     </p>
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#dca958] group-hover:gap-2.5 transition-all">
-                      {t("servicessection.learnmore", "Learn more")}
+                    <span
+                      aria-hidden="true"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9a6d1a] group-hover:gap-2.5 transition-all"
+                    >
+                      {(service as any).button_text?.[language] || t("servicessection.learnmore", "Learn more")}
                       <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </span>
                   </div>

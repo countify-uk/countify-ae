@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-   "./src/app/**/*.{js,ts,jsx,tsx}", // Focus on the src/app structure
-    "./src/components/**/*.{js,ts,jsx,tsx}", // Include components folder
-    "./src/**/*.{html,css}",
-    ],
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/data/**/*.{js,ts,jsx,tsx}",
+    "./src/context/**/*.{js,ts,jsx,tsx}",
+    "./src/hooks/**/*.{js,ts,jsx,tsx}",
+  ],
     theme: {
       extend: {
         colors: {

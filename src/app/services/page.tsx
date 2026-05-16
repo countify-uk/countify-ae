@@ -93,8 +93,11 @@ const Services = () => {
                     <p className="text-sm text-white/60 line-clamp-2 mb-4">
                       {service.description[language]}
                     </p>
-                    <div className="flex items-center gap-1 text-[#dca958] text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                      <span>{t("button.learnMore", "Learn more")}</span>
+                    <div
+                      aria-hidden="true"
+                      className="flex items-center gap-1 text-[#dca958] text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300"
+                    >
+                      <span>{(service as any).button_text?.[language] || t("button.learnMore", "Learn more")}</span>
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>

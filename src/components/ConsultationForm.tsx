@@ -88,9 +88,9 @@ const ConsultationForm = () => {
 
   return (
     <div className="glass-card p-6 w-full max-w-md mx-auto md:mx-0">
-      <h3 className="text-2xl font-bold mb-2 text-center">
+      <h2 className="text-2xl font-bold mb-2 text-center">
         {t('form.title', 'Request a Consultation')}
-      </h3>
+      </h2>
       <p className="text-muted-foreground mb-6 text-center">
         {t('form.subtitle', 'Learn how our sustainable solutions can help your business')}
       </p>
@@ -166,7 +166,10 @@ const ConsultationForm = () => {
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="bg-white text-gray-600">
+                    <SelectTrigger
+                      className="bg-white text-gray-600"
+                      aria-label={t('form.service.label', "Select a service")}
+                    >
                       <SelectValue
                         placeholder={t('form.service', 'I\'m interested in...')}
                       />

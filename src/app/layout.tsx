@@ -27,22 +27,23 @@ const notoSansArabic = Noto_Sans_Arabic({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.countify.ae"),
   title: {
-    default: "Accounting & Tax Services UAE | VAT, Corporate Tax, R&D | Countify",
+    default: "Accounting & Tax Services UAE | Countify",
     template: "%s │ Countify",
   },
   description:
-    "Expert accounting and tax services for businesses in UAE. ACCA-qualified accountants for VAT, corporate tax, R&D advisory, company formation, bookkeeping and payroll services.",
+    "ACCA-qualified accountants for UAE businesses. VAT, corporate tax, R&D advisory, bookkeeping & company formation — done right.",
   alternates: {
     canonical: "https://www.countify.ae/",
     languages: {
-      "en-AE": "https://www.countify.ae/",
-      "ar-AE": "https://www.countify.ae/?lang=ar",
+      "x-default": "https://www.countify.ae/",
+      "en": "https://www.countify.ae/",
+      "ar": "https://www.countify.ae/?lang=ar",
     },
   },
   openGraph: {
-    title: "Accounting & Tax Services UAE | VAT, Corporate Tax, R&D | Countify",
+    title: "Accounting & Tax Services UAE | Countify",
     description:
-      "Expert accounting and tax services for businesses in UAE. ACCA-qualified accountants for VAT, corporate tax, R&D advisory, company formation, bookkeeping and payroll services.",
+      "ACCA-qualified accountants for UAE businesses. VAT, corporate tax, R&D advisory, bookkeeping & company formation — done right.",
     url: "https://www.countify.ae/",
     siteName: "Countify UAE",
     images: [
@@ -60,9 +61,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@CountifyUAE",
     creator: "@CountifyUAE",
-    title: "Accounting & Tax Services UAE | VAT, Corporate Tax, R&D | Countify",
+    title: "Accounting & Tax Services UAE | Countify",
     description:
-      "ACCA-qualified accountants helping UAE businesses with VAT, corporate tax, R&D advisory, company formation and bookkeeping services.",
+      "ACCA-qualified accountants for UAE businesses. VAT, corporate tax, R&D advisory, bookkeeping & company formation.",
     images: ["/images/countify-og.webp"],
   },
   icons: {

@@ -90,7 +90,7 @@ const ProcessSection = () => {
                 <div className="relative z-10 mx-auto mb-6 flex h-24 w-24 items-center justify-center">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#dca958]/20 to-[#dca958]/0 rounded-2xl border border-[#dca958]/30 group-hover:border-[#dca958]/60 group-hover:from-[#dca958]/30 transition-all duration-300" />
                   <Icon className="w-9 h-9 text-[#dca958]" aria-hidden="true" />
-                  <span className="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full bg-[#dca958] text-[#0a112d] text-xs font-bold shadow-lg">
+                  <span aria-hidden="true" className="absolute -top-3 -right-3 w-9 h-9 flex items-center justify-center rounded-full bg-[#dca958] text-[#0a112d] text-xs font-bold shadow-lg">
                     {step.number}
                   </span>
                 </div>

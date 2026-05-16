@@ -118,6 +118,7 @@ const Footer = () => {
                   href="https://www.instagram.com/countifyuae/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Countify UAE on Instagram"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
                   <Instagram className="w-5 h-5" />
@@ -126,6 +127,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/countify-uae/"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Countify UAE on LinkedIn"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -141,6 +143,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="mailto:info@countify.ae"
+                  aria-label="Email Countify UAE"
                   className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:bg-[#dca958] hover:border-[#dca958] hover:text-white transition-all duration-200"
                 >
                   <Mail className="w-5 h-5" />
@@ -194,16 +197,16 @@ const Footer = () => {
               ))}
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
                 {t("footer.locate", "Locate Us")}
-              </h4>
+              </h3>
               <p className="text-sm text-white/60 leading-relaxed">
                 {t("footer.uaeAddress1", "Meydan Grandstand, 6th floor,")}<br />
                 {t("footer.uaeAddress2", "Meydan Road, Nad Al Sheba, Dubai, UAE")}
               </p>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mt-6 mb-3">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/40 mt-6 mb-3">
                 {t("footer.ukOffice", "UK Office")}
-              </h4>
+              </h3>
               <p className="text-sm text-white/60 leading-relaxed">
                 {t("footer.ukAddress1", "3rd Floor, St. Georges Building")}<br />
                 {t("footer.ukAddress2", "5 St. Vincent Place")}<br />
@@ -211,9 +214,9 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/40 mb-5">
                 {t("footer.getInTouch", "Get in Touch")}
-              </h4>
+              </h3>
               <a
                 href="mailto:info@countify.ae"
                 className="text-white/80 hover:text-[#dca958] transition-colors text-sm"

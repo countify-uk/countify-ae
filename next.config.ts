@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
+import type { Configuration } from "webpack";
 
 const nextConfig: NextConfig = {
+  turbopack: {},
+  experimental: {
+    optimizeCss: true,
+  },
+  compiler: {
+  },
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
@@ -17,6 +24,16 @@ const nextConfig: NextConfig = {
     ],
     formats: ["image/avif", "image/webp"],
     qualities: [75, 80],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "countify.ae" }],
+        destination: "https://www.countify.ae/:path*",
+        permanent: true,   // 301
+      },
+    ];
   },
   async headers() {
     return [
@@ -43,6 +60,36 @@ const nextConfig: NextConfig = {
         ],
       },
     ];
+  },
+  webpack(config: Configuration) {
+    if (config.optimization?.splitChunks && typeof config.optimization.splitChunks === "object") {
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        chunks: "all",
+        maxSize: 60_000,          // 60 KiB max per chunk
+        cacheGroups: {
+          framerMotion: {
+            test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+            name: "framer-motion",
+            chunks: "async",
+            priority: 30,
+          },
+          radixUi: {
+            test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
+            name: "radix-ui",
+            chunks: "async",
+            priority: 20,
+          },
+          commons: {
+            name: "commons",
+            minChunks: 2,
+            priority: 10,
+            reuseExistingChunk: true,
+          },
+        },
+      };
+    }
+    return config;
   },
 };
 

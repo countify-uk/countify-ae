@@ -37,7 +37,7 @@ const CookieConsent = () => {
         <button onClick={decline} className="px-4 py-2 text-sm text-white/60 border border-white/20 rounded hover:border-white/40 transition-colors">
           {t("cookie.decline", "Decline")}
         </button>
-        <button onClick={accept} className="px-4 py-2 text-sm bg-[#dca958] text-white rounded hover:bg-[#e69c31] transition-colors font-medium">
+        <button onClick={accept} className="px-4 py-2 text-sm bg-[#dca958] text-[#1a1a1a] rounded hover:bg-[#c8911e] transition-colors font-medium">
           {t("cookie.accept", "Accept")}
         </button>
       </div>
