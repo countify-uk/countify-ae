@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Countify UAE │ ACCA Chartered Accountants │ Big 4 Experience",
+    absolute: "About Countify UAE | ACCA Chartered Accountants",
   },
   description:
     "Meet Countify UAE, ACCA-qualified chartered accountants founded by Big 4 alumni and serving businesses across Dubai, Abu Dhabi and Sharjah.",

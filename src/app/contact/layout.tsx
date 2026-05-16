@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact Countify UAE │ Accountants in Dubai, Abu Dhabi & Sharjah",
+    absolute: "Contact Countify UAE | Expert Accountants",
   },
   description:
     "Contact Countify UAE for accounting, VAT, corporate tax and R&D advisory support. Call +971 58 511 7901 or email info@countify.ae.",

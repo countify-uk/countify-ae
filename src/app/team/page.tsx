@@ -25,7 +25,7 @@ const TeamPage = () => {
         />
 
         <MainHeader
-          title={language === "ar" ? "فريقنا" : "OUR TEAM"}
+          title={language === "ar" ? "فريقنا - خبراء المحاسبة والضرائب" : "Our Expert UAE Accounting Team"}
           description={
             language === "ar"
               ? "تعرّف على المتخصصين خلف Countify. مؤهلون من ACCA وFCCA ويمتلكون خبرة Big 4 لتقديم خدمات محاسبة وضرائب واستشارات موثوقة في الإمارات."

@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-03",
     readTime: "6 min read",
     category: "VAT",
-    metaTitle: "VAT Registration UAE Guide | Thresholds & Documents | Countify",
+    metaTitle: "VAT Registration UAE Guide | Countify",
     metaDescription:
       "UAE VAT registration guide covering thresholds, timing, required documents, common mistakes and first return preparation.",
     sections: [

@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 const content = {
   en: {
     eyebrow: "Website policy",
-    title: "Privacy Policy",
+    title: "Privacy Policy & Data Protection",
     intro:
       "This page explains how Countify UAE handles information shared through our website, consultation forms and direct enquiries.",
     updated:

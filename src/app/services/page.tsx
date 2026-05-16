@@ -23,7 +23,7 @@ const item = {
 const Services = () => {
   const { t, language } = useLanguage();
 
-  const title = t("services.title", "Our Services");
+  const title = t("services.title", "Accounting, Tax & Company Formation Services");
   const description = t(
     "services.description",
     "Explore our comprehensive range of accounting, tax, and business setup services tailored to meet your needs."

@@ -109,7 +109,7 @@ const WhyChooseCard = () => {
                     </div>
                     <span
                       aria-hidden="true"
-                      className="absolute -top-1 -right-1 text-[10px] font-bold text-[#dca958]/40 bg-[#0a112d] px-1.5 py-0.5 rounded-md border border-white/10"
+                      className="absolute -top-1 -right-1 text-[10px] font-bold text-[#dca958] bg-[#0a112d] px-1.5 py-0.5 rounded-md border border-white/10"
                     >
                       0{index + 1}
                     </span>

@@ -24,7 +24,7 @@ const AboutPage = () => {
 
   const content = {
     en: {
-      title: "About Us – Countify",
+      title: "About Countify: Chartered Accountants in the UAE",
       subtitle: "Expert Accounting & Business Support Across the UAE",
       sections: [
         {

@@ -95,7 +95,7 @@ const ContactForm = () => {
           type: "error",
           message:
             result?.message ||
-            language === "ar"
+              language === "ar"
               ? "تعذر إرسال رسالتك. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة."
               : "Your message could not be sent. Please try again or contact us directly.",
         });
@@ -288,9 +288,8 @@ const ContactForm = () => {
       {submitStatus && (
         <p
           role="status"
-          className={`text-sm ${
-            submitStatus.type === "success" ? "text-green-300" : "text-red-300"
-          }`}
+          className={`text-sm ${submitStatus.type === "success" ? "text-green-300" : "text-red-300"
+            }`}
         >
           {submitStatus.message}
         </p>
@@ -305,7 +304,7 @@ const ContactPage = () => {
   return (
     <div className="bg-gradient-to-b from-[#0a112d] via-[#061640] to-[#0a112d] min-h-screen">
       <MainHeader
-        title={language === "ar" ? "تواصل معنا" : "Get in Touch"}
+        title={language === "ar" ? "تواصل معنا - خبراء الضرائب والمحاسبة" : "Get in Touch with Our UAE Experts"}
         description={
           language === "ar"
             ? "نحن هنا لمساعدتك. تواصل مع فريقنا اليوم."
@@ -401,7 +400,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg">
-                    {language === "ar" ? "مكتب المملكة المتحدة" : "UK Office"}
+                    {language === "ar" ? "مكتب المملكة المتحدة" : "United Kingdom Office"}
                   </h3>
                   <span className="text-white/40 text-xs font-medium uppercase tracking-wider">
                     {language === "ar" ? "المقر الرئيسي" : "Head Office"}
